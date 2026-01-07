@@ -1,0 +1,18 @@
+File: ../corpus/corpus.txt
+Concurrency: 1
+Total words: 186324
+Unique words: 12
+Longest word: consectetur
+Shortest word: lorem
+Top 10 repeated words:
+  lorem = 15527
+  ipsum = 15527
+  dolor = 15527
+  consectetur = 15527
+  adipiscing = 15527
+  eiusmod = 15527
+  tempor = 15527
+  incididunt = 15527
+  labore = 15527
+  dolore = 15527
+run(concurrency=1): 115.21ms

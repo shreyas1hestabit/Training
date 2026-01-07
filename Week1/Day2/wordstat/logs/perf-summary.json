@@ -1,0 +1,20 @@
+[
+  {
+    "file": "../corpus/corpus.txt",
+    "concurrency": 1,
+    "runtimeMs": 148,
+    "timestamp": "2026-01-07T09:56:46.696Z"
+  },
+  {
+    "file": "../corpus/corpus.txt",
+    "concurrency": 1,
+    "runtimeMs": 153,
+    "timestamp": "2026-01-07T09:57:00.544Z"
+  },
+  {
+    "file": "../corpus/corpus.txt",
+    "concurrency": 1,
+    "runtimeMs": 149,
+    "timestamp": "2026-01-07T09:57:05.963Z"
+  }
+]

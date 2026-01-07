@@ -1,0 +1,56 @@
+{
+  "file": "../corpus/corpus.txt",
+  "concurrency": 1,
+  "minLength": 1,
+  "topN": 10,
+  "totals": {
+    "totalWords": 295013,
+    "uniqueWords": 19
+  },
+  "extremes": {
+    "longestWord": "consectetur",
+    "shortestWord": "do"
+  },
+  "topRepeatedWords": [
+    {
+      "word": "lorem",
+      "count": 15527
+    },
+    {
+      "word": "ipsum",
+      "count": 15527
+    },
+    {
+      "word": "dolor",
+      "count": 15527
+    },
+    {
+      "word": "sit",
+      "count": 15527
+    },
+    {
+      "word": "amet",
+      "count": 15527
+    },
+    {
+      "word": "consectetur",
+      "count": 15527
+    },
+    {
+      "word": "adipiscing",
+      "count": 15527
+    },
+    {
+      "word": "elit",
+      "count": 15527
+    },
+    {
+      "word": "set",
+      "count": 15527
+    },
+    {
+      "word": "do",
+      "count": 15527
+    }
+  ]
+}
