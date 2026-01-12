@@ -13,10 +13,10 @@ WEEK 1: ENGINEERING MINDSET BOOTCAMP
 	
 	**Install NVM
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/0.40.3/install.sh |bash
-	![installnvm](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task2/Screenshot-day1-task2/install-nvm.png)
+![installnvm](Screenshot-day1-task2/install-nvm.png)
 	**Check NVM Version
 	nvm --version
-	![nvmversion](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task2/Screenshot-day1-task2/version.png)
+![nvmversion](Screenshot-day1-task2/version.png)
 	LONG TERM SUPPORT(LTS)
 	LTS versions are highly stable, receive extended maintenance, security patches, and critical bug fixes over a predictable period, making them the recommended choice for production environments where reliability is paramount. Benefits of using LTS:
 	--Stability and Reliability: LTS releases have undergone extensive testing and feature freezes to ensure stability. New, potentially breaking features are reserved for "Current" releases first.
@@ -28,7 +28,7 @@ WEEK 1: ENGINEERING MINDSET BOOTCAMP
 
 	**Install LTS
 	nvm install --lts
-	![lts](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task2/Screenshot-day1-task2/install-lts.png)
+![lts](Screenshot-day1-task2/install-lts.png)
 	**Use lts
 	nvm use --lts
-	![use](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task2/Screenshot-day1-task2/use-lts.png)
+	![use](Screenshot-day1-task2/use-lts.png)
