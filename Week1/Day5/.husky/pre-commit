@@ -1,6 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+cd week1/Day5 || exit 1
+
 npx eslint src/index.js
 ./validate.sh
 
