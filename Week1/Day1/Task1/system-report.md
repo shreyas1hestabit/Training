@@ -49,61 +49,61 @@ WEEK 1: ENGINEERING MINDSET BOOTCAMP
 	            b. hostnamectl
 				    DESCRIPTION: Provides system information in a neat format, including OS and kernel version.
 				    WORKS ON: System-based distributions.
-				    ![hostname](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/hostnamectl.png)
+				    ![hostname](Screenshots-day1-task1/hostnamectl.png)
 	            c. lsb_release -a
 				    DESCRIPTION: Shows Linux Standard Base (LSB) and distribution-specific information.
 				    WORKS ON: Distribution with lsb-release package installed.
-				    ![lsb](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/lsb_release-a.png)
+				    ![lsb](Screenshots-day1-task1/lsb_release-a.png)
 	            d. cat /etc/*-release
 				    DESCRIPTION: A heuristic approach to display contents of all files ending with -release, which often includes the relevant version file.
 				    WORKS ON: Many distributions.
-				    ![starrelease](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/cat-etc-*-release.png)
+				    ![starrelease](Screenshots-day1-task1/cat-etc-*-release.png)
     2. CURRENT SHELL
     a. ps -p $$
     DESCRIPTION: The actual running process command name
     RELIABILITY FOR CURRENT SHELL: High
-    ![psp](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/ps-p$$.png)
+    ![psp](Screenshots-day1-task1/ps-p$$.png)
     b. echo $0
     DESCRIPTION: The name the shell was invoked with
     RELIABILITY FOR CURRENT SHELL: Medium
-    ![echozero](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/ech-$0.png)
+    ![echozero](Screenshots-day1-task1/ech-$0.png)
     c. ls -l /proc/$$/exe
     DESCRIPTION: The actual shell executable path
     RELIABILITY FOR CURRENT SHELL: High
-    ![proc](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/ls-l-proc-$$-exe.png)
+    ![proc](Screenshots-day1-task1/ls-l-proc-$$-exe.png)
     d. echo $$SHELL
     DESCRIPTION: Your default configured logon shell.
     RELIABILITY FOR CURRENT SHELL: Low
-    ![shell](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/echo$$shell.png)
+    ![shell](Screenshots-day1-task1/echo$$shell.png)
    3. NODE BINARY PATH
    **Node Binary Path commands were not working when I tried them first. The reason to it was that I did not install node npm, so it could not track the location or path or the details I was asking because my system did not have any folder or library named nodejs or npm.
-   Commands before installing nodejs npm-----> ![not](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/npm-before-installation.png)
-   Command to install nodejs npm-------------> ![install](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/install-nodejs-npm.png)
+   Commands before installing nodejs npm-----> ![not](Screenshots-day1-task1/npm-before-installation.png)
+   Command to install nodejs npm-------------> ![install](Screenshots-day1-task1/install-nodejs-npm.png)
     a. which node
     Displays full path to the node executable that your shell will use when you type node.
-    ![node](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/which-node.png)
+    ![node](Screenshots-day1-task1/which-node.png)
     b. which nodejs
     On some older or specific Debian-based systems (like Ubuntu), the executable might be named nodejs instead of node due to a naming conflict
-    ![nodejs](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/which-node-js.png)
+    ![nodejs](Screenshots-day1-task1/which-node-js.png)
     c. whereis node
     This command is similar to which but often provides additional information, such as the location of source files and manual pages, if available.
-    ![whereis](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/where-is-node.png)
+    ![whereis](Screenshots-day1-task1/where-is-node.png)
     d. type node
     command tells you whether node is a built-in command, a function, an alias, or a binary file and provides it location.
-    ![type](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/type-node.png)
+    ![type](Screenshots-day1-task1/type-node.png)
     e. npm bin -g
     If you want to find the directory where globally installed npm binaries (which includes the globally installed node executable if installed via a version manager like nvm or certain npm configurations) are stored, you can use this command. 
     This command is throwing an error because bin is not used in updated versions(2026) of nodejs npm, rather we can use npm config get prefix.
-    ![bin](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/npm-bin-g.png)
+    ![bin](Screenshots-day1-task1/npm-bin-g.png)
    4. NPM GLOBAL INSTALLATION PATH
     a. npm root -g
     This command prints the absolute path to the directory where global packages are installed
-    ![root](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/nom-root-g.png)
+    ![root](Screenshots-day1-task1/nom-root-g.png)
     b. npm config get prefix
     This command prints the "prefix" where npm is configured to install global items. The actual packages are typically in a node_modules subfolder within this prefix
-    ![config](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/npm-config-get-prefix.png)
+    ![config](Screenshots-day1-task1/npm-config-get-prefix.png)
   5. ALL PATH ENTRIES THAT INCLUDE "node" OR "npm"
     a. echo $PATH | tr ':' '\n' | grep -i 'node/|npm'
     List PATH entries and show only directories related to Node or npm.
-    ![echo](/home/shreyasinghal/Desktop/Training Bootcamp/Week1/Day1/Task1/Screenshots-day1-task1/echo-path-tr-grep.png)
+    ![echo](Screenshots-day1-task1/echo-path-tr-grep.png)
     
