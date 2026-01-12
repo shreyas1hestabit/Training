@@ -1,8 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-cd Week1/Day5 || exit 1
-
-npx eslint src/index.js
-./validate.sh
+echo "PRE-COMMIT RUNNING"
+exit 1
 
