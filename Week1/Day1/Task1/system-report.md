@@ -45,7 +45,7 @@ WEEK 1: ENGINEERING MINDSET BOOTCAMP
 	            a. cat /etc/os-release
 				    DESCRIPTION: Displays comprehensive OS identification data, including name, version and ID. This is recommended and widely used method.
 				    WORKS ON: Most modern Linux distributions.
-				    ![release](Screenshots_day1_task1/cat_etc_os_release.png)
+![release](Screenshots_day1_task1/cat_etc_os_release.png)
 	            b. hostnamectl
 				    DESCRIPTION: Provides system information in a neat format, including OS and kernel version.
 				    WORKS ON: System-based distributions.
@@ -62,7 +62,7 @@ WEEK 1: ENGINEERING MINDSET BOOTCAMP
     a. ps -p $$
     DESCRIPTION: The actual running process command name
     RELIABILITY FOR CURRENT SHELL: High
-    ![psp](Screenshots-day1-task1/ps-p$$.png)
+![psp](Screenshots-day1-task1/ps-p$$.png)
     b. echo $0
     DESCRIPTION: The name the shell was invoked with
     RELIABILITY FOR CURRENT SHELL: Medium
