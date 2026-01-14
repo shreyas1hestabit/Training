@@ -1,34 +1,83 @@
 <!DOCTYPE html>
+<!-- HTML5 ka standard declaration -->
+
 <html lang="en">
+<!-- lang="en" batata hai ki page English language me hai -->
+
 <head>
+  <!-- Character encoding set kar rahe hain -->
   <meta charset="UTF-8">
+
+  <!-- Page ka title jo browser tab me dikhega -->
   <title>FAQ Accordion</title>
+
+  <!-- External CSS file link kar rahe hain -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header">
-  <div class="logo">CodeConvey</div>
+  <!-- Pure page ka visible content body ke andar aata hai -->
 
-  <button class="menu-btn">
-    Menu 
-  </button>
+  <!-- ---------------- HEADER SECTION ---------------- -->
+  <!-- Header me logo + menu related cheezein hoti hain -->
+  <header class="header">
 
-  <ul class="dropdown">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</header>
+    <!-- Website ka logo / brand name -->
+    <div class="logo">CodeConvey</div>
+
+    <!-- 
+      Menu button
+      Mostly mobile view ke liye hota hai
+      JS se isko click pe kaam karwayenge
+    -->
+    <button class="menu-btn">
+      Menu
+    </button>
+
+    <!-- 
+      Dropdown menu list
+      Initially hidden hoti hai
+      Button click pe show / hide hoti hai
+    -->
+    <ul class="dropdown">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+  </header>
 
 
+  <!-- ---------------- FAQ SECTION ---------------- -->
+  <!-- Saare FAQ questions aur answers is section me hain -->
   <section class="faq">
-    
+
+    <!-- 
+      Ek single FAQ item
+      active class ka matlab:
+      yeh wala question by default open hoga
+    -->
     <div class="faq-item active">
+
+      <!-- 
+        Question ke liye button use kiya
+        taaki easily click event lag sake
+      -->
       <button class="faq-question">
         What is Codeconvey?
+
+        <!-- 
+          Arrow icon
+          JS se rotate kar sakte hain
+        -->
         <span class="icon">⌄</span>
       </button>
+
+      <!-- 
+        Answer ka container
+        CSS + JS se show / hide hota hai
+      -->
       <div class="faq-answer">
         <p>
           Codeconvey is web design & development blog which provide tutorials,
@@ -37,11 +86,16 @@
       </div>
     </div>
 
+    <!-- -------- SECOND FAQ ITEM -------- -->
     <div class="faq-item">
+
+      <!-- Question button -->
       <button class="faq-question">
         What we offer?
         <span class="icon">⌄</span>
       </button>
+
+      <!-- Answer content -->
       <div class="faq-answer">
         <p>
           We offer tutorials, UI inspiration and frontend development guides.
@@ -49,11 +103,16 @@
       </div>
     </div>
 
+    <!-- -------- THIRD FAQ ITEM -------- -->
     <div class="faq-item">
+
+      <!-- Question -->
       <button class="faq-question">
         Want to join?
         <span class="icon">⌄</span>
       </button>
+
+      <!-- Answer -->
       <div class="faq-answer">
         <p>
           You can join by subscribing to our newsletter.
@@ -63,10 +122,17 @@
 
   </section>
 
+  <!-- 
+    External JavaScript file
+    Accordion ka open/close logic yahin hota hai
+  -->
   <script src="script.js"></script>
+
+  <!-- ---------------- FOOTER ---------------- -->
+  <!-- Footer me copyright info di gayi hai -->
   <footer class="footer">
-  <p>© 2026 CodeConvey. All rights reserved.</p>
-</footer>
+    <p>© 2026 CodeConvey. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

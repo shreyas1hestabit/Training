@@ -1,101 +1,184 @@
+/* Browser ke default margin / padding hata rahe hain */
 * {
   margin: 0;
   padding: 0;
+
+  /* Box size ko predictable banane ke liye */
   box-sizing: border-box;
 }
 
+/* ---------------- BODY STYLING ---------------- */
+/* Pure page ke liye basic styling */
 body {
+  /* Light blue background */
   background: #dfeefe;
+
+  /* Simple readable font */
   font-family: Arial, sans-serif;
+
+  /* Minimum height full screen ke barabar */
   min-height: 100vh;
+
+  /* Header fixed hai isliye upar se space diya */
   padding-top: 250px;
+
+  /* Footer fixed hai isliye neeche se space diya */
   padding-bottom: 70px;
 }
 
+/* ---------------- FAQ CONTAINER ---------------- */
+/* Pura FAQ box */
 .faq {
+  /* Fixed width for desktop */
   width: 600px;
+
+  /* Center align karne ke liye */
   margin: 120px auto;
+
+  /* Dark background */
   background: #1f2a37;
+
+  /* Rounded corners */
   border-radius: 10px;
+
+  /* Extra content bahar na jaye */
   overflow: hidden;
+
+  /* Thoda extra top spacing */
   margin-top: 140px;
 }
 
+/* ---------------- INDIVIDUAL FAQ ITEM ---------------- */
+/* Har question + answer ka wrapper */
 .faq-item {
+  /* Items ke beech line */
   border-bottom: 1px solid #334155;
 }
 
+/* ---------------- QUESTION BUTTON ---------------- */
+/* Question clickable banaya */
 .faq-question {
+  /* Button full width lega */
   width: 100%;
+
+  /* Same dark background */
   background: #1f2a37;
+
+  /* Text white rakha */
   color: white;
+
+  /* Andar se space */
   padding: 20px;
+
+  /* Text size thoda bada */
   font-size: 18px;
+
+  /* Bold look ke liye */
   font-weight: bolder;
+
+  /* Default border hata diya */
   border: none;
+
+  /* Question aur arrow ko ek line me rakhne ke liye */
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* Mouse le jaane pe hand cursor */
   cursor: pointer;
 }
 
+/* ---------------- ANSWER SECTION ---------------- */
+/* Answer by default hidden */
 .faq-answer {
   display: none;
+
+  /* White background for contrast */
   background: white;
+
+  /* Andar se spacing */
   padding: 20px;
+
+  /* Dark readable text */
   color: #333;
 }
 
+/* ---------------- ACTIVE FAQ STATE ---------------- */
+/* Jab faq-item active ho */
 .faq-item.active .faq-answer {
+  /* Answer dikhana */
   display: block;
 }
 
+/* Arrow ko rotate karna jab open ho */
 .faq-item.active .icon {
   transform: rotate(180deg);
 }
 
+/* ---------------- HEADER ---------------- */
+/* Fixed header top pe */
 .header {
   width: 100%;
   background: #1f2a37;
   color: white;
   padding: 16px 40px;
 
+  /* Logo aur menu ko ek line me rakhna */
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  /* Header ko fixed banana */
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
 }
 
+/* ---------------- LOGO ---------------- */
+/* Website ka naam */
 .logo {
   font-size: 20px;
   font-weight: bolder;
 }
 
+/* ---------------- MENU BUTTON ---------------- */
+/* Mobile menu button */
 .menu-btn {
-  background: none;
-  border: none;
+  background: none;       /* Button background hata diya */
+  border: none;           /* Border remove */
   color: white;
   font-size: 16px;
   font-weight: bolder;
   cursor: pointer;
 }
 
+/* ---------------- DROPDOWN MENU ---------------- */
+/* Menu list jo button click pe dikhegi */
 .dropdown {
   list-style: none;
+
+  /* White background */
   background: white;
+
+  /* Absolute position header ke niche */
   position: absolute;
   top: 60px;
   right: 40px;
+
+  /* Fixed width */
   width: 160px;
 
+  /* Default hidden */
   display: none;
+
+  /* Rounded corners */
   border-radius: 6px;
+
+  /* Extra overflow hide */
   overflow: hidden;
 }
 
+/* Dropdown ke links */
 .dropdown li a {
   display: block;
   padding: 12px;
@@ -103,27 +186,39 @@ body {
   color: #333;
 }
 
+/* Hover effect on dropdown links */
 .dropdown li a:hover {
   background: #e5e7eb;
 }
 
-/* when active */
+/* ---------------- DROPDOWN ACTIVE STATE ---------------- */
+/* JS se show class add hoti hai */
 .dropdown.show {
   display: block;
 }
+
+/* ---------------- FOOTER ---------------- */
+/* Footer fixed bottom pe */
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 0; 
+
   width: 100%;
   background: #1f2a37;
   color: white;
+
+  /* Text center align */
   text-align: center;
+
   font-weight: bold;
   padding: 16px 0;
 }
 
+/* Footer text styling */
 .footer p {
   font-size: 14px;
+
+  /* Thoda light look ke liye */
   opacity: 0.8;
 }
