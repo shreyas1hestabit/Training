@@ -4,7 +4,7 @@
     <p>when i tried to add element to the todo list, a reference error was thrown on console and nothing would be added to the list.</p>
     <h4>Reason </h4>
     <p> I created the saveTodo function inside app.js instead of storage.js.</p>
-    <h4> Fix <h4>
+    <h4> Fix </h4>
     <p> Re-checked the code and changed the function location and ensured correct  file order </p>
     <img src="screenshots/error_one.png" alt="">
     <br>
@@ -15,7 +15,7 @@
 <p>I used the wrong id of todo-input in DOM.</p>
 <h4>Fix</h4>
 <p>used the correct id from index.html</p>
-<img src="screenshots/error_two.png" alt="">
+<img src="screenshots/error_2.png" alt="">
 <br>
 <h3>ERROR 3: ToDo items not aligned inside a card </h3>
 <h4>Error Generated</h4>
