@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- HTML5 ka standard declaration -->
+
+<html lang="en">
+<!-- lang="en" batata hai ki page English language me hai -->
+
+<head>
+  <!-- Character encoding set kar rahe hain -->
+  <meta charset="UTF-8">
+
+  <!-- Page ka title jo browser tab me dikhega -->
+  <title>FAQ Accordion</title>
+
+  <!-- External CSS file link kar rahe hain -->
+  <link rel="stylesheet" href="../css/help.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+  <!-- Pure page ka visible content body ke andar aata hai -->
+
+  <!-- ---------------- HEADER SECTION ---------------- -->
+  <!-- Header me logo + menu related cheezein hoti hain -->
+    <header>
+        <div class="left-container">
+        <div class="menu-hamburger">
+        <button class="menu-hamburger-btn"> 
+            <img src="../assets/menu-button-wide.svg" alt="menu">
+            </button>
+        
+        </div>
+        <div class="logo">
+            AllInOne
+        </div>
+        </div>
+                <nav class="menu-hamburger-list">
+            <ul>
+                <li>Profile</li>
+                <li>Wishlist</li>
+                <li>Cart</li>
+                <li>My Orders</li>
+                <li>Help & FAQ</li>
+                <li>Rewards & Gift Cards</li>
+            </ul>
+        </nav>
+
+        <div class="center-container">
+        <div class="products-menu">
+            PRODUCTS
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Here">
+        </div>
+        </div>
+        <div class="right-container">
+        <div class="wishlist">
+            <div class="wishlist-icon">
+            <img src="../assets/heart.svg" alt="wishlist">
+            </div>
+            <div class="wishlist-counter">
+                <!--wishlist count-->
+            </div>
+        </div>
+        <div class="cart">
+            <div class="cart-icon">
+                <img src="../assets/cart3.svg" alt="cart">
+            </div>
+            <div class="cart-counter">
+                <!--cart count-->
+            </div>
+        </div>
+        <div class="login">
+            <img src="../assets/person.svg" alt="login">
+        </div>
+        </div>
+    </header>
+
+
+
+  <!-- ---------------- FAQ SECTION ---------------- -->
+  <!-- Saare FAQ questions aur answers is section me hain -->
+  <section class="faq">
+
+    <!-- 
+      Ek single FAQ item
+      active class ka matlab:
+      yeh wala question by default open hoga
+    -->
+    <div class="faq-item active">
+
+      <!-- 
+        Question ke liye button use kiya
+        taaki easily click event lag sake
+      -->
+      <button class="faq-question">
+        Returns, Refunds and Product Support
+
+        <!-- 
+          Arrow icon
+          JS se rotate kar sakte hain
+        -->
+        <span class="icon">⌄</span>
+      </button>
+
+      <!-- 
+        Answer ka container
+        CSS + JS se show / hide hota hai
+      -->
+      <div class="faq-answer">
+        <p>
+          Most items can be returned for a refund or replacement/exchange within 30 days of delivery as long as they are in original or unused condition. For eligible items, you can enjoy free returns at many locations near you. For information on an item's return eligibility, please check the product detail page before placing your order. After placing an order, you can find relevant information on an item's return eligibility in your Order History.
+      </div>
+    </div>
+
+    <!-- -------- SECOND FAQ ITEM -------- -->
+    <div class="faq-item">
+
+      <!-- Question button -->
+      <button class="faq-question">
+        Accepted Payment Methods
+        <span class="icon">⌄</span>
+      </button>
+
+      <!-- Answer content -->
+      <div class="faq-answer">
+        <p>
+          The following payment methods are available for use: </p>
+<ul>
+<li>Visa (including the Amazon Rewards Visa Signature Card)</li>
+<li>Amazon Store Card</li>
+<li>Amazon Secured Card</li>
+<li>MasterCard/EuroCard</li>
+<li>Discover Network</li>
+<li>American Express</li>
+<li>Diner's Club (U.S. billing addresses only)</li>
+<li>JCB</li>
+<li>NYCE</li>
+<li>STAR</li>
+<li>China UnionPay (credit card only)</li>
+<li>Visa, MasterCard, or American Express prepaid credit or gift cards</li>
+</ul>
+          </div>
+    </div>
+
+    <!-- -------- THIRD FAQ ITEM -------- -->
+    <div class="faq-item">
+
+      <!-- Question -->
+      <button class="faq-question">
+        Buying Large and Bulky items
+        <span class="icon">⌄</span>
+      </button>
+
+      <!-- Answer -->
+      <div class="faq-answer">
+        <p>
+          If your item qualifies as a large item and is eligible for our FREE Scheduled Delivery, you will see a label that says FREE Scheduled Delivery and available delivery dates on the product detail page. You can select a delivery date and time for your assembly or installation services and scheduled delivery at checkout.
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ---------------- FOOTER ---------------- -->
+  <!-- Footer me copyright info di gayi hai -->
+    <footer>
+        <div class="top">
+            <div class="left">
+                <h4>ABOUT US</h4>
+                <p>Build for scroll-stoppers and smart shoppers</p>
+                    <p>We're not just an online store- WE'RE A VIBE</p>
+                    <p>From trending topics to everyday essentials, we bring you products that actually make sense and look good doing it.</p>
+                    <p>QAULITY, AFFORDABILITY and ZERO-BORING STUFF - THAT'S HOW WE ROLL</p>
+            </div>
+            <div class="center">
+                <h4>CONTACT US</h4>
+                <p>Email: AllInOne@gmail.com</p>
+                <p>Phone: 0120-546-873</p>
+            </div>
+            <div class="right">
+                <h4>CONNECT WITH US</h4>
+                <p> <img src="../assets/instagram.svg"> | <img src="../assets/linkedin.svg"> | <img src="../assets/twitter-x.svg"></p>
+            </div>
+        </div>
+        <div class="bottom">
+            <p> &copy AllInOne 2026. All Rights Reserved</p>
+        </div>
+    </footer>
+<script src="../js/help.js"></script>
+</body>
+</html>

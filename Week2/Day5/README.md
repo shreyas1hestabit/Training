@@ -145,3 +145,20 @@
 <li>return policy add</li>
 <li>footer</li>
 </ul>
+
+<h2>HOME PAGE</h2>
+<h3>Problems Faced</h3>
+<ol>
+<li><h4>Error faced:</h4>Unable to Link .html with other files in the folder. <h4>Reason:</h4> Was not using proper file path. <h4>Solution:</h4><ul>
+<li>instead of linking images in assets foler with path "/assets/image_name.svg" we need to first go to root folder as this searches for image in html folder and not the root folder. so the correct path would be "../assets/image_name.svg".</li>
+<li> I Was using rel="stylesheet_global" because i was linking to stylesheets to the file so i thought that we need to define two different relations otherwise it would create conflict, so changed the relation to stylesheet because irrespective of how many .css you link the html knows only one relation i.e. stylesheet. so you dont explicitly name them differently and it does not get meixed up. </li>
+</ul></li>
+</ol>
+<h3>PROBLEMS I COULD NOT FIX</h3>
+<ol>
+<li>Video not getting loaded in header</li>
+<li>Could not fetch categories from dataset to display on home page hence could also not make products dropdown because categories were not fetched so could not divide the dataset to display.</li>
+<li>wishlist counter displaying zero even after there are items in wishlist.</li>
+<li>items get moved to cart but are not removed from wishlist.</li>
+<li>could not display product page for each single product. all the products are visible on one page but i also wanted that if i click on certain product a product page opens which displays all the details related to that product and also suggest similar items. I could not achieve that.</li>
+</ol>

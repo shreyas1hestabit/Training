@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <title>All Products</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/products.css">
+</head>
+<body>
+
+<header>
+  <div class="left-container">
+    <div class="menu-hamburger">
+      <button class="menu-hamburger-btn">
+        <img src="../assets/menu-button-wide.svg" alt="menu">
+      </button>
+    </div>
+    <div class="logo">AllInOne</div>
+  </div>
+
+  <nav class="menu-hamburger-list">
+    <ul>
+      <li>Profile</li>
+      <li>Wishlist</li>
+      <li>Cart</li>
+      <li>My Orders</li>
+      <li>Help & FAQ</li>
+      <li>Rewards & Gift Cards</li>
+    </ul>
+  </nav>
+
+  <div class="center-container">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="products-page">
+    <h2>All Products</h2>
+    <div class="controls">
+  <select id="categoryFilter">
+    <option value="all">All Categories </option>
+  </select>
+
+  <select id="priceSort">
+    <option value="default">Sort by Price</option>
+    <option value="low-high">Low → High</option>
+    <option value="high-low">High → Low</option>
+  </select>
+</div>
+<div class="price-range">
+  <label>Price Range</label>
+  <input type="range" id="priceRange" min="0" max="2000" value="2000">
+  <span id="priceValue">Up to $2000</span>
+</div>
+
+
+    <div class="products-grid" id="productsGrid">
+      <!-- products will load here -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="top">
+    <div class="left">
+      <h4>ABOUT US</h4>
+      <p>Build for scroll-stoppers and smart shoppers</p>
+    </div>
+    <div class="center">
+      <h4>CONTACT US</h4>
+      <p>Email: AllInOne@gmail.com</p>
+      <p>Phone: 0120-546-873</p>
+    </div>
+    <div class="right">
+      <h4>CONNECT WITH US</h4>
+      <p>
+        <img src="../assets/instagram.svg"> |
+        <img src="../assets/linkedin.svg"> |
+        <img src="../assets/twitter-x.svg">
+      </p>
+    </div>
+  </div>
+  <div class="bottom">
+    <p>&copy; AllInOne 2026. All Rights Reserved</p>
+  </div>
+</footer>
+<script src="../js/storage.js"></script>
+<script src="../js/products.js"></script>
+</body>

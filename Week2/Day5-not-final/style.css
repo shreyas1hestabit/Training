@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+img{
+    max-width: 100%;
+    /*display: block;*/
+}
+button{
+    cursor:pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+.container{
+    width:90%;
+    max-width: 1200px;
+    margin: auto;
+}
+h1,h2,h3,h4{
+    font-weight: 600;
+    line-height: 1.3;
+}
+section{
+    padding: 40px 20px;
+}
+
+/*---------INDEX.HTML KA CSS--------*/
+/* ===== HEADER ===== */
+header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-icon img {
+  width: 24px;
+}
+
+/* LOGO */
+.logo a {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* CENTER */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* PRODUCTS BUTTON */
+.products-btn {
+  font-weight: 600;
+}
+
+/* SEARCH */
+.search-container input {
+  padding: 8px 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-right img {
+  width: 22px;
+}
+/* ===== SIDE MENU ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;        /* hidden */
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* menu list */
+.menu-list {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.menu-list li {
+  margin-bottom: 18px;
+}
+
+.menu-list a {
+  font-weight: 500;
+  color: #333;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 70vh;
+  background: #000;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero p {
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+/* ===== OFFERS ===== */
+.offers h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.offer-cards {
+  display: flex;
+  gap: 20px;
+}
+
+/* placeholder offer card */
+.offer-cards div {
+  flex: 1;
+  height: 150px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+/* ===== CATEGORIES ===== */
+.categories h2 {
+  margin-bottom: 20px;
+}
+
+.categories-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+/* placeholder category */
+.categories-list div {
+  padding: 20px;
+  background: #fafafa;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* ===== PRODUCTS (INDEX) ===== */
+.products h2 {
+  margin-bottom: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+/* ===== PRODUCTS DROPDOWN ===== */
+.nav-products {
+  position: relative;
+}
+
+.products-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  width: 420px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+
+  display: none;
+  z-index: 999;
+}
+.nav-products:hover .products-dropdown {
+  display: block;
+}
+
+.products-dropdown {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.products-dropdown .category h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.products-dropdown ul {
+  list-style: none;
+}
+
+.products-dropdown li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.products-dropdown li:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 999;
+}
+
+/* ===== PRODUCT GRID ===== */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  transition: 
+  box-shadow 0.3s ease, 
+  transform 0.3s ease,
+  background-color 0.3s ease,
+  border-color 0.3s ease;
+
+}
+
+.product-card:hover {
+  transform: scale(1.04);
+  background-color: #fafafa;
+  border-color: #ddd;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.product-card .product-image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.product-card:hover img{
+    transform: scale(1.08);
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-rating {
+  font-size: 13px;
+  color: #666;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-to-cart {
+  flex: 1;
+  padding: 8px 10px;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.add-to-cart:hover {
+  background: #333;
+}
+
+.add-to-wishlist {
+top:10px;
+right:10px;
+background: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border:none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+.add-to-wishlist:hover {
+  background: #f5f5f5;
+  transition: transform 0.3s ease;
+}
+.add-to-wishlist img{
+    width:40px;
+    height:40px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-top h4 {
+  margin-bottom: 10px;
+}
+
+.footer-top p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.6;
+}
+.socials img{
+    width:18px;
+    margin-right: 3px;
+    filter:invert(1);
+    cursor: pointer;
+}
+.socials img:hover {
+  opacity: 0.7;
+}
