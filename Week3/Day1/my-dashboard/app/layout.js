@@ -1,4 +1,4 @@
-import './globals.css'
+/*import './globals.css'
 import Sidebar from '@/components/ui/Sidebar'
 import Navbar from '@/components/ui/Navbar'
 
@@ -15,6 +15,23 @@ export default function RootLayout({ children }) {
             </main>
           </div>
         </div>
+      </body>
+    </html>
+  )
+}*/
+
+import './globals.css'
+
+export const metadata = {
+  title: 'Dashboard App',
+  description: 'WEEK3 DAY3',
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        {children}
       </body>
     </html>
   )
