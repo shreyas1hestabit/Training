@@ -7,7 +7,7 @@
   );
 }*/
 
-"use client"
+/*"use client"
 
 import { useState } from 'react';
 import Button from '@/components/ui/Button';
@@ -57,6 +57,58 @@ export default function Home() {
         <p>This is a test modal!</p>
         <Input label="Test Input" placeholder="Type something..." />
       </Modal>
+    </div>
+  );
+}*/
+
+import Link from 'next/link';
+import LandingNavbar from '@/components/LandingNavbar';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <LandingNavbar />
+      
+      {/* Hero Section */}
+      <section className="max-w-7xl mx-auto px-4 py-20 text-center">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          Dashboard App
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Learning React.js with Tailwind CSS.
+        </p>
+        <div className="flex gap-4 justify-center">
+          <Link href="/dashboard">
+            <Button size="lg">Get Started</Button>
+          </Link>
+          <Link href="/page">
+            <Button variant="outline" size="lg">Learn More</Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Card title="CARD1">
+            <p className="text-gray-600">
+              Landing Page
+            </p>
+          </Card>
+          <Card title="CARD 2">
+            <p className="text-gray-600">
+              WEEK3
+            </p>
+          </Card>
+          <Card title="CARD 3">
+            <p className="text-gray-600">
+              DAY3
+            </p>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 }
