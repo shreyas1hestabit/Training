@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   )
 }*/
 
-import './globals.css'
+/*import './globals.css'
 
 export const metadata = {
   title: 'Dashboard App',
@@ -30,6 +30,34 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  )
+}*/
+
+import './globals.css'
+
+export const metadata = {
+  title: 'Dashboard App - Build Powerful Dashboards Faster',
+  description: 'The modern platform for building powerful dashboards. Get real-time insights, beautiful charts, and seamless collaboration. Start your free trial today.',
+  keywords: ['dashboard', 'analytics', 'data visualization', 'business intelligence', 'SaaS'],
+  authors: [{ name: 'Dashboard App Team' }],
+  openGraph: {
+    title: 'Dashboard App - Build Powerful Dashboards Faster',
+    description: 'Transform your data into insights with our modern dashboard platform.',
+    type: 'website',
+    locale: 'en_US',
+  },
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         {children}
       </body>

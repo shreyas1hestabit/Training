@@ -7,7 +7,7 @@ export default function LandingNavbar() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-blue-600">
-              MyApp
+              Dashboard App
             </Link>
           </div>
           
@@ -15,7 +15,7 @@ export default function LandingNavbar() {
             <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium">
               Home
             </Link>
-            <Link href="Week3/Day1/my-dashboard/app/about/pagee.js" className="text-gray-700 hover:text-blue-600 font-medium">
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium">
               About
             </Link>
             <Link href="/dashboard" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
