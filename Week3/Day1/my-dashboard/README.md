@@ -228,11 +228,11 @@ export default function Badge({children, variant='default', size='md'})
 this again creates a react component named Badge and export default allows other files to import it. this is different from other export defaults we used previously as we have done destructuring here.
 we have divided the whole function into 3 parts:
 
-<p>
 `children: ` text/content inside badge
+
 `variant: ` color style of badge
+
 `size: ` size of badge
-</p>
 
 <p>and set these badges variant to default and size to md. if the user does not passes anything then these properties will apply. this allows to make components reusable and prevent errors.</p>
 
@@ -250,6 +250,7 @@ at last we returned the jsx in span tag with various properties.
 | rounded-full | shape of the container should be like a pill |
 
 then we used `${variant[variant]}` and `${size[size]}`.
+
 -- these are dynamic classes which changes based on props and picks correct color and size class.
 
 <h5>components/ui/button.js</h5>
@@ -305,7 +306,7 @@ create an input component with props like:
 rest everything is same like we did in previous components.
 
 <h5>components/ui/modal.js</h5>
-we have used ** use client ** here because modal needs client side components like onclick, isopen state and browser interaction.
+we have used <strong>use client</strong> here because modal needs client side components like onclick, isopen state and browser interaction.
 
 imported a specific x icon from lucide-react to use in modal header.
 the inside function modal we have used an if statement which means if modal is closed dont render anything and if not then return.
