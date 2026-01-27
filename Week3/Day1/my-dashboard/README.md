@@ -15,6 +15,8 @@ app folder contained two files namely <strong>layout.jsx and page.jsx</strong>
 and components contained file named <strong>DashboardLayout.jsx</strong>
 --my folder had .jsx files instead of .js, so I got to learn that .jsx and .js are interchangable and both work perfectly fine for react components. .jsx just displays that this file contains jsx syntax
 --till now the project structure is:
+
+```txt
 my-dashboard
 |----app
 |     |----layout.js
@@ -28,6 +30,7 @@ my-dashboard
 |
 |-----public
 |-----package.json
+```
 
 <h4>BASIC PROJECT IDEA</h4>
 a page contains all the content which needs to be displayed on the home page when the server is loaded
@@ -146,21 +149,22 @@ while creating navbar we again imported lucide-react for SVG icon components.
 then again same thing like sidebar. export default navbar function with a return jsx.
 return contains different classes and tags for different areas and their properties
 
-| property | function | target |
-| bg-gray-800 | dark background | header|
-|text-white| white font color |header|
-|shadow-md| bottom shadow|header|
-|flex|row layout|inner container|
-|items-center| vertical center | inner container|
-|justify between | left and right seperation| inner container|
-|px-6|horizontal padding| inner container|
-|py-3|vertical padding| inner container|
-|span| inline text with no block spacing | left section (title)|
-|text-lg|large text| left section title|
-|font-semibold| semibold font| left section title|
-|flex-1|takes remaining space|search bar container|
-|max-w-md| limits width|search bar container|
-|mx-4|horizontal margin| searchbar container|
+| property        | function                          | target               |
+| --------------- | --------------------------------- | -------------------- |
+| bg-gray-800     | dark background                   | header               |
+| text-white      | white font color                  | header               |
+| shadow-md       | bottom shadow                     | header               |
+| flex            | row layout                        | inner container      |
+| items-center    | vertical center                   | inner container      |
+| justify between | left and right seperation         | inner container      |
+| px-6            | horizontal padding                | inner container      |
+| py-3            | vertical padding                  | inner container      |
+| span            | inline text with no block spacing | left section (title) |
+| text-lg         | large text                        | left section title   |
+| font-semibold   | semibold font                     | left section title   |
+| flex-1          | takes remaining space             | search bar container |
+| max-w-md        | limits width                      | search bar container |
+| mx-4            | horizontal margin                 | searchbar container  |
 
 then we created a div class relative because we have an absolute position container and an absolute position needs a relative parent. without this the buttons will move to the page corner.
 for search input we used properties
