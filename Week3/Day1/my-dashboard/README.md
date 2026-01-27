@@ -40,56 +40,69 @@ create a navbar and sidebar which is visible on each and every page
 common structure file which decides <strong>overall layout </strong>of the page
 we have imported globals.css and sidebar and navbar here. while importing sidebar and navbar we used <strong>'@/...'</strong> this @ states the project root. we are using this because hmne multiple folders mein multiple files bnayi hai so if we are calling a file of different folder then we need our js to search files from root otherwise it searches only in the folder we are working.
 then we used a fixed layout function of next.js called RootLayout
-``` bash 
+
+```bash
 export default function RootLayout({children})
 ```
+
 {children} --> whatever page is loading is rendered in children.
 then we also specified the css of navbar and sidebar
 we created a container for sidebar and aligned the items horizontally in it.
-| Property | Purpose | Target |
-| --- | --- | ---|
-| flex | items side by side | sidebar |
-| h-screen | full screen height | sidebar |
-| bg-gray-100 | light gray background | sidebar |
-| flex-1 | take all the space left after sidebar | navbar |
-| flex-col | align items vertically | Navbar and main content |
-| overflow-auto | scroll if content is more | main |
+
+| Property      | Purpose                               | Target                  |
+| ------------- | ------------------------------------- | ----------------------- |
+| flex          | items side by side                    | sidebar                 |
+| h-screen      | full screen height                    | sidebar                 |
+| bg-gray-100   | light gray background                 | sidebar                 |
+| flex-1        | take all the space left after sidebar | navbar                  |
+| flex-col      | align items vertically                | Navbar and main content |
+| overflow-auto | scroll if content is more             | main                    |
+
 <h5>app/page</h5>
 home page file which is <strong>rendered on the webpage</strong>
-created a function called Home using 
-``` bash
+created a function called Home using
+
+```bash
 export default function Home()
 ```
+
 export default states that whatever is written here is the content of home page. whenever the browser is loaded this function runs.
 then we specified all the content we want with its css in return. in return we write jsx.
-| Property | Purpose | Target |
-| --- | --- | --- |
-|p-6| padding of 6px on all the four side | whole content of the page |
-| text-3xl | text size | heading |
-| font-bold | font weight | heading |
-| mb-4 | margin at bottom of 4px | heading |
-| text-gray-600 | light gray color of text | paragraph |
+
+| Property      | Purpose                             | Target                    |
+| ------------- | ----------------------------------- | ------------------------- |
+| p-6           | padding of 6px on all the four side | whole content of the page |
+| text-3xl      | text size                           | heading                   |
+| font-bold     | font weight                         | heading                   |
+| mb-4          | margin at bottom of 4px             | heading                   |
+| text-gray-600 | light gray color of text            | paragraph                 |
+
 <h5>components/ui/sidebar</h5>
-we started by the code line 
-``` bash
+we started by the code line
+
+```bash
 use client
 ```
+
 this tells the next.js that the file contains all the things needer for browser like button click, hide/show sidebar, usestate etc.
 by default next.js components are server components but if we want something to run on client side we use this command.
 
 then we imported icons of lucide-react library.
-| icon | use |
-| --- | --- |
-|Menu|hamburger icon|
-|LayoutDashboard|dashboard icon |
-|chevronRight| arrow |
-|barchart, table | charts and tables |
+
+| icon            | use               |
+| --------------- | ----------------- |
+| Menu            | hamburger icon    |
+| LayoutDashboard | dashboard icon    |
+| chevronRight    | arrow             |
+| barchart, table | charts and tables |
+
 <strong>Alternative to lucide-react: </strong>
-| alternative | why not used |
-| --- | --- |
-|svg files | download and link each file manually |
-| fontAwesome | heavy library |
-| material icons | less flexible |
+
+| alternative    | why not used                         |
+| -------------- | ------------------------------------ |
+| svg files      | download and link each file manually |
+| fontAwesome    | heavy library                        |
+| material icons | less flexible                        |
 
 then we imported useState from react. its function as name suggests is to store the state of the component like is sidebar open or close.
 
@@ -100,18 +113,22 @@ export default function sidebar()
 ```
 
 then we declared the state of the sidebar and set it to true
-| property | function |
-| --- | --- |
-|sidebarOpen| current value of side bar- open/closed |
-|setsidebaropen | function to change the value |
+
+| property       | function                               |
+| -------------- | -------------------------------------- |
+| sidebarOpen    | current value of side bar- open/closed |
+| setsidebaropen | function to change the value           |
+
 next we declared an aside tag wherein we defined the properties of sidebar for smooth toggle.
-| property | function |
-| --- | --- |
-|sidebaropen ? w-64 : w-20| if sidebar open then width 64 else width 20 |
-|bg-gray-800 | dark gray background |
-|text-white| white color text |
-|transition-all duration-300 | smooth animation|
-|h-screen|full height|
+
+| property                    | function                                    |
+| --------------------------- | ------------------------------------------- |
+| sidebaropen ? w-64 : w-20   | if sidebar open then width 64 else width 20 |
+| bg-gray-800                 | dark gray background                        |
+| text-white                  | white color text                            |
+| transition-all duration-300 | smooth animation                            |
+| h-screen                    | full height                                 |
+
 then we defined properties for sidebar header as it contains logo and menu button
 next we worked upon sidebar title and specified its text visibility if sidebar is open and hide if sidebar is closed.
 then we created toggle button for sidebar and used onClick() method to set the sidebar state.
@@ -120,12 +137,15 @@ next we specified hamburger menu contents and their basic properties like margin
 <h5>components/ui/navbar</h5>
 this section contains app title, search input and user icon.
 while creating navbar we again imported lucide-react for SVG icon components.
-| property | function |
-| --- | --- |
-|search|magnifying glass icon|
-|user|profile icon|
+
+| property | function              |
+| -------- | --------------------- |
+| search   | magnifying glass icon |
+| user     | profile icon          |
+
 then again same thing like sidebar. export default navbar function with a return jsx.
-return contains different classes and tags for different areas and their properties 
+return contains different classes and tags for different areas and their properties
+
 | property | function | target |
 | bg-gray-800 | dark background | header|
 |text-white| white font color |header|
@@ -144,14 +164,16 @@ return contains different classes and tags for different areas and their propert
 
 then we created a div class relative because we have an absolute position container and an absolute position needs a relative parent. without this the buttons will move to the page corner.
 for search input we used properties
-| property | function |
-| --- | --- |
-| type="text" |text input|
-|palceholder|grey hint text|
-|w-full| full width|
-|px-4 py-2| x and y axis padding |
-|pr-10| space for icon button|
-|rounded| rounded corners|
-|focus:ring|blue focus ring|
+
+| property    | function              |
+| ----------- | --------------------- |
+| type="text" | text input            |
+| palceholder | grey hint text        |
+| w-full      | full width            |
+| px-4 py-2   | x and y axis padding  |
+| pr-10       | space for icon button |
+| rounded     | rounded corners       |
+| focus:ring  | blue focus ring       |
+
 then styled search button and user icon section. user icon is a flex container with a user button
 we have not used use client here because no usestate or onclick is used. it is only server side component.
