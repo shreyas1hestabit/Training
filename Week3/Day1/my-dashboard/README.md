@@ -476,3 +476,61 @@ use state lives only in browser memory(RAM) and when we refresh browser memory i
 
 <h3>DAY4</h3>
 in this day we only updated our landing page and made it better looking with more content, responsive using md and lg, added some hover effects for animations
+
+<h3>DAY5</h3>
+this day we completed our project by adding all the left necessary pages like login, users, added graphs and user listings on the dashboard home page.
+
+so the final file structure looked like:
+
+```txt
+my-dashboard
+|----app
+|     |----layout.js
+|     |----page.js
+|     |----global.css
+|     |----about
+|     |      |-----page.js
+|     |----login
+|     |      |-----page.js
+|     |----dashboard
+|            |-----layout.js
+|            |-----page.js
+|            |-----users
+|            |       |--------page.js
+|            |-----profile
+|                    |--------page.js
+|
+|----components
+|     |----ui
+|     |     |---sidebar.jsx
+|     |     |---navbar.jsx
+|     |     |---modal.jsx
+|     |     |---input.jsx
+|     |     |---card.jsx
+|     |     |---button.jsx
+|     |     |---badge.jsx
+|     |-----LandingNavbar.jsx
+|-----public
+|-----package.json
+|-----UI-COMPONENTS-DOCS.md
+|-----README.md
+```
+
+<h5>landing page</h5>
+![lo](screenshots/l1.png)
+![lt](screenshots/l2.png)
+<h5>about</h5>
+![ab](screenshots/about.png)
+<h5>dashboard</h5>
+![do](screenshots/d1.png)
+![dt](screenshots/d2.png)
+![dth](screenshots/d3.png)
+![df](screenshots/d4.png)
+<h5>profile</h5>
+![pf](screenshots/p1.png)
+![pt](screenshots/p2.png)
+<h5>users</h5>
+![us](screenshots/users.png)
+![ust](screenshots/user_modal.png)
+<h5>login</h5>
+![log](screenshots/login.png)
