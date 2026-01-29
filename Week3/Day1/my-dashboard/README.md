@@ -323,3 +323,153 @@ in return we have created a main wrapper div with properties:
 | justify-center | horizontally aligned                                         |
 
 next a backdrop of dark background is created which closes on clicking outside the modal. followed by a modal box which is the actual pop up. this contains header, body {children} and footer.
+
+<h3>DAY3</h3>
+This day our task was to work on a multipage app with next js routing and also create a landing page for our dashboard.
+
+steps we performed: updated our floder structure by creating more .jsx files for the pages we wanted to display like landing, profile, about. then we updated the app/layout.js because we didn't want the same sidebar and navbar like dashboard here and the code written in this.jsx file is applied to all the pages. then we one by one updated and wrote the code of each page we wanted to display and laslty connected them with link tag from next js. had it been any html code we would have have used anchor tag but as we were working with next.js we used link tag.
+
+the benefit of using link tag was that it enables client side navigation without a full page reload, leading to faster, smoother user experience and improved performance and SEO.
+
+so the updated folder structure looks like:
+
+```txt
+my-dashboard
+|----app
+|     |----layout.js
+|     |----page.js
+|     |----global.css
+|     |----about
+|     |      |-----page.js
+|     |----dashboard
+|            |-----layout.js
+|            |-----page.js
+|            |-----profile
+|                    |--------page.js
+|
+|----components
+|     |----ui
+|     |     |---sidebar.jsx
+|     |     |---navbar.jsx
+|     |     |---modal.jsx
+|     |     |---input.jsx
+|     |     |---card.jsx
+|     |     |---button.jsx
+|     |     |---badge.jsx
+|     |-----LandingNavbar.jsx
+|-----public
+|-----package.json
+|-----UI-COMPONENTS-DOCS.md
+```
+
+<h5>LandingNavbar.jsx</h5>
+the purpose of this file was to create a clean SEO friendly page which displays before login or dashboard.
+
+We started by importing Link from `next/Link`. When we use link client side navigation becomes faster as their is no reload for each page and state remains intact. we could have also used js event handlers but they are not SEO friendly.
+
+next we created a landing navbar function and added export default to it so that it could be imported by other files.
+
+inside the function we started by using a nav tag to create a navbar as it tells the browser and google that this is navigation and it improves the understandability of the code because of the use of semantic tag.
+
+then we created another container to align all the items to center because there is tendency of all the items streching on large screens so to maintain the items spacing we created a container inside navbar. we also added responsiveness to this container using tailwind css properties like `sm:px-6` for tablet padding, `lg:px-8` for desktop padding and `px-4` for small screen padding.
+
+then we created a div class with flexible layout so that it can align items of navbar acc to our need (logo to the left and navigation links on right side.). we achived this by using property called `justify-between`
+
+then we created seperate multiple divs inside navbar for each item and styled them accordingly. we used Link tag with all the items which we wanted to redirect, like:
+
+```bash
+<Link href="/about" className"tailwind css propetries">
+```
+
+this type of button is called CTA Button (call to action).
+
+also we have not used used client in this code because we are not using any event handlers or useState which work for client side. This is a server component which is static and does not reload the whole page.
+
+<h5>app/Layout.js</h5>
+this is the html structure of our entire app, contains common things shared by all the pages and the SEO metadata.
+
+we started by importing globals.css because this page runs for all the routes so global css is loaded once and there is no need to import global css inside every page explicitly.
+
+then we used a built in SEO feature of nextjs metadata which automatically adds title and description for our app. we could have used `<head>` like we used to do in html syntaxes but this is better optimized approach for nextjs.
+
+then we defined the RootLayout function which is a special nextjs layout, we passed children as an argument in this and value of children depends on the page we are loading. it basically means konsa page load ho rha hai. then we inject this children inside `<body>` which means now it can be displayed on the browser.
+
+<h5>app/page.js</h5>
+this is the homepage of the app which is our landing page.
+
+we started by importing all the components we needed in the landing page like landing navbar, buttons, cards and the link tag which will help us make CTA buttons for client side navigation.
+
+next we created a home function which runs when we load the page followed by return which then contains the main wrapper div to bind all the elements of the page into one section and apply common styling to each item. and then called landing navbar inside the page.
+
+| Property          | meaning                     |
+| ----------------- | --------------------------- |
+| min-h-screen      | at least full screen height |
+| bg-gradient-to-br | gradient background         |
+| form-blue-50      | light blue start            |
+| to-indigo-100     | indigo end                  |
+
+then we divided our remaining page into two sections hero and the features sections.
+
+We added various components each with its own styling in our hero section like
+
+| Property       | meaning                       | target     |
+| -------------- | ----------------------------- | ---------- |
+| text-5xl       | very large text               | heading    |
+| font-bold      | bolder font weight            | heading    |
+| text-gray-900  | dark text                     | heading    |
+| mb-6           | margin bottom                 | heading    |
+| text-xl        | text size                     | subtitle   |
+| text-gray-900  | dark gray text                | subtitle   |
+| mn-8           | bootm margin                  | subtitle   |
+| max-w-2xl      | maximum width for readability | subtitle   |
+| mx-auto        | center horizontally           | subtitle   |
+| flex           | flexible layout               | CTA button |
+| gap-4          | spacing                       | CTA Button |
+| justify-center | centered                      | CTA Button |
+
+then we created two buttons inside this CTA button div tag and wrapped those buttons in link seperately, because button is the UI and link is responsible for routing. To create Learn More button we used outline variant of button. these variants are pre-defined in tailwind css with specific properties and we could just import them in our code acc to our need.
+
+this was followed by the features section where we created three cards wrapped in a div with grid layout. we then wrapped this grid into section tag to seperate it from hero section. in grid div tag we specified various properties for responsivness like `grid-cols-1` which tells 1 column if mobile and `md:grid-cols-3` three columns if desktop and some common styling like space between cards using `gap`.
+
+<h5>app/about/page.js</h5>
+again imported all the important components link landingNavbar, card and badge. Created a function called AboutPage
+
+the page is then wrapped into one single div to allow better alignment of items and apply common css to whole page. called landing navbar inside this div followed by creating a wrapper div for the cards and heading.
+
+then created two cards one with heading, paragraph and badges (all the badges were wrapped inside another div because we wanted horizontal layout for them) whereas second card containing list of items.
+
+<h5>app/dashboard/page.js</h5>
+we again did the samething like we did in previous pages. Imported necessary components, created a function, wrapped the whole page into one section, created seperate divs for each sub-section or content and styled them.
+
+<h5>app/dashboard/profile/page.js</h5>
+we started by use client because we will be using multiple client side components like useState, form inputs, onChange, buttonClicks.
+
+then we imported `useState` because we need to store and update email,phone,location and bio followed by importing lucide icons for camera, mobile etc.
+
+in this page we wanted to create controlled components which means they should input value that comes from state and updates state. so we next created some state variables like name, email etc.
+
+then in return we defined wrapper div, page-header, main layout grid, profile card set to left column with its component in flex layout, editable forms on right side of the grid.
+
+inside forms we created both kinds of inputs editable and non editable to understand the working of useState with onChange. We hardcoded the value of name which we can change if we want but it wont be updated on reloading the page, whereas email column is editable.
+
+how email works: value comes from state, typing pdtaes state and set the value to new target value.
+
+for password we used input type as password to automaticaaly hide characters typed.
+
+next we created checkboxes for preference section
+| Property | meaning |
+| --- | --- |
+|sr-only|hidden-visually, accessible|
+|peer|allow sibling styling|
+|peer-checked|style when checked|
+
+<h5>components/ui/sidebar.jsx</h5>
+
+started with importing all the necessary components one of them being `{usePathname}` from `next/navigation`. this allows us to use active menu highlighting as it tells which page is active.
+
+we then set the sidebar state to true which means whenever the page will load sidebar will be opened but if we want to close sidebar we can just click onn it and ste the state to false.
+
+then to get current route we declared a const variable pathname which uses usePathname now we check if the current URL is equal to the link we clicked in sidebar. if yes then highlight menu item. there are other ways by which we could achieve this meu highlighting like useLocation but this is an old way and is not used next.js or the manual state tracking using useState but it breaks if the page is refreshed.
+
+<h6>WHY useSTATE breaks on page refersh </h6>
+use state lives only in browser memory(RAM) and when we refresh browser memory is wiped, so react state resets.
