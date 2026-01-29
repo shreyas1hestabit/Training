@@ -3,7 +3,16 @@
 //console.log(config);
 
 //to test the working of logger.js
+// import {config} from "./src/config/index.js";
+// import logger from "./src/utils/logger.js";
+// logger.info("Logger is working");
+// console.log(config);
+
+//now we will test working of db.js
 import {config} from "./src/config/index.js";
 import logger from "./src/utils/logger.js";
-logger.info("Logger is working");
-console.log(config);
+import {connectDB} from "./src/loaders/db.js";
+logger.info("starting db test");
+await connectDB();
+logger.info("db test finished");
+console.log(config); 

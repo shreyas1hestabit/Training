@@ -1,2 +1,8 @@
 [2026-01-29T05:59:29.289Z] function toUpperCase() { [native code] }: Logger is working
 [2026-01-29T06:00:24.880Z] INFO: Logger is working
+[2026-01-29T06:21:43.002Z] INFO: starting db test
+[2026-01-29T06:21:43.023Z] INFO: Database Connected
+[2026-01-29T06:21:43.023Z] INFO: db test finished
+[2026-01-29T06:32:08.673Z] INFO: starting db test
+[2026-01-29T06:32:08.712Z] INFO: Database Connected
+[2026-01-29T06:32:08.712Z] INFO: db test finished

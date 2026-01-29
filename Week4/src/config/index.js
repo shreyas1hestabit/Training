@@ -12,5 +12,6 @@ dotenv.config({ // file ko read + load, now konsi file ko load read krna will be
 //this is a must to follow rule k configs should be centralized 
 export const config={
     env,
-    port:process.env.PORT
+    port:process.env.PORT,
+    dbUrl: process.env.DB_URL
 };
