@@ -61,3 +61,7 @@ Mount routes
         |
 Start HTTP server
 ```
+
+health screenshot
+
+![health](./screenshots/health.png)
