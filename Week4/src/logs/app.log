@@ -6,3 +6,8 @@
 [2026-01-29T06:32:08.673Z] INFO: starting db test
 [2026-01-29T06:32:08.712Z] INFO: Database Connected
 [2026-01-29T06:32:08.712Z] INFO: db test finished
+[2026-01-29T06:53:03.137Z] INFO: initializing application
+[2026-01-29T06:53:03.139Z] INFO: Middlewares loaded
+[2026-01-29T06:53:03.172Z] INFO: Database Connected
+[2026-01-29T06:53:03.173Z] INFO: routes mounted: 1 endpoint
+[2026-01-29T06:53:03.176Z] INFO: server started on port 3000
