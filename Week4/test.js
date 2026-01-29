@@ -9,10 +9,19 @@
 // console.log(config);
 
 //now we will test working of db.js
-import {config} from "./src/config/index.js";
+// import {config} from "./src/config/index.js";
+// import logger from "./src/utils/logger.js";
+// import {connectDB} from "./src/loaders/db.js";
+// logger.info("starting db test");
+// await connectDB();
+// logger.info("db test finished");
+// console.log(config); 
+
+//now we will check the working of loaders/app.js
+import { createApp } from "./src/loaders/app.js";
+import { config } from "./src/config/index.js";
 import logger from "./src/utils/logger.js";
-import {connectDB} from "./src/loaders/db.js";
-logger.info("starting db test");
-await connectDB();
-logger.info("db test finished");
-console.log(config); 
+const app = await createApp();
+app.listen(config.port,() => {
+    logger.info(`server started on port ${config.port}`);
+});
