@@ -473,3 +473,6 @@ then to get current route we declared a const variable pathname which uses usePa
 
 <h6>WHY useSTATE breaks on page refersh </h6>
 use state lives only in browser memory(RAM) and when we refresh browser memory is wiped, so react state resets.
+
+<h3>DAY4</h3>
+in this day we only updated our landing page and made it better looking with more content, responsive using md and lg, added some hover effects for animations
