@@ -517,20 +517,32 @@ my-dashboard
 ```
 
 <h5>landing page</h5>
+
 ![lo](screenshots/l1.png)
+
 ![lt](screenshots/l2.png)
+
 <h5>about</h5>
+
 ![ab](screenshots/about.png)
+
 <h5>dashboard</h5>
+
 ![do](screenshots/d1.png)
 ![dt](screenshots/d2.png)
 ![dth](screenshots/d3.png)
 ![df](screenshots/d4.png)
+
 <h5>profile</h5>
+
 ![pf](screenshots/p1.png)
 ![pt](screenshots/p2.png)
+
 <h5>users</h5>
+
 ![us](screenshots/users.png)
 ![ust](screenshots/user_modal.png)
+
 <h5>login</h5>
+
 ![log](screenshots/login.png)
