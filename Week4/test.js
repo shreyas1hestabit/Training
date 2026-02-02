@@ -18,10 +18,53 @@
 // console.log(config); 
 
 //now we will check the working of loaders/app.js
-import { createApp } from "./src/loaders/app.js";
+// import { createApp } from "./src/loaders/app.js";
+// import { config } from "./src/config/index.js";
+// import logger from "./src/utils/logger.js";
+// const app = await createApp();
+// app.listen(config.port,() => {
+//     logger.info(`server started on port ${config.port}`);
+// });
+
+//db connection k liye for users
+// import mongoose from "mongoose";
+// import { config } from "./src/config/index.js";
+// import { UserRepository } from "./src/repositories/user.repository.js";
+// import logger from "./src/utils/logger.js";
+
+// await mongoose.connect(config.dbUrl);
+// logger.info("DB connected for testing");
+
+// const user = await UserRepository.create({
+//   firstName: "Shrey",
+//   lastName: "Singhal",
+//   email: "shrey@test.com",
+//   password: "password153"
+// });
+
+// logger.info("User created");
+// console.log(user);
+
+// process.exit(0);
+
+//db connection for products
+import mongoose from "mongoose";
 import { config } from "./src/config/index.js";
+import { ProductRepository } from "./src/repositories/product.repository.js";
 import logger from "./src/utils/logger.js";
-const app = await createApp();
-app.listen(config.port,() => {
-    logger.info(`server started on port ${config.port}`);
+
+await mongoose.connect(config.dbUrl);
+logger.info("DB connected for testing");
+
+const product = await ProductRepository.create({
+  name:"wireless mouse",
+  price:999,
+  createdBy:"6980981476178770d6681185",
+  status:"active"
+
 });
+
+logger.info("product created");
+console.log(product);
+
+process.exit(0);
