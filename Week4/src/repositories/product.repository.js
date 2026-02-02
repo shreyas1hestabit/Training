@@ -25,4 +25,12 @@ export class ProductRepository {
   static async delete(id) {
     return Product.findByIdAndDelete(id);
   }
+  //new method for day3
+  static async findWithQuery({ filter, sort, skip, limit }) {
+  return Product.find(filter)
+    .sort(sort)
+    .skip(skip)
+    .limit(limit);
+}
+
 }

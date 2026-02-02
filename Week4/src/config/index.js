@@ -11,7 +11,7 @@ dotenv.config({ // file ko read + load, now konsi file ko load read krna will be
 //this set of code is used qk direct process.env use nhi krte coz we want ki sab configs ek jgh se export ho. 
 //this is a must to follow rule k configs should be centralized 
 export const config={
-    env,
+    env:process.env.NODE_ENV,
     port:process.env.PORT,
     dbUrl: process.env.DB_URL
 };
