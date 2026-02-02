@@ -1,6 +1,7 @@
 import express from "express"; //express is a http server framework jo routing or middleware system deta hai.
 import logger from "../utils/logger.js";
 import { connectDB } from "./db.js";
+import { errorHandler } from "../middlewares/error.middleware.js";
 export const createApp = async () => { //yeh function app create krta hai, server abh start nh hota so this becomes reusable
     const app = express(); //yha app exist krti hai
     logger.info("initializing application"); //app initialization ka log
@@ -11,5 +12,9 @@ export const createApp = async () => { //yeh function app create krta hai, serve
         res.json ({status: "OK"});
     });
     logger.info("routes mounted: 1 endpoint");
+
+    //day3
+app.use(errorHandler);
+
     return app;
 };

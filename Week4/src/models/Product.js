@@ -20,7 +20,12 @@ const productSchema = new mongoose.Schema(
       type: String,
       enum: ["active", "inactive"],
       default: "active"
-    }
+    }, //day3 
+    deletedAt: {
+  type: Date,
+  default: null
+}//till here
+
   },
   { timestamps: true }
 );
