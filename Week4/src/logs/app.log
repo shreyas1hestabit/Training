@@ -16,3 +16,9 @@
 [2026-01-29T14:04:10.074Z] INFO: Database Connected
 [2026-01-29T14:04:10.075Z] INFO: routes mounted: 1 endpoint
 [2026-01-29T14:04:10.080Z] INFO: server started on port 3000
+[2026-02-02T12:27:00.446Z] INFO: DB connected for seeding
+[2026-02-02T12:27:00.470Z] INFO: User created
+[2026-02-02T12:29:31.674Z] INFO: DB connected for testing
+[2026-02-02T12:29:31.686Z] INFO: User created
+[2026-02-02T12:37:12.166Z] INFO: DB connected for testing
+[2026-02-02T12:37:12.183Z] INFO: product created
