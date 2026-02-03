@@ -1,0 +1,8 @@
+[2026-02-03T05:59:56.280Z] INFO: initializing application
+[2026-02-03T05:59:56.283Z] INFO: Middlewares loaded
+[2026-02-03T05:59:56.334Z] INFO: Database Connected
+[2026-02-03T05:59:56.336Z] INFO: routes mounted: 1 endpoint
+[2026-02-03T06:25:08.957Z] INFO: initializing application
+[2026-02-03T06:25:08.959Z] INFO: Middlewares loaded
+[2026-02-03T06:25:09.003Z] INFO: Database Connected
+[2026-02-03T06:25:09.004Z] INFO: routes mounted: 1 endpoint

@@ -1,9 +1,9 @@
-import express from "express";
+import "./config/env.js";
 import { createApp } from "./loaders/app.js";
 
-const app = express();
+const app = await createApp();
 
-await createApp(app);
+
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
