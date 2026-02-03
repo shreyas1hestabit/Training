@@ -1,0 +1,30 @@
+import express from "express";
+import helmet from "helmet";
+import cors from "cors";
+import rateLimit from "express-rate-limit";
+
+export const securityMiddleware = (app) => {
+
+  app.use(helmet());
+
+  app.use(
+    cors({
+      origin: ["http://localhost:3000"], 
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+      credentials: true
+    })
+  );
+
+  app.use(
+    rateLimit({
+      windowMs: 15 * 60 * 1000, 
+      max: 100,
+      standardHeaders: true,
+      legacyHeaders: false,
+      message: "Too many requests, please try again later"
+    })
+  );
+
+  app.use(express.json({ limit: "10kb" }));
+};
