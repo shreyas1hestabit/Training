@@ -6,3 +6,15 @@
 [2026-02-03T06:25:08.959Z] INFO: Middlewares loaded
 [2026-02-03T06:25:09.003Z] INFO: Database Connected
 [2026-02-03T06:25:09.004Z] INFO: routes mounted: 1 endpoint
+[2026-02-03T10:47:39.067Z] INFO: Initializing application
+[2026-02-03T10:47:39.112Z] INFO: Database Connected
+[2026-02-03T11:14:53.711Z] INFO: Initializing application
+[2026-02-03T11:14:53.747Z] INFO: Database Connected
+[2026-02-03T11:36:01.812Z] INFO: Initializing application
+[2026-02-03T11:36:01.848Z] INFO: Database Connected
+[2026-02-03T11:39:47.320Z] INFO: Initializing application
+[2026-02-03T11:39:47.360Z] INFO: Database Connected
+[2026-02-03T11:43:59.216Z] INFO: Initializing application
+[2026-02-03T11:43:59.252Z] INFO: Database Connected
+[2026-02-03T11:47:11.843Z] INFO: Initializing application
+[2026-02-03T11:47:11.888Z] INFO: Database Connected
