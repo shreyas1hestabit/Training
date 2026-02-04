@@ -1,0 +1,4 @@
+[2026-02-04T06:31:29.424Z] INFO: Processing email job for user@test.com
+[2026-02-04T06:31:31.429Z] INFO: Email sent successfully to user@test.com
+[2026-02-04T21:31:40.823Z] INFO[c9ff79f0-3c59-4f38-9b52-17d85806c8ff] Processing email job for user@test.com
+[2026-02-04T21:31:42.831Z] INFO[c9ff79f0-3c59-4f38-9b52-17d85806c8ff] Email sent successfully to user@test.com

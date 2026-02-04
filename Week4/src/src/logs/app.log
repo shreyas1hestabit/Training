@@ -34,3 +34,91 @@
 [2026-02-03T13:53:55.877Z] INFO: Database Connected
 [2026-02-03T13:55:42.477Z] INFO: Initializing application
 [2026-02-03T13:55:42.497Z] INFO: Database Connected
+[2026-02-04T05:41:33.170Z] INFO: Initializing application
+[2026-02-04T05:41:33.206Z] INFO: Database Connected
+[2026-02-04T05:50:57.761Z] INFO: Initializing application
+[2026-02-04T05:50:57.797Z] INFO: Database Connected
+[2026-02-04T05:51:09.653Z] INFO: Incoming GET /health
+[2026-02-04T05:51:09.661Z] INFO: Response 200 GET /health
+[2026-02-04T05:51:20.988Z] INFO: Incoming GET /products
+[2026-02-04T05:51:21.016Z] INFO: Response 200 GET /products
+[2026-02-04T05:51:33.475Z] INFO: Incoming GET /product
+[2026-02-04T05:51:33.479Z] INFO: Response 404 GET /product
+[2026-02-04T05:51:43.649Z] INFO: Incoming POST /products
+[2026-02-04T05:51:43.656Z] INFO: Response 400 POST /products
+[2026-02-04T06:01:16.617Z] INFO: Initializing application
+[2026-02-04T06:01:16.666Z] INFO: Database Connected
+[2026-02-04T06:04:20.473Z] INFO: Initializing application
+[2026-02-04T06:04:20.521Z] INFO: Database Connected
+[2026-02-04T06:04:57.125Z] INFO: Incoming POST /products
+[2026-02-04T06:04:57.138Z] INFO: Response 400 POST /products
+[2026-02-04T06:07:31.473Z] INFO: Incoming POST /products
+[2026-02-04T06:07:31.479Z] INFO: Response 400 POST /products
+[2026-02-04T06:08:07.155Z] INFO: Incoming POST /products
+[2026-02-04T06:08:07.157Z] INFO: Response 400 POST /products
+[2026-02-04T06:12:08.543Z] INFO: Initializing application
+[2026-02-04T06:12:08.589Z] INFO: Database Connected
+[2026-02-04T06:13:35.311Z] INFO: Incoming POST /products
+[2026-02-04T06:13:35.322Z] INFO: Response 400 POST /products
+[2026-02-04T06:13:55.253Z] INFO: Incoming POST /products
+[2026-02-04T06:13:55.256Z] INFO: Response 400 POST /products
+[2026-02-04T06:18:08.213Z] INFO: Initializing application
+[2026-02-04T06:18:08.261Z] INFO: Database Connected
+[2026-02-04T06:19:21.026Z] INFO: Incoming POST /products
+[2026-02-04T06:19:21.057Z] INFO: Response 500 POST /products
+[2026-02-04T06:19:41.804Z] INFO: Incoming POST /products
+[2026-02-04T06:19:41.811Z] INFO: Response 500 POST /products
+[2026-02-04T06:21:23.611Z] INFO: Incoming GET /products
+[2026-02-04T06:21:23.636Z] INFO: Response 200 GET /products
+[2026-02-04T06:21:38.423Z] INFO: Incoming POST /products
+[2026-02-04T06:21:38.434Z] INFO: Response 500 POST /products
+[2026-02-04T06:29:36.381Z] INFO: Initializing application
+[2026-02-04T06:29:36.428Z] INFO: Database Connected
+[2026-02-04T06:31:12.974Z] INFO: Initializing application
+[2026-02-04T06:31:13.020Z] INFO: Database Connected
+[2026-02-04T06:31:29.385Z] INFO: Incoming POST /products
+[2026-02-04T06:31:29.426Z] INFO: Response 201 POST /products
+[2026-02-04T06:40:24.399Z] INFO: Initializing application
+[2026-02-04T06:40:24.457Z] INFO: Database Connected
+[2026-02-04T06:40:58.924Z] INFO: Incoming GET /health
+[2026-02-04T06:40:58.933Z] INFO: Response 200 GET /health
+[2026-02-04T21:01:41.711Z] INFO: Initializing application
+[2026-02-04T21:01:41.768Z] INFO: Database Connected
+[2026-02-04T21:01:48.870Z] INFO: Incoming GET /health
+[2026-02-04T21:01:48.877Z] INFO: Response 200 GET /health
+[2026-02-04T21:05:30.616Z] INFO: Initializing application
+[2026-02-04T21:05:30.685Z] INFO: Database Connected
+[2026-02-04T21:05:37.851Z] INFO: Incoming GET /health
+[2026-02-04T21:05:37.858Z] INFO: Response 200 GET /health
+[2026-02-04T21:07:29.527Z] INFO: Initializing application
+[2026-02-04T21:07:29.612Z] INFO: Database Connected
+[2026-02-04T21:07:36.949Z] INFO: Incoming GET /health
+[2026-02-04T21:07:36.958Z] INFO: Response 200 GET /health
+[2026-02-04T21:13:56.569Z] INFO[SYSTEM] Initializing application
+[2026-02-04T21:13:56.624Z] INFO[SYSTEM] Database Connected
+[2026-02-04T21:14:02.851Z] INFO[34462378-b643-4468-8e19-26ec5b7a397b] Incoming GET /health
+[2026-02-04T21:14:02.859Z] INFO[34462378-b643-4468-8e19-26ec5b7a397b] Response 200 GET /health
+[2026-02-04T21:26:47.030Z] INFO[SYSTEM] Initializing application
+[2026-02-04T21:26:47.102Z] INFO[SYSTEM] Database Connected
+[2026-02-04T21:30:15.170Z] INFO[d79de958-afa1-4e04-af3e-a5aebfc08cb1] Incoming POST /products
+[2026-02-04T21:30:15.183Z] INFO[d79de958-afa1-4e04-af3e-a5aebfc08cb1] Response 400 POST /products
+[2026-02-04T21:31:40.786Z] INFO[c9ff79f0-3c59-4f38-9b52-17d85806c8ff] Incoming POST /products
+[2026-02-04T21:31:40.821Z] INFO[c9ff79f0-3c59-4f38-9b52-17d85806c8ff] Response 201 POST /products
+[2026-02-04T22:14:14.452Z] INFO[SYSTEM] Initializing application
+[2026-02-04T22:14:14.479Z] INFO[SYSTEM] Database Connected
+[2026-02-04T22:14:56.687Z] INFO[0827741a-99a0-46d8-a1ee-d1083e4d183c] Incoming GET /health
+[2026-02-04T22:14:56.691Z] INFO[0827741a-99a0-46d8-a1ee-d1083e4d183c] Response 200 GET /health
+[2026-02-04T22:15:19.844Z] INFO[8025687f-b0e5-476d-8469-6c63ffd48ed4] Incoming GET /health
+[2026-02-04T22:15:19.844Z] INFO[8025687f-b0e5-476d-8469-6c63ffd48ed4] Response 200 GET /health
+[2026-02-04T22:15:19.868Z] INFO[postman-req-1] Incoming POST /products
+[2026-02-04T22:15:19.881Z] INFO[postman-req-1] Response 201 POST /products
+[2026-02-04T22:15:19.894Z] INFO[f2a150b9-13f2-43f6-9304-ffab51806a62] Incoming GET /products?search=mac&minPrice=600000
+[2026-02-04T22:15:19.904Z] INFO[f2a150b9-13f2-43f6-9304-ffab51806a62] Response 200 GET /products?search=mac&minPrice=600000
+[2026-02-04T22:15:19.918Z] INFO[dbec6466-7762-46b4-8acb-cd4fa1dbb780] Incoming DELETE /products/%7B%7BproductId%7D%7D
+[2026-02-04T22:15:19.922Z] INFO[dbec6466-7762-46b4-8acb-cd4fa1dbb780] Response 500 DELETE /products/%7B%7BproductId%7D%7D
+[2026-02-04T22:32:16.571Z] INFO[SYSTEM] Initializing application
+[2026-02-04T22:32:16.598Z] INFO[SYSTEM] Database Connected
+[2026-02-04T22:32:33.179Z] INFO[SYSTEM] Initializing application
+[2026-02-04T22:32:33.204Z] INFO[SYSTEM] Database Connected
+[2026-02-04T22:34:19.505Z] INFO[da7d1246-af67-4642-967e-eea21aa8bbc3] Incoming GET /health
+[2026-02-04T22:34:19.509Z] INFO[da7d1246-af67-4642-967e-eea21aa8bbc3] Response 200 GET /health

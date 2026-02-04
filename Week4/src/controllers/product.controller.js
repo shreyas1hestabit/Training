@@ -68,12 +68,18 @@
 // }
 
 
+import { emailQueue } from "../jobs/email.jobs.js";
 import ProductRepository from "../repositories/product.repository.js";
 
 const ProductController = {
   createProduct: async (req, res) => {
     try {
       const product = await ProductRepository.create(req.body);
+      await emailQueue.add("send-email",{
+        email:"user@test.com",
+        productID:req._id,
+        requestId: req.requestId
+      });
       res.status(201).json(product);
     } catch (err) {
       res.status(500).json({ error: err.message });
@@ -94,7 +100,8 @@ const ProductController = {
       const deleted = await ProductRepository.softDelete(req.params.id);
       res.json(deleted);
     } catch (err) {
-      res.status(500).json({ error: err.message });
+      //res.status(500).json({ error: err.message });
+      next(err);
     }
   }
 };

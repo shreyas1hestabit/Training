@@ -4,7 +4,7 @@ export const createProductSchema = z.object({
   body: z.object({
     name: z
       .string()
-      .min(3, "Product name must be at least 3 characters")
+      .min(2, "Product name must be at least 3 characters")
       .max(100)
       .trim(),
 
@@ -13,7 +13,7 @@ export const createProductSchema = z.object({
       .max(500)
       .optional(),
 
-    price: z
+    price: z.coerce
       .number()
       .positive("Price must be greater than 0"),
 
@@ -22,7 +22,7 @@ export const createProductSchema = z.object({
       .min(2)
       .max(50),
 
-    stock: z
+    stock: z.coerce
       .number()
       .int()
       .min(0),
