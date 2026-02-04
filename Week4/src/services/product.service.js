@@ -58,6 +58,20 @@
 
 
 import  ProductRepository  from "../repositories/product.repository.js";
+import { emailQueue } from "../jobs/email.jobs.js";
+await emailQueue.add(
+    "product-created",{
+        productName: product.name,
+        price: product.price
+    },
+    {
+    attempts: 3,
+    backoff: {
+        type: "exponential",
+        delay: 2000
+    }
+    }
+);
 
 export class ProductService {
 
