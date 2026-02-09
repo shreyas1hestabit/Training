@@ -12,7 +12,7 @@ we have divided our system into 3 parts/containers
 - used node.js and express
 - port used is 5173
 
-![cl](/screenshots/client.png)
+![cl](./screenshots/client.png)
 
 <strong>SERVER</strong>
 
