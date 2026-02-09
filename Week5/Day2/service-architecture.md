@@ -11,7 +11,8 @@ we have divided our system into 3 parts/containers
 - does not contain any business logic or db access.
 - used node.js and express
 - port used is 5173
-  ![cl](/screenshots/client.png)
+
+![cl](/screenshots/client.png)
 
 <strong>SERVER</strong>
 
@@ -21,7 +22,8 @@ we have divided our system into 3 parts/containers
 - communicate with MongoDB
 - used nodejs and express
 - port used is 3002
-  ![se](/screenshots/server.png)
+
+![se](/screenshots/server.png)
 
 <strong>MONGODB</strong>
 
