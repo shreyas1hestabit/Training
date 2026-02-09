@@ -23,7 +23,7 @@ we have divided our system into 3 parts/containers
 - used nodejs and express
 - port used is 3002
 
-![se](/screenshots/server.png)
+![se](./screenshots/server.png)
 
 <strong>MONGODB</strong>
 
