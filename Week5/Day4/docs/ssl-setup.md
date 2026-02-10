@@ -74,8 +74,6 @@ Instead of accessing services via localhost, a custom local domain is used.
 
 ### screenshot of working
 
-![s1](/screenshots/s1.png)
-
-![s2](/screenshots/s2.png)
-
-![s3](/screenshots/s3.png)
+![ch](../screenshots/s1.png)
+![js](../screenshots/s2.png)
+![jj](../screenshots/s3.png)
