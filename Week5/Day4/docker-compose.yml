@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: day4-backend
+
+  nginx:
+    image: nginx:alpine
+    container_name: day4-nginx
+    depends_on:
+      - backend
+    ports:
+      - "3004:443"
+      - "3003:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./ssl/certs:/etc/nginx/ssl
