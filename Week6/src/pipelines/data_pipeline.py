@@ -17,7 +17,7 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
     
     if "Date" in df.columns: #hmare dataset mein date ka ek column hai but woh as a string read hogi because of csv file. toh uso datetime object mein convert krne k liye we use this.
         # agr nh kiya toh date sorting incorrect hogi and time-based operations fail ho jayengi.
-        df["Date"] = pd.to_datetime(df["Date"], errors="coerce") # yeh coerce se hm system ko bta rhe hai ki agr invalid date mile toh na crash kre na error de bs NaT which is missing date daal de. if not done then program crash ho skta hai.
+        df["Date"] = pd.to_datetime(df["Date"],errors="coerce") # yeh coerce se hm system ko bta rhe hai ki agr invalid date mile toh na crash kre na error de bs NaT which is missing date daal de. if not done then program crash ho skta hai.
 
     if "Port Code" in df.columns:
         df["Port Code"]=df["Port Code"].astype("category")
@@ -44,7 +44,7 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
             df[col]=df[col].fillna(df[col].median())
 
     # Categorical columns -> mode
-    categorical_cols = df.select_dtypes(include="object").columns
+    categorical_cols = df.select_dtypes(include=["object","string"]).columns
     for col in categorical_cols:
         df[col] = df[col].fillna(df[col].mode()[0])
 
@@ -63,6 +63,17 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
     #         #df = df[(df[col] >= lower) & (df[col] <= upper)]
     #         #hmara data right skewed hai iski wjh se jo imp dataset tha like heavy ports wgrh bh delete ho rhe the coz IQR assumes ki data normal hai.
     #         df["Value"]=np.log1p(df["Value"])
+    return df
+
+
+def create_target(df):
+    df["Traffic_level"]="Zero"
+    non_zero_mask=df["Value"]>0
+    df.loc[non_zero_mask,"Traffic_level"]=pd.qcut(
+        df.loc[non_zero_mask,"Value"],
+        q=3,
+        labels=["Low","Medium","High"],
+        duplicates="drop")
 
     return df
 
@@ -79,6 +90,7 @@ if __name__ == "__main__":
 
     df = load_data(raw_path)
     df = clean_data(df)
+    df= create_target(df)
     save_data(df, processed_path)
 
     print("Data pipeline executed successfully.")
