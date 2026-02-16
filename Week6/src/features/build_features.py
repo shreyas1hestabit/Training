@@ -410,25 +410,65 @@ def split_data(df):
 
 # ---------------- ENCODE + SCALE ---------------- #
 
-def encode_and_scale(X_train, X_test):
+# def encode_and_scale(X_train, X_test):
 
+#     categorical_cols = ["State", "Border", "Measure"]
+
+#     # Keep sparse_output=True for memory efficiency
+#     encoder = OneHotEncoder(
+#         handle_unknown="ignore",
+#         sparse_output=True
+#     )
+
+#     encoded_train = encoder.fit_transform(
+#         X_train[categorical_cols]
+#     )
+
+#     encoded_test = encoder.transform(
+#         X_test[categorical_cols]
+#     )
+
+#     # Convert sparse matrix to DataFrame using pd.arrays.SparseArray
+#     encoded_train_df = pd.DataFrame.sparse.from_spmatrix(
+#         encoded_train,
+#         columns=encoder.get_feature_names_out(categorical_cols),
+#         index=X_train.index
+#     )
+
+#     encoded_test_df = pd.DataFrame.sparse.from_spmatrix(
+#         encoded_test,
+#         columns=encoder.get_feature_names_out(categorical_cols),
+#         index=X_test.index
+#     )
+
+#     X_train = X_train.drop(columns=categorical_cols)
+#     X_test = X_test.drop(columns=categorical_cols)
+
+#     X_train = pd.concat([X_train, encoded_train_df], axis=1)
+#     X_test = pd.concat([X_test, encoded_test_df], axis=1)
+
+#     # ----- Scaling -----
+#     num_cols = X_train.select_dtypes(include=np.number).columns
+
+#     scaler = StandardScaler()
+
+#     X_train[num_cols] = scaler.fit_transform(X_train[num_cols])
+#     X_test[num_cols] = scaler.transform(X_test[num_cols])
+
+#     return X_train, X_test
+
+
+def encode_features(X_train, X_test):
     categorical_cols = ["State", "Border", "Measure"]
 
-    # Keep sparse_output=True for memory efficiency
     encoder = OneHotEncoder(
         handle_unknown="ignore",
         sparse_output=True
     )
 
-    encoded_train = encoder.fit_transform(
-        X_train[categorical_cols]
-    )
+    encoded_train = encoder.fit_transform(X_train[categorical_cols])
+    encoded_test = encoder.transform(X_test[categorical_cols])
 
-    encoded_test = encoder.transform(
-        X_test[categorical_cols]
-    )
-
-    # Convert sparse matrix to DataFrame using pd.arrays.SparseArray
     encoded_train_df = pd.DataFrame.sparse.from_spmatrix(
         encoded_train,
         columns=encoder.get_feature_names_out(categorical_cols),
@@ -447,14 +487,7 @@ def encode_and_scale(X_train, X_test):
     X_train = pd.concat([X_train, encoded_train_df], axis=1)
     X_test = pd.concat([X_test, encoded_test_df], axis=1)
 
-    # ----- Scaling -----
-    num_cols = X_train.select_dtypes(include=np.number).columns
-
-    scaler = StandardScaler()
-
-    X_train[num_cols] = scaler.fit_transform(X_train[num_cols])
-    X_test[num_cols] = scaler.transform(X_test[num_cols])
-
+    # NO SCALING HERE!
     return X_train, X_test
 
 
@@ -515,7 +548,7 @@ if __name__ == "__main__":
 
     X_train, X_test, y_train, y_test = split_data(df)
 
-    X_train, X_test = encode_and_scale(X_train, X_test)
+    X_train, X_test = encode_features(X_train, X_test)
 
     print("\nx_train:", X_train.shape)
     print("x_test:", X_test.shape)
