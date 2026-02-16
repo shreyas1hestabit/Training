@@ -19,6 +19,12 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
         # agr nh kiya toh date sorting incorrect hogi and time-based operations fail ho jayengi.
         df["Date"] = pd.to_datetime(df["Date"], errors="coerce") # yeh coerce se hm system ko bta rhe hai ki agr invalid date mile toh na crash kre na error de bs NaT which is missing date daal de. if not done then program crash ho skta hai.
 
+    if "Port Code" in df.columns:
+        df["Port Code"]=df["Port Code"].astype("category")
+    
+    if "Point" in df.columns:
+        df=df.drop(columns=["Point"])
+
     # Drop rows where location data is missing
     location_cols = ["Latitude", "Longitude"]
     for col in location_cols:
@@ -27,10 +33,15 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
                                          #subset tells ki sirf specific columns check kro. without subset kisi bh column mein koi bh missing value ho toh row delete.
 
     # Numerical columns -> median
-    numerical_cols = df.select_dtypes(include=np.number).columns  #select_dtypes automatically numeric columns ko detect krta hai
-                                                                  # include=np.number se hm keh rhe hai ki sirf numbers pick kro. without this object column pr bh median apply ho jayega and then error throw.
-    for col in numerical_cols:
-        df[col] = df[col].fillna(df[col].median())
+    # numerical_cols = df.select_dtypes(include=np.number).columns  #select_dtypes automatically numeric columns ko detect krta hai
+    #                                                               # include=np.number se hm keh rhe hai ki sirf numbers pick kro. without this object column pr bh median apply ho jayega and then error throw.
+    # for col in numerical_cols:
+    #     df[col] = df[col].fillna(df[col].median())
+
+    numeric_cols=["Value","Latitude","Longitude"]
+    for col in numeric_cols:
+        if col in df.columns:
+            df[col]=df[col].fillna(df[col].median())
 
     # Categorical columns -> mode
     categorical_cols = df.select_dtypes(include="object").columns
@@ -38,18 +49,20 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
         df[col] = df[col].fillna(df[col].mode()[0])
 
 
-    outlier_cols = ["Value"]  # Only apply where meaningful
+    # outlier_cols = ["Value"]  # Only apply where meaningful
 
-    for col in outlier_cols:
-        if col in df.columns:
-            Q1 = df[col].quantile(0.25)  #25th percentile
-            Q3 = df[col].quantile(0.75)  #75th percentile
-            IQR = Q3 - Q1
+    # for col in outlier_cols:
+    #     if col in df.columns:
+    #         # Q1 = df[col].quantile(0.25)  #25th percentile
+    #         # Q3 = df[col].quantile(0.75)  #75th percentile
+    #         # IQR = Q3 - Q1
 
-            lower = Q1 - 1.5 * IQR
-            upper = Q3 + 1.5 * IQR
+    #         # lower = Q1 - 1.5 * IQR
+    #         # upper = Q3 + 1.5 * IQR
 
-            df = df[(df[col] >= lower) & (df[col] <= upper)]
+    #         #df = df[(df[col] >= lower) & (df[col] <= upper)]
+    #         #hmara data right skewed hai iski wjh se jo imp dataset tha like heavy ports wgrh bh delete ho rhe the coz IQR assumes ki data normal hai.
+    #         df["Value"]=np.log1p(df["Value"])
 
     return df
 
