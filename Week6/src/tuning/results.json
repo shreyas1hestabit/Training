@@ -1,0 +1,13 @@
+{
+    "Baseline Accuracy": 0.858625,
+    "Tuned Accuracy": 0.861325,
+    "Best Parameters": {
+        "learning_rate": 0.013817386563228406,
+        "max_iter": 325,
+        "max_depth": 13,
+        "max_leaf_nodes": 125,
+        "min_samples_leaf": 32,
+        "max_bins": 178,
+        "l2_regularization": 0.2345266420536991
+    }
+}

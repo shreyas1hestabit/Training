@@ -1,0 +1,14 @@
+2026-02-17 16:11:29,116 - INFO - Loading selected features...
+2026-02-17 16:11:34,412 - INFO - baseline accuracy: 0.8586
+2026-02-17 16:15:42,259 - INFO - Best Trial Parameters: {'learning_rate': 0.14285701658635747, 'max_iter': 102, 'max_depth': 12, 'max_leaf_nodes': 33}
+2026-02-17 16:15:42,259 - INFO - Best Trial Accuracy: 0.8606
+2026-02-17 16:15:47,658 - INFO - Tuned Accuracy: 0.8606
+2026-02-17 16:15:47,710 - INFO - tunning completed
+2026-02-17 16:20:37,370 - INFO - Loading selected features...
+2026-02-17 16:20:42,713 - INFO - baseline accuracy: 0.8586
+2026-02-17 16:26:07,294 - INFO - Loading selected features...
+2026-02-17 16:26:12,397 - INFO - baseline accuracy: 0.8586
+2026-02-17 16:34:28,704 - INFO - Best Trial Parameters: {'learning_rate': 0.013817386563228406, 'max_iter': 325, 'max_depth': 13, 'max_leaf_nodes': 125, 'min_samples_leaf': 32, 'max_bins': 178, 'l2_regularization': 0.2345266420536991}
+2026-02-17 16:34:28,704 - INFO - Best Trial Accuracy: 0.8613
+2026-02-17 16:35:04,800 - INFO - Tuned Accuracy: 0.8613
+2026-02-17 16:35:05,028 - INFO - tunning completed
