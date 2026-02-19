@@ -559,12 +559,14 @@
 
 
 
+from json import encoder
 import pandas as pd
 import numpy as np
 import os
 import json
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
+import joblib
 
 def load_data(path):
     df=pd.read_csv(path)
@@ -664,36 +666,76 @@ def encode_features(X_train, X_test):
     X_train = pd.concat([X_train, encoded_train_df], axis=1)
     X_test = pd.concat([X_test, encoded_test_df], axis=1)
 
-    return X_train, X_test
+    return X_train, X_test, encoder
 
 
 # ---------------- SAVE ---------------- #
 
+# def save_split_data(X_train, X_test, y_train, y_test):
+
+#     os.makedirs("data/processed", exist_ok=True)
+
+#     X_train.to_csv("data/processed/X_train.csv", index=False)
+#     X_test.to_csv("data/processed/X_test.csv", index=False)
+#     y_train.to_csv("data/processed/y_train.csv", index=False)
+#     y_test.to_csv("data/processed/y_test.csv", index=False)
+
+#     feature_list = list(X_train.columns)
+#     os.makedirs("features", exist_ok=True)
+
+#     with open("features/feature_list.json", "w") as f:
+#         json.dump(feature_list, f, indent=4)
 def save_split_data(X_train, X_test, y_train, y_test):
+    # Ensure paths start with src/
+    data_dir = "src/data/processed"
+    feat_dir = "src/features"
+    
+    os.makedirs(data_dir, exist_ok=True)
+    os.makedirs(feat_dir, exist_ok=True)
 
-    os.makedirs("data/processed", exist_ok=True)
-
-    X_train.to_csv("data/processed/X_train.csv", index=False)
-    X_test.to_csv("data/processed/X_test.csv", index=False)
-    y_train.to_csv("data/processed/y_train.csv", index=False)
-    y_test.to_csv("data/processed/y_test.csv", index=False)
+    X_train.to_csv(f"{data_dir}/X_train.csv", index=False)
+    X_test.to_csv(f"{data_dir}/X_test.csv", index=False)
+    y_train.to_csv(f"{data_dir}/y_train.csv", index=False)
+    y_test.to_csv(f"{data_dir}/y_test.csv", index=False)
 
     feature_list = list(X_train.columns)
-    os.makedirs("features", exist_ok=True)
-
-    with open("features/feature_list.json", "w") as f:
+    with open(f"{feat_dir}/feature_list.json", "w") as f:
         json.dump(feature_list, f, indent=4)
-
 
 # ---------------- MAIN ---------------- #
 
 if __name__ == "__main__":
 
-    data_path = "data/processed/final.csv"
+    data_path = "src/data/processed/final.csv"
 
     print("Loading data...")
     df = load_data(data_path)
     print("Original shape:", df.shape)
+
+    ####aggregation stats saving
+
+    print("\nCalculating and saving aggregation statistics...")
+    
+    aggregation_stats = {
+        "Port_Avg_Value": df.groupby("Port Name")["Value"].mean().to_dict(),
+        "Port_Max_Value": df.groupby("Port Name")["Value"].max().to_dict(),
+        "Measure_Avg_Value": df.groupby("Measure")["Value"].mean().to_dict(),
+        "Border_Avg_Value": df.groupby("Border")["Value"].mean().to_dict(),
+        "Month_Avg_Value": df.groupby(df["Date"].apply(lambda x: pd.to_datetime(x).month))["Value"].mean().to_dict()
+    }
+    
+    # Convert Month_Avg_Value keys to int (they're currently timestamps)
+    aggregation_stats["Month_Avg_Value"] = {
+        int(k): v for k, v in aggregation_stats["Month_Avg_Value"].items()
+    }
+    
+    # Save to file
+    os.makedirs("src/models", exist_ok=True)
+    import json
+    with open("src/models/aggregation_stats.json", "w") as f:
+        json.dump(aggregation_stats, f, indent=4)
+    
+    print("Aggregation statistics saved to src/models/aggregation_stats.json")
 
     print("\nEngineering features...")
     df = engineer_features(df)
@@ -706,7 +748,10 @@ if __name__ == "__main__":
     X_train, X_test, y_train, y_test = split_data(df)
 
     print("\nEncoding features...")
-    X_train, X_test = encode_features(X_train, X_test)
+    X_train, X_test, encoder = encode_features(X_train, X_test)
+    os.makedirs("src/models",exist_ok=True)
+    joblib.dump(encoder,"src/models/encoder.pkl")
+    print("encoder saved to src/models/encoder.pkl")
 
     print("X_train shape:", X_train.shape)
     print("X_test shape:", X_test.shape)

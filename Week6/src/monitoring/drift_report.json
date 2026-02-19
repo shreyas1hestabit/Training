@@ -1,0 +1,45 @@
+{
+    "summary": {
+        "total_features_checked": 6,
+        "features_with_drift": 6,
+        "drift_percentage": 1.0
+    },
+    "feature_drift_details": {
+        "Latitude": {
+            "train_mean": 43.87735955,
+            "current_mean": 2020024.3333333333,
+            "percent_shift": 46036.96477387011,
+            "drift_detected": true
+        },
+        "Measure_Personal Vehicles": {
+            "train_mean": 1.0,
+            "current_mean": 666.7777777777778,
+            "percent_shift": 665.7777777777778,
+            "drift_detected": true
+        },
+        "Measure_Buses": {
+            "train_mean": 1.0,
+            "current_mean": 166.66666666666666,
+            "percent_shift": 165.66666666666666,
+            "drift_detected": true
+        },
+        "Measure_Trucks": {
+            "train_mean": 1.0,
+            "current_mean": 500.44444444444446,
+            "percent_shift": 499.44444444444446,
+            "drift_detected": true
+        },
+        "Measure_Trains": {
+            "train_mean": 1.0,
+            "current_mean": 100.0,
+            "percent_shift": 99.0,
+            "drift_detected": true
+        },
+        "Measure_Pedestrians": {
+            "train_mean": 1.0,
+            "current_mean": 66.66666666666667,
+            "percent_shift": 65.66666666666667,
+            "drift_detected": true
+        }
+    }
+}

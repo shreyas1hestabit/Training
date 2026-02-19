@@ -13,7 +13,7 @@
         "Precision": 0.8165507004723027,
         "Recall": 0.8169,
         "F1 Score": 0.8166672301967131,
-        "ROC-AUC": 0.9546814295833334
+        "ROC-AUC": 0.9546813695833333
     },
     "XGBoost": {
         "Train Accuracy": 0.86425,
@@ -24,11 +24,11 @@
         "ROC-AUC": 0.97431846875
     },
     "HistGradientBoosting": {
-        "Train Accuracy": 0.86844375,
-        "Test Accuracy": 0.860975,
-        "Precision": 0.8614685006261843,
-        "Recall": 0.860975,
-        "F1 Score": 0.8609532168707091,
-        "ROC-AUC": 0.9750531425000001
+        "Train Accuracy": 0.86225,
+        "Test Accuracy": 0.8593,
+        "Precision": 0.8602546867036396,
+        "Recall": 0.8593,
+        "F1 Score": 0.8594163439660973,
+        "ROC-AUC": 0.9740264991666667
     }
 }

@@ -203,10 +203,12 @@ from sklearn.pipeline import Pipeline
 # ---------------- LOAD DATA ---------------- #
 
 print("Loading selected features...")
-X_train = pd.read_csv("data/processed/X_train_selected.csv")
-y_train = pd.read_csv("data/processed/y_train_selected.csv")
-X_test = pd.read_csv("data/processed/X_test_selected.csv")
-y_test = pd.read_csv("data/processed/y_test_selected.csv")
+# X_train = pd.read_csv("data/processed/X_train_selected.csv")
+X_train = pd.read_csv("src/data/processed/X_train_imputed.csv")
+y_train = pd.read_csv("src/data/processed/y_train_selected.csv")
+# X_test = pd.read_csv("data/processed/X_test_selected.csv")
+X_test = pd.read_csv("src/data/processed/X_test_imputed.csv")
+y_test = pd.read_csv("src/data/processed/y_test_selected.csv")
 
 y_train = y_train.values.ravel()
 y_test = y_test.values.ravel()
@@ -224,7 +226,7 @@ num_classes = len(np.unique(y_train_encoded))
 models = {
 
     "LogisticRegression": Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
+        # ("imputer", SimpleImputer(strategy="median")),
         ("scaler", StandardScaler()),
         ("model", LogisticRegression(
             max_iter=2000,
@@ -233,8 +235,8 @@ models = {
         ))
     ]),
 
-    "RandomForest": Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
+     "RandomForest": Pipeline([
+        # ("imputer", SimpleImputer(strategy="median")),
         ("model", RandomForestClassifier(
             n_estimators=300,
             class_weight="balanced",
@@ -243,8 +245,8 @@ models = {
         ))
     ]),
 
-    "XGBoost": Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
+     "XGBoost": Pipeline([
+        # ("imputer", SimpleImputer(strategy="median")),
         ("model", XGBClassifier(
             objective="multi:softprob",
             num_class=num_classes,
@@ -340,7 +342,7 @@ for name, model in models.items():
 # ---------------- SAVE BEST MODEL ---------------- #
 
 os.makedirs("models", exist_ok=True)
-joblib.dump(best_model, "models/best_model.pkl")
+joblib.dump(best_model, "src/models/best_model.pkl")
 
 # ---------------- CONFUSION MATRIX ---------------- #
 

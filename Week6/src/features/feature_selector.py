@@ -166,8 +166,16 @@ import pandas as pd
 import json
 import os
 from sklearn.ensemble import RandomForestClassifier
+import sys
+#sys.path.insert(0,os.path.dirname(os.path.dirname(__file__)))
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_ROOT)
 
+from src.utils.feature_pipeline import FeaturePipeline
+
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+# DATA_PATH = os.path.join(BASE_DIR, "data", "processed")
 # ---------------- FEATURE SELECTION ---------------- #
 
 def select_features(X_train, y_train, importance_threshold=0.01):
@@ -207,16 +215,27 @@ def select_features(X_train, y_train, importance_threshold=0.01):
 
 # ---------------- SAVE ---------------- #
 
+# def save_selected_data(X_train_select, X_test_select, y_train, y_test):
+
+#     os.makedirs("src/data/processed", exist_ok=True)
+
+#     X_train_select.to_csv("src/data/processed/X_train_selected.csv", index=False)
+#     X_test_select.to_csv("src/data/processed/X_test_selected.csv", index=False)
+#     y_train.to_csv("src/data/processed/y_train_selected.csv", index=False)
+#     y_test.to_csv("src/data/processed/y_test_selected.csv", index=False)
+
+#     print("\n Selected datasets saved!")
 def save_selected_data(X_train_select, X_test_select, y_train, y_test):
+    # Folder path ko src ke andar point karein
+    output_path = "src/data/processed"
+    os.makedirs(output_path, exist_ok=True)
 
-    os.makedirs("data/processed", exist_ok=True)
+    X_train_select.to_csv(f"{output_path}/X_train_selected.csv", index=False)
+    X_test_select.to_csv(f"{output_path}/X_test_selected.csv", index=False)
+    y_train.to_csv(f"{output_path}/y_train_selected.csv", index=False)
+    y_test.to_csv(f"{output_path}/y_test_selected.csv", index=False)
 
-    X_train_select.to_csv("data/processed/X_train_selected.csv", index=False)
-    X_test_select.to_csv("data/processed/X_test_selected.csv", index=False)
-    y_train.to_csv("data/processed/y_train_selected.csv", index=False)
-    y_test.to_csv("data/processed/y_test_selected.csv", index=False)
-
-    print("\n Selected datasets saved!")
+    print(f"\n Selected datasets saved in {output_path}!")
 
 
 # ---------------- MAIN ---------------- #
@@ -224,10 +243,10 @@ def save_selected_data(X_train_select, X_test_select, y_train, y_test):
 if __name__ == "__main__":
 
     print("Loading split data...")
-    X_train = pd.read_csv("data/processed/X_train.csv")
-    X_test = pd.read_csv("data/processed/X_test.csv")
-    y_train = pd.read_csv("data/processed/y_train.csv")
-    y_test = pd.read_csv("data/processed/y_test.csv")
+    X_train = pd.read_csv("src/data/processed/X_train.csv")
+    X_test = pd.read_csv("src/data/processed/X_test.csv")
+    y_train = pd.read_csv("src/data/processed/y_train.csv")
+    y_test = pd.read_csv("src/data/processed/y_test.csv")
 
     print(f"Original X_train shape: {X_train.shape}")
     print(f"Original X_test shape: {X_test.shape}")
@@ -239,14 +258,14 @@ if __name__ == "__main__":
     )
 
     # Save selected feature list
-    os.makedirs("features", exist_ok=True)
+    os.makedirs("src/features", exist_ok=True)
 
-    with open("features/selected_feature_list.json", "w") as f:
+    with open("src/features/selected_feature_list.json", "w") as f:
         json.dump(selected_features, f, indent=4)
 
     # Save full importance report
     feature_importance_df.to_csv(
-        "features/feature_importance_report.csv",
+        "src/features/feature_importance_report.csv",
         index=False
     )
 
@@ -261,6 +280,25 @@ if __name__ == "__main__":
     print(f"Filtered X_test shape: {X_test_select.shape}")
 
     save_selected_data(X_train_select, X_test_select, y_train, y_test)
+    # from src.utils.feature_pipeline import FeaturePipeline
+    
+    print("\nFitting preprocessing pipeline...")
+    pipeline = FeaturePipeline()
+    pipeline.fit(
+        X_train_select,
+        aggregation_stats_path="src/models/aggregation_stats.json",
+        selected_features=selected_features
+    )
+    
+    # Transform and save imputed data
+    X_train_imputed = pipeline.transform(X_train_select)
+    X_test_imputed = pipeline.transform(X_test_select)
+    
+    X_train_imputed.to_csv("src/data/processed/X_train_imputed.csv", index=False)
+    X_test_imputed.to_csv("src/data/processed/X_test_imputed.csv", index=False)
+    
+    # Save pipeline
+    pipeline.save("src/models/feature_pipeline.pkl")
 
     print("\n Feature selection completed successfully!")
 
