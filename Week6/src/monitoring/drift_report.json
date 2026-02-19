@@ -1,45 +1,93 @@
 {
     "summary": {
-        "total_features_checked": 6,
-        "features_with_drift": 6,
-        "drift_percentage": 1.0
+        "total_features_checked": 14,
+        "features_with_drift": 3,
+        "drift_percentage": 0.21428571428571427
     },
     "feature_drift_details": {
+        "Measure_Avg_Value": {
+            "train_mean": 30740.605155799924,
+            "current_mean": 46053.21206200331,
+            "percent_shift": 0.4981231445703765,
+            "drift_detected": true
+        },
+        "Port_Avg_Value": {
+            "train_mean": 29951.6971187414,
+            "current_mean": 86433.97182641995,
+            "percent_shift": 1.8857787751978974,
+            "drift_detected": true
+        },
+        "Port_Max_Value": {
+            "train_mean": 422128.837,
+            "current_mean": 1252376.9,
+            "percent_shift": 1.9668120019954947,
+            "drift_detected": true
+        },
+        "Day_of_Week": {
+            "train_mean": 2.99530625,
+            "current_mean": 3.0,
+            "percent_shift": 0.0015670350903183743,
+            "drift_detected": false
+        },
+        "Longitude": {
+            "train_mean": -99.4733995875,
+            "current_mean": -103.87,
+            "percent_shift": 0.04419875495089133,
+            "drift_detected": false
+        },
         "Latitude": {
             "train_mean": 43.87735955,
-            "current_mean": 2020024.3333333333,
-            "percent_shift": 46036.96477387011,
-            "drift_detected": true
+            "current_mean": 38.959999999999994,
+            "percent_shift": 0.11207054390764969,
+            "drift_detected": false
+        },
+        "Month": {
+            "train_mean": 6.4782375,
+            "current_mean": 6.7,
+            "percent_shift": 0.03423191878964001,
+            "drift_detected": false
+        },
+        "Month_Avg_Value": {
+            "train_mean": 29146.116351306773,
+            "current_mean": 29358.444853118483,
+            "percent_shift": 0.007284967206349247,
+            "drift_detected": false
+        },
+        "Measure_Personal Vehicle Passengers": {
+            "train_mean": 1.0,
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         },
         "Measure_Personal Vehicles": {
             "train_mean": 1.0,
-            "current_mean": 666.7777777777778,
-            "percent_shift": 665.7777777777778,
-            "drift_detected": true
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         },
         "Measure_Buses": {
             "train_mean": 1.0,
-            "current_mean": 166.66666666666666,
-            "percent_shift": 165.66666666666666,
-            "drift_detected": true
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         },
         "Measure_Trucks": {
             "train_mean": 1.0,
-            "current_mean": 500.44444444444446,
-            "percent_shift": 499.44444444444446,
-            "drift_detected": true
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         },
         "Measure_Trains": {
             "train_mean": 1.0,
-            "current_mean": 100.0,
-            "percent_shift": 99.0,
-            "drift_detected": true
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         },
         "Measure_Pedestrians": {
             "train_mean": 1.0,
-            "current_mean": 66.66666666666667,
-            "percent_shift": 65.66666666666667,
-            "drift_detected": true
+            "current_mean": 1.0,
+            "percent_shift": 0.0,
+            "drift_detected": false
         }
     }
 }

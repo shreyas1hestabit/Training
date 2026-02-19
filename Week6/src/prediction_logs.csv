@@ -1,36 +1,12 @@
-Measure_Avg_Value,Day_of_Week,Port_Avg_Value,Port_Max_Value,Longitude,Abs_longitude,Abs_latitude,Latitude,Month,Month_Avg_Value,Measure_Personal Vehicle Passengers,Measure_Personal Vehicles,Measure_Buses,Measure_Trucks,Measure_Trains,Measure_Pedestrians,Measure_Rail Containers Loaded,Quarter,Measure_Train Passengers,Measure_Rail Containers Empty,prediction,request_id,timestamp
-1200,2,500,900,-95,95,40,40,6,1100,0,1,0,0,0,0,0,2,0,0,Zero,fb3ad85c-66f3-43c0-85c7-2c705c7b49fb,2026-02-18 12:07:01.269918
-1500,4,600,900,-90,90,40,40,9,1300,0,0,0,1,0,0,0,2,0,0,Zero,6dc8ec44-2f98-4dcc-bc14-0dc073787d3d,2026-02-18 09:08:29.488405
-1600,4,600,900,-90,90,40,40,9,1300,0,0,0,1,0,0,0,2,0,0,Zero,d447f5a3-1f77-4142-883f-6e2709ada2b8,2026-02-18 09:09:16.110132
-1200,2,500,900,-90,90,40,40,9,1300,0,0,0,1,0,0,0,2,0,0,Zero,2d34d31e-2a7b-49df-aaeb-c42b49e813f5,2026-02-18 09:09:54.493407
-2400,5,800,900,-90,90,40,40,9,1300,0,0,0,1,0,0,0,2,0,0,Zero,ffc788cc-8d4d-4b0b-8c2e-6e80b0f2482a,2026-02-18 09:11:40.487137
-50,2,40,80,-95,95,30,30,1,60,0,0,0,0,0,0,0,1,0,0,Zero,d98518fb-43e7-4dfe-939f-4f22b124440f,2026-02-18 09:12:16.838459
-8000,5,7000,9000,-90,90,45,45,7,7500,3000,2000,500,1500,300,200,400,3,800,300,Low,89250821-02f8-4550-af99-88e1a0a4cdef,2026-02-18 09:12:37.919300
-80000,5,70050,6000,-90,90,45,45,7,7500,3000,2000,500,1500,300,200,400,3,800,300,High,e1a312b7-4093-49f8-a15e-ab2cf6af8524,2026-02-18 09:13:07.848915
-8000,5,70050,6000,-90,90,45,45,7,7500,3000,2000,500,1500,300,200,400,3,800,300,High,9538a7e7-e689-4227-a7db-ef528d5ff81d,2026-02-18 09:13:19.783936
-2026-02-19 11:47:54,e6e9e4af-0f5c-49bc-a033-21715e1b7694,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Trucks', 'Value': 50, 'Latitude': 42.9, 'Longitude': -78.9}",High
-2026-02-19 11:48:26,758b599d-56c1-4513-9298-296ec81a2b7e,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Buses', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Medium
-2026-02-19 11:48:42,1a17ede9-7658-4985-8e37-c161cbb92c9d,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2023-05-01', 'Measure': 'Buses', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Medium
-2026-02-19 11:49:16,8d1897b5-e460-415c-87b0-898bf446e21d,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2019-12-01', 'Measure': 'Trains', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Low
-2026-02-19 11:49:28,11b7599f-687d-4e21-a1b8-7899228aba72,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2019-12-01', 'Measure': 'Trucks', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",High
-US-Mexico Border,2020-03-15,42.9,-78.9,Personal Vehicles,Buffalo-Niagara Falls,New York,100000,2026-02-19 12:15:46,baf03bf0-f0cc-475b-80f6-18fe03e6997f,Zero
-US-Mexico Border,2020-03-15,42.9,-78.9,Trucks,Buffalo-Niagara Falls,New York,100000,2026-02-19 12:16:08,3b92e549-d65e-4f95-b6aa-c806695cc718,Zero
-US-Mexico Border,2020-03-15,42.9,-78.9,Trains,Buffalo-Niagara Falls,New York,100000,2026-02-19 12:16:21,6d3349b6-9cf0-42d7-b338-c3f02da74b99,Zero
-US-Mexico Border,2020-03-15,42.9,-78.9,Trains,Buffalo-Niagara Falls,New York,10000000,2026-02-19 12:16:27,12642ce7-aa04-4c81-bdf4-026c664e59c9,Zero
-US-Canada Border,2025-03-15,42.9,-78.9,Trucks,Buffalo-Niagara Falls,New York,10000000,2026-02-19 12:16:51,d921d54b-4622-45e3-ab39-4db96816c39d,Zero
-US-Canada Border,2019-12-01,42.9,-78.9,Trucks,Buffalo-Niagara Falls,New York,10000000,2026-02-19 12:17:34,aa7b30aa-834c-48c4-a90a-83ca0d514bb4,Zero
-2026-02-19 12:23:16,e62d2739-4447-4b7d-b839-9fd8bca47fd8,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2024-07-15', 'Measure': 'Personal Vehicles', 'Value': 100, 'Latitude': 42.9, 'Longitude': -78.9}",Low
-2026-02-19 12:23:43,bc73712e-28c6-4e3b-b1f3-5dc1d0040235,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2024-07-15', 'Measure': 'Personal Vehicles', 'Value': 100000, 'Latitude': 42.9, 'Longitude': -78.9}",Low
-2026-02-19 12:23:55,cf9944c3-eb8b-4ba9-9785-404646cdfcd9,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2024-07-15', 'Measure': 'Trucks', 'Value': 100000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:24:14,058f235d-3659-4ad2-8cc9-a3c8abb261b3,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2024-07-15', 'Measure': 'Trucks', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:25:52,786345fd-d5a0-4568-9fd2-d9b38548b991,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2019-12-01', 'Measure': 'Trucks', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:26:30,6c0bef63-27d1-4ccc-a407-fe4136dcd96d,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2019-12-01', 'Measure': 'Trains', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:27:08,ce2dad75-cae6-4347-b7d7-3068b65e9b9c,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2019-12-01', 'Measure': 'Trains', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:27:58,b7a956f0-1fc4-4472-a40f-c363da5e35e5,"{'Port Name': 'Buffalo-Niagara Falls', 'State': 'New York', 'Border': 'US-Canada Border', 'Date': '2019-12-01', 'Measure': 'Trains', 'Value': 500000, 'Latitude': 42.9, 'Longitude': -78.9}",Zero
-2026-02-19 12:35:44,aecb6ebf-a35e-4ade-86be-1fe6a932c55e,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Trucks', 'Value': 50, 'Latitude': 42.9, 'Longitude': -78.9}",High
-2026-02-19 12:35:56,3a69e1bc-9d8b-4512-b5e6-58dad7a0f4e7,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Trains', 'Value': 50, 'Latitude': 42.9, 'Longitude': -78.9}",Low
-2026-02-19 12:36:04,9b042051-9ff5-4c2a-8b39-d785eb224a81,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Trains', 'Value': 534550, 'Latitude': 42.9, 'Longitude': -78.9}",Low
-2026-02-19 12:36:32,c4181037-272e-4a45-ba19-f2447a4fc67f,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Mexico border', 'Date': '2023-05-01', 'Measure': 'Personal Vehicles', 'Value': 534550, 'Latitude': 42.9, 'Longitude': -78.9}",High
-2026-02-19 12:36:45,6ad731fc-31b0-4acb-b641-cd1a4295c1f3,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2023-05-01', 'Measure': 'Personal Vehicles', 'Value': 534550, 'Latitude': 42.9, 'Longitude': -78.9}",High
-2026-02-19 12:36:52,61f221fc-05bb-4dce-91b0-b0da28b3cd18,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2023-05-01', 'Measure': 'Personal Vehicles', 'Value': 534, 'Latitude': 42.9, 'Longitude': -78.9}",High
-2026-02-19 12:37:04,3ed68384-305b-4450-8c45-0858377366ae,"{'Port Name': 'Buffalo Niagara Falls', 'State': 'NY', 'Border': 'US-Canada border', 'Date': '2023-05-01', 'Measure': 'Buses', 'Value': 534, 'Latitude': 42.9, 'Longitude': -78.9}",Medium
+Measure_Avg_Value,Port_Avg_Value,Port_Max_Value,Day_of_Week,Longitude,Latitude,Month,Month_Avg_Value,Measure_Personal Vehicle Passengers,Measure_Personal Vehicles,Measure_Buses,Measure_Trucks,Measure_Trains,Measure_Pedestrians,timestamp,request_id,prediction
+296.81668950909545,100.78603988603989,3577.0,0.0,-106.4,48.9,12.0,29867.25824437951,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:34:11,12eb3752-2070-4299-8260-cd81dec0f634,Zero
+80617.93610889534,174406.8865872605,2805201.0,1.0,-98.3,26.1,7.0,31817.839513037372,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:35:02,db53eecd-1fcc-461d-9a75-b2ac01d0a3f7,High
+37.013239539436576,310628.8148582142,4447374.0,5.0,-106.4,31.8,8.0,32499.697737770934,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:35:20,7b357437-259b-4012-96e0-ae7f0804a19b,Low
+80617.93610889534,461.244499449945,10750.0,0.0,-136.3,59.4,11.0,28402.8394175798,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:35:51,3c28c84a-04e8-47da-b74b-395a5c4d7bc9,Medium
+80617.93610889534,0.0,0.0,5.0,-117.1,32.5,4.0,28081.50704598276,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:36:03,6044cc68-666f-41d7-b000-6c76e88771c4,Low
+8986.928402665322,192710.07360647927,2024496.0,5.0,-99.5,27.5,6.0,29128.170322920323,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:36:17,4315fce2-8bcd-49aa-b139-50ab65d2e5d8,High
+39134.75334117718,45167.90008234971,652622.0,3.0,-100.9,29.3,1.0,27550.356443503573,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:36:30,f2d54869-bd63-42a8-9e1c-6fcd2f1f11e9,High
+80617.93610889534,7497.350324597259,106348.0,4.0,-111.9,48.9,2.0,25691.157028430596,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:36:46,ce971d06-e83d-4c44-a247-d591e285c1ea,High
+8986.928402665322,133366.66226596254,2473401.0,2.0,-83.0,42.3,9.0,28727.783264542566,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:36:55,04a082f2-51f4-4262-a73f-92fa207481c4,High
+80617.93610889534,0.0,0.0,5.0,-78.9,42.9,7.0,31817.839513037372,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:37:03,62e7a7c2-af13-41be-828f-fbf6088f39d9,Low
+296.81668950909545,100.78603988603989,3577.0,0.0,-106.4,48.9,12.0,29867.25824437951,1.0,1.0,1.0,1.0,1.0,1.0,2026-02-19 18:48:21,4c086aea-b36a-4f41-b60e-7b54c2a538bb,Zero

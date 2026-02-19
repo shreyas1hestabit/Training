@@ -259,7 +259,11 @@ def engineer_features(df):
     df["Port_Max_Value"] = df["Port Name"].map(stats["Port_Max_Value"]).fillna(0)
     df["Measure_Avg_Value"] = df["Measure"].map(stats["Measure_Avg_Value"]).fillna(0)
     df["Border_Avg_Value"] = df["Border"].map(stats["Border_Avg_Value"]).fillna(0)
-    df["Month_Avg_Value"] = df["Month"].map(stats["Month_Avg_Value"]).fillna(0)
+    #df["Month_Avg_Value"] = df["Month"].map(stats["Month_Avg_Value"]).fillna(0)
+    month_mapping = {int(k): v for k, v in stats["Month_Avg_Value"].items()}
+    df["Month_Avg_Value"] = df["Month"].astype(int).map(month_mapping).fillna(0)
+#check if this code line works correctly or not
+    df = df.drop(columns=["Date", "Port Name", "Port Code"], errors="ignore")
     
     return df
 

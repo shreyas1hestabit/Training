@@ -194,19 +194,81 @@
 #     return {"status": "healthy", "model_loaded": model is not None}
 
 
+# import traceback
+# import os
+# import uuid
+# import joblib
+# import csv
+# import pandas as pd
+# from fastapi import FastAPI, HTTPException
+# from pydantic import BaseModel
+# from datetime import datetime
+# from src.utils.preprocessing import preprocess_input
+# app = FastAPI(title="Traffic Classification API")
+
+# # Use Environment Variable or default path
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# MODEL_PATH = os.getenv("MODEL_PATH", os.path.join(BASE_DIR, "models", "tuned_model.pkl"))
+# model = joblib.load(MODEL_PATH)
+
+# class PredictionInput(BaseModel):
+#     data: dict
+
+# @app.post("/predict")
+# def predict(input_data: PredictionInput):
+#     try:
+
+#         request_id = str(uuid.uuid4())
+#         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+#         # Preprocess using the selective pipeline
+#         processed_df = preprocess_input(input_data.data)
+        
+#         # Predict
+#         prediction = model.predict(processed_df)[0]
+
+#         log_file = "src/prediction_logs.csv"
+#         file_exists = os.path.isfile(log_file)
+        
+#         with open(log_file, mode='a', newline='') as f:
+#             writer = csv.writer(f)
+#             # Write header if file is new
+#             if not file_exists:
+#                 writer.writerow(["timestamp", "request_id", "input_data", "prediction"])
+            
+#             # Write the log row
+#             writer.writerow([timestamp, request_id, str(input_data.data), str(prediction)])
+#         return {
+#             "request_id": request_id,
+#             "prediction": str(prediction),
+#             "status": "success"
+#         }
+#     except Exception as e:
+#         print("ERROR DURING PREDICTION")
+#         traceback.print_exc()
+#         raise HTTPException(status_code=500, detail=str(e))
+
+# @app.get("/health")
+# def health():
+#     return {"status": "healthy"}
+
+
+###fixed api.py
+
+# src/deployment/api.py
+
 import traceback
 import os
 import uuid
 import joblib
-import csv
 import pandas as pd
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from datetime import datetime
 from src.utils.preprocessing import preprocess_input
+
 app = FastAPI(title="Traffic Classification API")
 
-# Use Environment Variable or default path
+# Load model
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL_PATH = os.getenv("MODEL_PATH", os.path.join(BASE_DIR, "models", "tuned_model.pkl"))
 model = joblib.load(MODEL_PATH)
@@ -217,31 +279,37 @@ class PredictionInput(BaseModel):
 @app.post("/predict")
 def predict(input_data: PredictionInput):
     try:
-
         request_id = str(uuid.uuid4())
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Preprocess using the selective pipeline
+        
+        # Preprocess using the pipeline
         processed_df = preprocess_input(input_data.data)
         
         # Predict
         prediction = model.predict(processed_df)[0]
 
+        log_entry = processed_df.iloc[0].to_dict()  # Get all processed features
+        log_entry["timestamp"] = timestamp
+        log_entry["request_id"] = request_id
+        log_entry["prediction"] = str(prediction)
+        
+        log_df = pd.DataFrame([log_entry])
+        
         log_file = "src/prediction_logs.csv"
         file_exists = os.path.isfile(log_file)
         
-        with open(log_file, mode='a', newline='') as f:
-            writer = csv.writer(f)
-            # Write header if file is new
-            if not file_exists:
-                writer.writerow(["timestamp", "request_id", "input_data", "prediction"])
-            
-            # Write the log row
-            writer.writerow([timestamp, request_id, str(input_data.data), str(prediction)])
+        # Append to CSV
+        if file_exists:
+            log_df.to_csv(log_file, mode='a', header=False, index=False)
+        else:
+            log_df.to_csv(log_file, mode='w', header=True, index=False)
+        
         return {
             "request_id": request_id,
             "prediction": str(prediction),
             "status": "success"
         }
+    
     except Exception as e:
         print("ERROR DURING PREDICTION")
         traceback.print_exc()
