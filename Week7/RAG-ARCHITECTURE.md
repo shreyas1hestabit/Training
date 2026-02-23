@@ -92,3 +92,11 @@ Search FAISS
   |
 chunks return
 ```
+
+### WORKING SCREENSHOTS
+
+![w1](screenshots/w1.png)
+
+![w2](screenshots/w2.png)
+
+![w3](screenshots/w3.png)
