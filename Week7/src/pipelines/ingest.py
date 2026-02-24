@@ -4,6 +4,7 @@ from src.loaders.pdf_loader import load_pdf
 from src.chunking.chunker import create_chunks
 from src.embeddings.embedder import Embedder
 from src.vectorstore.store import VectorStore
+from src.retriever.bm25 import BM25store
 
 def run_raw_ingestion(data_folder):
     all_chunks=[]
@@ -23,8 +24,10 @@ def run_raw_ingestion(data_folder):
                     "source": file_name, #which pdf did chunk came from
                     "page":page_number, #which page was it on
                     "chunk_id":i, #which piece of that page is this
-                    "text": chunk #the actual text data 
+                    "text": chunk, #the actual text data 
                     #by saving the text inside metadata, the vectorstoreloop will be able to show exactly what the ai found
+                    "year": extract_year_from_filename(file_name),
+                    "type":extract_type_from_filename(file_name)
                 })
     print (f"total chunks created: {len(all_chunks)}")
     embedder=Embedder()
@@ -41,7 +44,31 @@ def run_raw_ingestion(data_folder):
         "src/indexes/index.faiss", #this is the math map which stores the coordinates of the text in 384 dimensional space. it does not store words or file names.
         "src/indexes/metadata.pkl" #this is the next dictionary which stores the serialized versionof python all_metadata list. it acts as the lookup table that links vector id back to actual text.
     )
-    print("ingestion complete")
+    print("Building BM25 store...")
+    bm25_store = BM25store(all_chunks)
+
+    os.makedirs("src/indexes", exist_ok=True)
+    bm25_store.save("src/indexes/bm25.pkl")
+
+    print("Ingestion complete.")
+
+
+def extract_year_from_filename(file_name):
+    # Example: credit_policy_2024.pdf
+    for token in file_name.split("_"):
+        if token.isdigit():
+            return token
+    return None
+
+
+def extract_type_from_filename(file_name):
+    # Example naming convention:
+    # credit_policy_2024.pdf → type=policy
+    if "policy" in file_name.lower():
+        return "policy"
+    if "guideline" in file_name.lower():
+        return "guideline"
+    return "document"
 
 if __name__=="__main__":
     run_raw_ingestion("src/data/raw")
