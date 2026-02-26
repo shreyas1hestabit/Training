@@ -1,0 +1,251 @@
+[
+    {
+        "question": "Bionano Geonomics",
+        "retrieved_docs": [
+            {
+                "chunk_id": 2010,
+                "text": "icipate\ndirectly in the NGS and array markets for genetic disease and cancer applications independent of OGM using a monetization model with a pay-per-sample\nNxClinical software offering. In this manner we can expand our network of Bionano customers into our software ecosystem with among the most\ncomprehensive platform-agnostic genome interpretation solution where our proprietary original content in OGM can be adopted when needed to obtain a\nmore comprehensive view of the genome by revealing all",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2735,
+                "text": "Table of Contents\nIn August 2020, through the acquisition of Lineagen we obtained a lease for approximately 9,710 square feet of office space in Salt Lake City, Utah under a\nnon-cancelable operating lease that expires in December 2026. We continue to conduct part of our Bionano Laboratories business at this property.\nIn October 2021, through the acquisition of BioDiscovery, we obtained a finance lease for approximately 4,786 square feet of office space in El Segundo,\nCalifornia that expires in F",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1942,
+                "text": "oned to develop LDT\u2019s that can improve upon the existing SOC for diagnostic testing for NDDs.\nBionano Laboratories is working with payers to secure reimbursement alternatives for OGM-based testing. If reimbursements can be established, Bionano\nLaboratories intends to share its strategies with other labs which may drive demand for the Saphyr system. Bionano Laboratories plans to expand its testing\nmenu with inclusion of OGM to demonstrate workflow implementation in a clinical setting in order to ",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2170,
+                "text": "r Bionano Laboratories, BioDiscovery and Purigen businesses;\n\u2022 execution on our commercial and reimbursement strategy involving Bionano Laboratories;\n\u2022 customer demand for current BioDiscovery software solutions, including NxClinical software, and future software solutions developed through\nBioDiscovery\u2019s platform;\n\u2022 the position of our Purigen business in the DNA isolation space of genome analysis and customer demand for our Ionic Purification system;\n\u2022 the timing of customer orders and payment",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1887,
+                "text": "Table of Contents\nRecent Highlights\nAchievement of 2022 ELEVATE! Milestones\nBionano executed on its 2022 ELEVATE! milestones and achieved or exceeded all publicly stated milestones outlined at the beginning of 2022.\n\u2022 Reimbursement: We applied for a category 1 Current Procedural Terminology (CPT) code for OGM.\n\u2022 Clinical Studies: We received institutional review board (IRB) approval for our hematological study. Site selection was completed, and\nenrollment commenced for our hematological study. D",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "SELECT 'Bionano participates directly in NGS and array markets for genetic disease and cancer applications, utilizing OGM and NxClinical software'",
+        "faithfulness": 0.8037755489349365,
+        "context_match": 0.7241271138191223,
+        "hallucination": false,
+        "confidence": 0.772,
+        "timestamp": "2026-02-26T11:57:36.042241"
+    },
+    {
+        "question": "[IMAGE QUERY]: TRYING TO LOOK SURPRISED.\n\n...",
+        "answer": "Error: Model returned empty response.",
+        "type": "image",
+        "timestamp": "2026-02-26T11:58:21.656327"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: [(4, 'Advanced Router Rechargeable', 'For force gas energy six laugh.', 'Gallagher and Sons', 'Kitch",
+        "sql": "SELECT * FROM products WHERE size = 'L'",
+        "type": "sql",
+        "timestamp": "2026-02-26T11:58:57.910027"
+    },
+    {
+        "question": "[IMAGE QUERY]: TRYING TO LOOK SURPRISED.\n\n...",
+        "answer": "I am sorry, but the provided context does not contain information about \"trying to look surprised.\"",
+        "type": "image",
+        "timestamp": "2026-02-26T12:07:56.939827"
+    },
+    {
+        "question": "Risk Factors of Bionano Genomics",
+        "retrieved_docs": [
+            {
+                "chunk_id": 2933,
+                "text": "Table of Contents\nBIONANO GENOMICS, INC.\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS\n1. Organization and Operations\nDescription of Business\nBionano Genomics, Inc. (collectively, with its consolidated subsidiaries, the \u201cCompany\u201d) is a provider of genome analysis solutions that can enable\nresearchers and clinicians to reveal answers to challenging questions in biology and medicine. The Company offers OGM solutions for applications across\nbasic, translational and clinical research, and for other app",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1941,
+                "text": "Table of Contents\nautism spectrum disorder and intellectual disability. Studies are ongoing to determine the sensitivity and specificity for OGM as it relates to fragile X\nsyndrome. Bionano Laboratories also employs Whole Exome Sequencing (WES), which aims to detect genome SNVs that are different from genome SVs\nand are not detectable by OGM.\nWe believe that Bionano Laboratories is uniquely positioned to develop LDT\u2019s that can improve upon the existing SOC for diagnostic testing for NDDs.\nBionan",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 154,
+                "text": "Please refer to \u201cItem 1A. Risk Factors \u2013 We are subject to requirements relating to information technology which could adversely affect our business\u201d of this\nAnnual Report on Form 10-K for additional discussion of the risks accompanying compliance with data privacy and cybersecurity laws and regulations.\nThese laws and regulations impact the ways in which we use and manage personal data, protected health information, and our information technologysystems. They also impact our ability to move, st",
+                "source": "f85f0ccbbc59f1423d52d44e5ab70e3a01164499.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2170,
+                "text": "r Bionano Laboratories, BioDiscovery and Purigen businesses;\n\u2022 execution on our commercial and reimbursement strategy involving Bionano Laboratories;\n\u2022 customer demand for current BioDiscovery software solutions, including NxClinical software, and future software solutions developed through\nBioDiscovery\u2019s platform;\n\u2022 the position of our Purigen business in the DNA isolation space of genome analysis and customer demand for our Ionic Purification system;\n\u2022 the timing of customer orders and payment",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2149,
+                "text": " we changed our name to BioNano Genomics, Inc., and in July 2018, we changed our name to Bionano Genomics,\nInc.\nOur principal executive offices are located at 9540 Towne Centre Drive, Suite 100, San Diego, California 92121, and our telephone number is (858) 888-\n7600. Our website address is www.bionanogenomics.com. Information contained in, or that can be accessed through, our website is not incorporated by\nreference into this Annual Report, and you should not consider information on our website",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "The Company, Bionano Genomics, Inc., is subject to requirements relating to information technology which could adversely affect its business. This risk is discussed in \u201cItem 1A. Risk Factors\u201d of its Annual Report on Form 10-K, which provides additional discussion of the risks accompanying compliance with data privacy and cybersecurity laws and regulations. These laws and regulations impact the ways in which the Company uses and manages personal data, protected health information, and its information technology systems, and also impact its ability to move and store this data.",
+        "faithfulness": 0.8431646823883057,
+        "context_match": 0.8271051645278931,
+        "hallucination": false,
+        "confidence": 0.837,
+        "timestamp": "2026-02-26T12:09:06.236550"
+    },
+    {
+        "question": "list all the companies making tablets",
+        "answer": "SQL Result: no such table: product",
+        "sql": "SELECT DISTINCT company_name FROM product WHERE product_category = 'Tablet'",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:09:41.616520"
+    },
+    {
+        "question": "list all the companies making tablet",
+        "answer": "SQL Result: no such table: company",
+        "sql": "SELECT DISTINCT T1.name FROM company AS T1 INNER JOIN product AS T2 ON T1.id = T2.company_id WHERE T2.type = 'tablet'",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:10:01.459830"
+    },
+    {
+        "question": "list all the companies making Radio",
+        "answer": "SQL Result: near \"Error\": syntax error",
+        "sql": "Error during generation: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 40.064147639s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '40s'}]}}",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:10:23.170741"
+    },
+    {
+        "question": "[IMAGE QUERY]: ...",
+        "answer": "Error: No question provided.",
+        "type": "image",
+        "timestamp": "2026-02-26T12:18:52.623127"
+    },
+    {
+        "question": "list all companies making Radio",
+        "answer": "SQL Result: near \"Error\": syntax error",
+        "sql": "Error during generation: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:19:38.278996"
+    },
+    {
+        "question": "[IMAGE QUERY]: square MOMENT|WHEN YOUFIND}\njs y : \u2014\n\nwf\n\n\u00b0 {4\nTHE...",
+        "answer": "Error during generation: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\\nPlease retry in 30.577827841s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '30s'}]}}",
+        "type": "image",
+        "timestamp": "2026-02-26T12:24:32.477159"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: near \"Error\": syntax error",
+        "sql": "Error during generation: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': '* GenerateContentRequest.model: unexpected model name format\\n', 'status': 'INVALID_ARGUMENT'}}",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:29:46.228856"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: near \"Error\": syntax error",
+        "sql": "Error during generation: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\\nPlease retry in 18.969769245s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}",
+        "type": "sql",
+        "timestamp": "2026-02-26T12:38:44.035726"
+    },
+    {
+        "question": "[IMAGE QUERY]: pie\nLAR bey...",
+        "answer": "I'm not able to understand the question as it seems to be incomplete and doesn't make sense in the context provided.",
+        "type": "image",
+        "timestamp": "2026-02-26T13:04:10.214424"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: [(4, 'Advanced Router Rechargeable', 'For force gas energy six laugh.', 'Gallagher and Sons', 'Kitch",
+        "sql": "SELECT * FROM products WHERE Size = 'L'",
+        "type": "sql",
+        "timestamp": "2026-02-26T13:05:31.721807"
+    },
+       {
+        "question": "[IMAGE] which fruit is there in the image",
+        "answer": "The fruit in the image is an apple.",
+        "visual_caption": "an apple with a green leaf on it",
+        "timestamp": "2026-02-26T13:29:32.510621"
+    },
+    {
+        "question": "[IMAGE] what does meme tell",
+        "answer": "There is no mention of a meme in the provided context. The context only mentions a cat sitting on a chair in a room.",
+        "visual_caption": "a cat is sitting on a chair in a room",
+        "timestamp": "2026-02-26T13:30:25.947672"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: [(4, 'Advanced Router Rechargeable', 'For force gas energy six laugh.', 'Gallagher and Sons', 'Kitch",
+        "sql": "SELECT * FROM products WHERE Size = 'L'",
+        "type": "sql",
+        "timestamp": "2026-02-26T13:42:29.239573"
+    },
+    {
+        "question": "What is bionano geonomics",
+        "retrieved_docs": [
+            {
+                "chunk_id": 2933,
+                "text": "Table of Contents\nBIONANO GENOMICS, INC.\nNOTES TO CONSOLIDATED FINANCIAL STATEMENTS\n1. Organization and Operations\nDescription of Business\nBionano Genomics, Inc. (collectively, with its consolidated subsidiaries, the \u201cCompany\u201d) is a provider of genome analysis solutions that can enable\nresearchers and clinicians to reveal answers to challenging questions in biology and medicine. The Company offers OGM solutions for applications across\nbasic, translational and clinical research, and for other app",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2149,
+                "text": " we changed our name to BioNano Genomics, Inc., and in July 2018, we changed our name to Bionano Genomics,\nInc.\nOur principal executive offices are located at 9540 Towne Centre Drive, Suite 100, San Diego, California 92121, and our telephone number is (858) 888-\n7600. Our website address is www.bionanogenomics.com. Information contained in, or that can be accessed through, our website is not incorporated by\nreference into this Annual Report, and you should not consider information on our website",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1942,
+                "text": "oned to develop LDT\u2019s that can improve upon the existing SOC for diagnostic testing for NDDs.\nBionano Laboratories is working with payers to secure reimbursement alternatives for OGM-based testing. If reimbursements can be established, Bionano\nLaboratories intends to share its strategies with other labs which may drive demand for the Saphyr system. Bionano Laboratories plans to expand its testing\nmenu with inclusion of OGM to demonstrate workflow implementation in a clinical setting in order to ",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2735,
+                "text": "Table of Contents\nIn August 2020, through the acquisition of Lineagen we obtained a lease for approximately 9,710 square feet of office space in Salt Lake City, Utah under a\nnon-cancelable operating lease that expires in December 2026. We continue to conduct part of our Bionano Laboratories business at this property.\nIn October 2021, through the acquisition of BioDiscovery, we obtained a finance lease for approximately 4,786 square feet of office space in El Segundo,\nCalifornia that expires in F",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1887,
+                "text": "Table of Contents\nRecent Highlights\nAchievement of 2022 ELEVATE! Milestones\nBionano executed on its 2022 ELEVATE! milestones and achieved or exceeded all publicly stated milestones outlined at the beginning of 2022.\n\u2022 Reimbursement: We applied for a category 1 Current Procedural Terminology (CPT) code for OGM.\n\u2022 Clinical Studies: We received institutional review board (IRB) approval for our hematological study. Site selection was completed, and\nenrollment commenced for our hematological study. D",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "Bionano Genomics, Inc. is a provider of genome analysis solutions that enable researchers and clinicians to reveal answers to challenging questions in biology and medicine through its OGM solutions for applications across basic, translational, and clinical research.",
+        "faithfulness": 0.8918454647064209,
+        "context_match": 0.7569546699523926,
+        "hallucination": false,
+        "confidence": 0.838,
+        "timestamp": "2026-02-26T13:42:55.911778"
+    },
+    {
+        "question": "[IMAGE] what is there in the image",
+        "answer": "A groundhog is standing in the grass.",
+        "visual_caption": "a groundhog is standing in the grass",
+        "timestamp": "2026-02-26T13:45:13.383204"
+    }
+]
