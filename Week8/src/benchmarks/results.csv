@@ -1,0 +1,4 @@
+Model,Tokens/Sec,VRAM (GB),Latency (s)
+Base (FP16),26.8,0.95,3.73
+Fine-Tuned (INT8),9.76,1.17,10.25
+Quantized (GGUF-Q4),125.28,0.8,0.73
