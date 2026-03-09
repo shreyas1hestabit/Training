@@ -1,0 +1,9 @@
+# FastAPI and Server
+fastapi
+uvicorn
+pydantic
+requests
+
+# LLM Engine (Pre-compiled for CPU to avoid hanging)
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+llama-cpp-python
