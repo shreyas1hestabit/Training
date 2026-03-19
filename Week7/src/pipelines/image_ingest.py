@@ -49,9 +49,7 @@ class ImageIngestPipeline:
         for file in os.listdir(self.data_path):
             path = os.path.join(self.data_path, file)
 
-            # ----------------------
             # IMAGE FILES
-            # ----------------------
             if file.lower().endswith((".jpg", ".png", ".jpeg")):
                 try:
                     image = Image.open(path).convert("RGB")
@@ -59,9 +57,7 @@ class ImageIngestPipeline:
                 except Exception as e:
                     print(f"Error processing {file}: {e}")
 
-            # ----------------------
             # PDF FILES
-            # ----------------------
             elif file.lower().endswith(".pdf"):
                 try:
                     pages = pdf_to_images(path)

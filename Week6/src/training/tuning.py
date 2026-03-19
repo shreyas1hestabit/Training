@@ -154,7 +154,7 @@ import logging
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
-
+import xgboost as xgb
 # ---------------- PATH CONFIGURATION ---------------- #
 # Root directory (Week6) se paths define kar rahe hain
 BASE_DIR = "src"
@@ -203,20 +203,24 @@ logging.info(f"Baseline accuracy: {baseline_acc:.4f}")
 
 # ---------------- OPTUNA OBJECTIVE ---------------- #
 def objective(trial):
+    # XGBoost specific hyperparameter space
     params = {
-        "learning_rate": trial.suggest_float("learning_rate", 0.01, 0.3),
-        "max_iter": trial.suggest_int("max_iter", 200, 600),
-        "max_depth": trial.suggest_int("max_depth", 3, 20),
-        "max_leaf_nodes": trial.suggest_int("max_leaf_nodes", 15, 128),
-        "min_samples_leaf": trial.suggest_int("min_samples_leaf", 20, 100),
-        "max_bins": trial.suggest_int("max_bins", 128, 255),
-        "l2_regularization": trial.suggest_float("l2_regularization", 0.0, 1.0),
-        "random_state": 42
+        "n_estimators": trial.suggest_int("n_estimators", 200, 1000), #total no of trees built. optuna ki range is 200 to 1000
+        "max_depth": trial.suggest_int("max_depth", 3, 10), #how deep each tree can go. min 3 max 10
+        "learning_rate": trial.suggest_float("learning_rate", 0.01, 0.3, log=True), #learning rate is the step i.e. how fast the model learns.
+        #log=true tells optuna to search more carefully at smaller values.
+        "subsample": trial.suggest_float("subsample", 0.5, 1.0), #percentage of rows used for each tree
+        "colsample_bytree": trial.suggest_float("colsample_bytree", 0.5, 1.0), #percentage of columns used for each tree
+        "gamma": trial.suggest_float("gamma", 1e-8, 1.0, log=True), #min loss required to make a further split on leaf node 
+        #It acts as a Regularization parameter. It tells the tree: "Don't split this branch unless it significantly improves the prediction." This makes the model more conservative and less likely to overfit.
+        "random_state": 42,
+        "tree_method": "hist", # Fast histogram-based method This is an architectural optimization. Instead of looking at every single data point to find a split, XGBoost groups the values into "bins" (like a histogram). This makes training much faster on large datasets.
+        "device": "cpu"        # Or "cuda" if you have a GPU
     }
-    model = HistGradientBoostingClassifier(**params)
-    model.fit(X_train, y_train)
+    model = xgb.XGBClassifier(**params)
+    model.fit(X_train, y_train_encoded)
     preds = model.predict(X_test)
-    return accuracy_score(y_test, preds)
+    return accuracy_score(y_test_encoded, preds)
 
 # ---------------- RUN OPTUNA ---------------- #
 study = optuna.create_study(direction="maximize")

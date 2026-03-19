@@ -2,7 +2,7 @@ import json
 import random
 import os
 
-def generate_finance_dataset(count=1300):
+def generate_finance_dataset(count=1300): #runs the loop 1300 times 
     companies = ["Apple", "Tesla", "NVIDIA", "Microsoft", "Goldman Sachs", "Amazon", "JPMorgan", "Visa"]
     sectors = ["Tech", "Energy", "Banking", "Retail", "Healthcare"]
     currencies = ["USD", "EUR", "GBP", "JPY", "INR"]

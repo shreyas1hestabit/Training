@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TODO APP - SECURE</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        .todo-item { background: white; padding: 10px; margin: 5px 0; display: flex; justify-content: space-between; border-radius: 4px; }
+        .completed { text-decoration: line-through; color: gray; }
+    </style>
+</head>
+<body>
+    <h1>SYSTUMM TODO APP</h1>
+    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <input type="text" id="todoInput" placeholder="Enter task...">
+        <button onclick="addTodo()">SUBMIT</button>
+    </div>
+    <div id="todoList"></div>
+
+    <script>
+        // Load todos on page open
+        async function fetchTodos() {
+            const res = await fetch('/api/todos');
+            const data = await res.json();
+            const list = document.getElementById('todoList');
+            list.innerHTML = data.map(t => `
+                <div class="todo-item ${t.completed ? 'completed' : ''}">
+                    <span>${t.title}</span>
+                    <button onclick="toggleTodo(${t.id})">${t.completed ? 'Undo' : 'Done'}</button>
+                </div>
+            `).join('');
+        }
+
+        async function addTodo() {
+            const input = document.getElementById('todoInput');
+            await fetch('/api/todos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title: input.value })
+            });
+            input.value = '';
+            fetchTodos();
+        }
+
+        async function toggleTodo(id) {
+            await fetch(`/api/todos/${id}`, { method: 'PATCH' });
+            fetchTodos();
+        }
+
+        fetchTodos();
+    </script>
+</body>
+</html>

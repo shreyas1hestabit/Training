@@ -1,5 +1,3 @@
-# src/utils/schema_loader.py
-
 import sqlite3
 from typing import Dict
 
@@ -7,7 +5,7 @@ from typing import Dict
 class SchemaLoader:
     def __init__(self, db_path: str):
         self.db_path = db_path
-        self._cached_schema = None
+        self._cached_schema = None #we use this to save time and computation. if we want to access the db 10 times then the hard work of reading the databse is done only once. this stores the map in the memory
 
     def load_schema(self) -> str:
         """
@@ -21,7 +19,7 @@ class SchemaLoader:
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
 
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+        cursor.execute("SELECT name FROM sqlite_master WHERE type='table';") #every sqlite database has a hidden master table that lists everything inside it
         tables = cursor.fetchall()
 
         schema_text = ""
@@ -35,7 +33,8 @@ class SchemaLoader:
 
             schema_text += f"\nTable: {table_name}\nColumns:\n"
 
-            cursor.execute(f"PRAGMA table_info({table_name});")
+            cursor.execute(f"PRAGMA table_info({table_name});") #pragma is a special SQLite only command that returns metadata
+            #it gives back a list of columns, their names and their types 
             columns = cursor.fetchall()
 
             for col in columns:

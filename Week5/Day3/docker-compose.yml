@@ -3,6 +3,8 @@ services:
     build: ./server
     expose:
       - "3003"
+    deploy:
+      replicas: 2
 
   nginx:
     image: nginx:alpine

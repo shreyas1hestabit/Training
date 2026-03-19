@@ -1,7 +1,7 @@
 import faiss
 import pickle
 import numpy as np
-
+import time
 from src.embeddings.embedder import Embedder
 
 
@@ -47,7 +47,10 @@ if __name__ == "__main__":
     #query = "What is equity compensation plan? "
     query= "What is equity compensation plan of ZIFF DAVIS, INC? "
 
+    st = time.perf_counter()
     results = engine.search(query, top_k=3)
-
+    et = time.perf_counter()
+    print(f"Printed results in {et-st:.4f} seconds \n") 
+    
     for i, res in enumerate(results):
         print(f"\nResult {i+1}:\n{res}\n")

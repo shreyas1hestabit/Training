@@ -18,9 +18,7 @@ class ImageSearch:
         self.text_embedder = TextEmbedder()
         print("System ready.\n")
 
-    # -----------------------------
-    # TEXT → IMAGE
-    # -----------------------------
+    # TEXT -> IMAGE
     def text_query(self, query, k=3):
         vector = self.text_embedder.encode(query)
         scores, indices = self.index.text_index.search(
@@ -38,9 +36,7 @@ class ImageSearch:
             })
         return results
 
-    # -----------------------------
-    # IMAGE → IMAGE
-    # -----------------------------
+    # IMAGE -> IMAGE
     # def image_query(self, image_path, k=3):
     #     image = Image.open(image_path).convert("RGB")
     #     vector = self.clip.encode_image(image)
@@ -63,7 +59,7 @@ class ImageSearch:
     def image_query(self, image_path, k=3):
         results = []
 
-        # If PDF → convert to images
+        # If PDF -> convert to images
         if image_path.lower().endswith(".pdf"):
             pages = pdf_to_images(image_path)
 
@@ -104,9 +100,7 @@ class ImageSearch:
 
         return results
 
-    # -----------------------------
-    # IMAGE → TEXT ANSWER
-    # -----------------------------
+    # IMAGE -> TEXT ANSWER
     def image_to_text(self, image_path, k=3):
         results = self.image_query(image_path, k)
 
@@ -119,9 +113,7 @@ class ImageSearch:
         return combined_text
 
 
-# =====================================================
 # CLI Interface
-# =====================================================
 
 if __name__ == "__main__":
     search_system = ImageSearch()

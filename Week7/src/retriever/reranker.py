@@ -5,8 +5,8 @@ class Reranker:
         self.model=CrossEncoder(model_name)
     
     def rerank(self,query,documents,top_k=5):
-        pairs=[[query,doc] for doc in documents]
-        scores= self.model.predict(pairs)
+        pairs=[[query,doc] for doc in documents] #reranker chunks ka pair bnata hai like [[question, chunk#1]]
+        scores= self.model.predict(pairs) #model looks at both the texts and read them side by side and gives a score usually between 0 to1. if score is 0.99 means chunk is perfect to answer this specifc question.
 
         ranked=sorted(
             list(zip(documents,scores)),

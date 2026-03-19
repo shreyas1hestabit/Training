@@ -16,7 +16,9 @@ class VectorStore:
         self.metadata=[] #initializes empty list to store metadata.
     def add(self,embeddings,metadata_list):
         self.index.add(embeddings) # this wires the numbers into faiss index so that they can be searched.
+        #we have not used append or extend because faiss just uses add.
         self.metadata.extend(metadata_list) # faiss stores numbers and not text. we maintain a seperate list(metadata) to store actual text chunks and page numbers. extend() is used to add multiple items to our list at once.
+        #The Problem with append: If you used .append([chunk1, chunk2, chunk3]), Python would put the entire list into one single slot. Your metadata would look like this: [[chunk1, chunk2, chunk3]]. This breaks our "one-to-one" map with FAISS.
     def save (self, index_path, metadata_path):
         folder=os.path.dirname(index_path)
         os.makedirs(folder,exist_ok=True)
@@ -33,6 +35,7 @@ class VectorStore:
             #idx basically is the current id we are working on
             #indices[0] is the list of top id found.
             # faiss is designed to handle batch searches. even if we ask one question it puts ans inside another list so we grab the inner list at position 0. 
+            #faiss is a batch specialist had i given two questions at a time it would return in the form of [[ans of q1][ans of q2]]. ab qk maine ek hi ques diya hai woh fir bh list of lists return krega like [[top 3 ans of q1]].so basically indeices[0] tells ki maine ek hi question diya hai so give me the first (and only) list of answers.
             results.append({
                 "score": scores[0][i],
                 "metadata": self.metadata[idx]

@@ -184,10 +184,10 @@ def select_features(X_train, y_train, importance_threshold=0.01):
     """
 
     model = RandomForestClassifier(
-        n_estimators=200,
-        class_weight="balanced",
+        n_estimators=200, #no of trees in the forest
+        class_weight="balanced", #since traffic levels might be imbalanced this tells model to give more respect to the minority class so the importance scores are fair.
         random_state=42,
-        n_jobs=-1
+        n_jobs=-1 #tells that use every single core of this computer to increase speed.
     )
 
     print(f"\nTraining Random Forest on {X_train.shape[1]} features...")
@@ -240,6 +240,7 @@ def save_selected_data(X_train_select, X_test_select, y_train, y_test):
 
 # ---------------- MAIN ---------------- #
 
+#hmne imputed idhar isliye alag se bnaya hai coz agr hm selected use kr rhe hai and what if testing k time pr koi naya prot aa gya and uski koi history hi nh hai toh udhar nan store ho jata hai and models like xgboost and random classifier can not handle nan values. so this is like the final polishing of the dataset. it fills those empty spaces with medians, means or modes.
 if __name__ == "__main__":
 
     print("Loading split data...")

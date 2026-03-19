@@ -177,7 +177,7 @@
         "type": "sql",
         "timestamp": "2026-02-26T13:05:31.721807"
     },
-       {
+    {
         "question": "[IMAGE] which fruit is there in the image",
         "answer": "The fruit in the image is an apple.",
         "visual_caption": "an apple with a green leaf on it",
@@ -247,5 +247,181 @@
         "answer": "A groundhog is standing in the grass.",
         "visual_caption": "a groundhog is standing in the grass",
         "timestamp": "2026-02-26T13:45:13.383204"
+    },
+    {
+        "question": "what is the investment policy of Bionano Geonomic?",
+        "retrieved_docs": [
+            {
+                "chunk_id": 5056,
+                "text": "dom, and theEuropean Union. These investments are made in accordance with the Company\u2019s investment policy with the principal objectives being preservation of capital, fulfillment of liquidity needs and abovemarket returns commensurate with preservation of capital. The Company\u2019s investment policy also requires that investments in marketable securities be in only highly rated instruments, withlimitations on investing in securities of any single issuer. However, these investments are not insured ag",
+                "source": "ecabab4934d4b80570c4bb3b8e35b7476694b3fb.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2480,
+                "text": " provide third-party payors with sufficient evidence of the clinical utility and validity of our Bionano Laboratories products and\ndiagnostic assays, they may not provide coverage, or may provide limited coverage, which will adversely affect our revenues and our ability to succeed.\nSince each third-party payor makes its own decision as to whether to establish a policy to cover our Bionano Laboratories products and diagnostic assays,\nenter into a contract with us and set the amount it will reimbu",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2791,
+                "text": "llion for the\nyear ended December 31, 2021. The decrease in service and other gross profit is primarily due to increased service costs on our growing installed base as\nwell increased costs to support the service offerings from Bionano Laboratories.\nResearch and Development Expenses\nResearch and development (R&D) expenses increased by $26.6 million, or 118%, to $49.0 million for the year ended December 31, 2022 as compared to\n$22.5 million for the same period in 2021. The increase is primarily du",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 3488,
+                "text": "Attachment I\nBionano Genomics, Inc.\nOption Agreement(2018 Equity Incentive Plan) (Incentive Stock Option or Nonstatutory Stock Option)\nPursuant to your Stock Option Grant Notice (\u201cGrant Notice\u201d) and this Option Agreement, Bionano Genomics, Inc. (the \u201cCompany\u201d)has granted you an option under its 2018 Equity Incentive Plan (the \u201cPlan\u201d) to purchase the number of shares of the Company\u2019s CommonStock indicated in your Grant Notice at the exercise price indicated in your Grant Notice. The option is gra",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2735,
+                "text": "Table of Contents\nIn August 2020, through the acquisition of Lineagen we obtained a lease for approximately 9,710 square feet of office space in Salt Lake City, Utah under a\nnon-cancelable operating lease that expires in December 2026. We continue to conduct part of our Bionano Laboratories business at this property.\nIn October 2021, through the acquisition of BioDiscovery, we obtained a finance lease for approximately 4,786 square feet of office space in El Segundo,\nCalifornia that expires in F",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "The investment policy of Bionano Genomics, Inc. is to preserve capital, fulfill liquidity needs, and achieve above-market returns commensurate with the preservation of capital. The company's investment policy also requires that investments in marketable securities be in highly rated instruments, with limitations on investing in securities of any single issuer.",
+        "faithfulness": 0.8420833349227905,
+        "context_match": 0.8249771595001221,
+        "hallucination": false,
+        "confidence": 0.835,
+        "timestamp": "2026-03-17T16:42:37.931264"
+    },
+    {
+        "question": "[IMAGE] summarize the image",
+        "answer": "The image appears to be a basket filled with a variety of fresh fruits and vegetables.",
+        "visual_caption": "a basket of fresh fruits and vegetables",
+        "timestamp": "2026-03-17T18:03:10.827195"
+    },
+    {
+        "question": "[IMAGE] summarize the image",
+        "answer": "The image appears to be a table full of food, suggesting a meal or a buffet setting.",
+        "visual_caption": "a table full of food",
+        "timestamp": "2026-03-17T18:21:40.968484"
+    },
+    {
+        "question": "list all products with size L",
+        "answer": "SQL Result: [(4, 'Advanced Router Rechargeable', 'For force gas energy six laugh.', 'Gallagher and Sons', 'Kitch",
+        "sql": "SELECT * FROM products WHERE Size = 'L'",
+        "type": "sql",
+        "timestamp": "2026-03-18T17:32:55.377802"
+    },
+    {
+        "question": "what are the services provided by hestabit?",
+        "retrieved_docs": [
+            {
+                "chunk_id": 4814,
+                "text": "ransactions involving the sale of perpetual software licenses, related software support and maintenance, hardware used in conjunction with itssoftware, and other related services. Revenue is\n(1)\n(2)\n(3)\n-41-",
+                "source": "ecabab4934d4b80570c4bb3b8e35b7476694b3fb.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1703,
+                "text": "heCompany\u2019s legal basis for the collection, processing and usage of the Participant\u2019s personal data is the Company legitimateinterest of managing the Plan and generally administering employee equity awards granted under the Plan, and to satisfy itscontractual obligations under the terms of the Award Agreement and this Exhibit A. The Participant\u2019s refusal to providepersonal data may affect the Participant\u2019s ability to participate in the Plan.\n(c) Stock Plan Administration Service Provider. The Co",
+                "source": "f85f0ccbbc59f1423d52d44e5ab70e3a01164499.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 4674,
+                "text": "er for one of our services or properties. In order for our Everyday Health Group brands todeliver marketing and communications solutions to pharmaceutical and medical device companies, health insurers, hospital systems, and other customers, we rely on data provided by our users. Wealso purchase data from third-party sources to augment our user profiles and marketing databases so we are better able to personalize content, enhance our analytical capabilities and better target ourmarketing programs",
+                "source": "ecabab4934d4b80570c4bb3b8e35b7476694b3fb.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 1914,
+                "text": "e needs of our\ncustomers\n7",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2073,
+                "text": "Table of Contents\nCoverage and Reimbursement\nCurrently, our OGM products are for research use only, but clinical laboratories may acquire our instrumentation through a capital purchase or capital lease\nand use the Saphyr system and direct label and stain chemistry to create their own diagnostic tests and potentially seek reimbursement for such tests. Our\ncustomers may generate revenue for these testing services by seeking the necessary approval of their product from the FDA or CMS, along with co",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "Unfortunately, I couldn't find any information about \"hestabit\" in the provided context. The context only mentions transactions involving the sale of perpetual software licenses, related software support and maintenance, hardware used in conjunction with its software, and other related services, but does not mention \"hestabit\" or any services provided by it.",
+        "faithfulness": 0.7097711563110352,
+        "context_match": 0.6698318719863892,
+        "hallucination": false,
+        "confidence": 0.694,
+        "timestamp": "2026-03-18T17:33:39.651304"
+    },
+    {
+        "question": "[IMAGE] what is this image about?",
+        "answer": "This image is about a basket of fresh fruits and vegetables.",
+        "visual_caption": "a basket of fresh fruits and vegetables",
+        "timestamp": "2026-03-18T17:34:08.055667"
+    },
+    {
+        "question": "list products with size l",
+        "answer": "SQL Result: [(4, 'Advanced Router Rechargeable', 'For force gas energy six laugh.', 'Gallagher and Sons', 'Kitch",
+        "sql": "SELECT * FROM products WHERE Size = 'L'",
+        "type": "sql",
+        "timestamp": "2026-03-18T17:34:45.181448"
+    },
+    {
+        "question": "[IMAGE] give me simialr images",
+        "answer": "Based on the image description of a basket of fresh fruits and vegetables, similar images could include:\n\n1. A fruit salad or a fruit platter with a variety of colorful fruits.\n2. A vegetable garden or a farmer's market with a selection of fresh produce.\n3. A still life photography of a fruit or vegetable arrangement, such as an apple or a bouquet of fresh flowers.\n4. A healthy snack or meal setup with a bowl of fresh fruits and vegetables.\n5. A grocery store or supermarket display of fresh fruits and vegetables.\n\nYou can find these types of images on stock photo websites such as Unsplash, Pexels, or Shutterstock.",
+        "visual_caption": "a basket of fresh fruits and vegetables",
+        "timestamp": "2026-03-18T18:46:46.884746"
+    },
+    {
+        "question": "can you five me food images",
+        "retrieved_docs": [
+            {
+                "chunk_id": 5,
+                "text": "red to submit such files).    Yes  \u2612    No  \u2610\n1",
+                "source": "f85f0ccbbc59f1423d52d44e5ab70e3a01164499.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 2460,
+                "text": "ederal Food, Drug, and\nCosmetic Act. We could be subject to a range of enforcement actions, including warning letters,\n45",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 3268,
+                "text": "\n(15)\n(16)\n+\n#\n*\n117",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 4339,
+                "text": "apchat, Twitter, and Facebook.\nth\n-4-",
+                "source": "ecabab4934d4b80570c4bb3b8e35b7476694b3fb.pdf",
+                "year": null,
+                "type": "document"
+            },
+            {
+                "chunk_id": 4136,
+                "text": "op markets for Licensed\nPage 6 of #NUM_PAGES#",
+                "source": "5a24fa827d172a7669eca206b2a5f47c2b19b48d.pdf",
+                "year": null,
+                "type": "document"
+            }
+        ],
+        "answer": "Based on the context, I can provide you with similar images to the one described as a basket of fresh fruits and vegetables. However, I must note that the context seems to be related to submitting files, possibly for regulatory purposes, and mentions the Federal Food, Drug, and Cosmetic Act. Therefore, I will provide images that are relevant to food and drug submissions.\n\nHere are some options:\n\n1. A label or packaging design for a food product.\n2. A photograph of a food product or ingredient.\n3. A diagram or illustration of a food manufacturing process.\n4. A picture of a food safety inspection or quality control process.\n5. A graphic representation of a food ingredient or nutritional information.\n\nYou can find these types of images on stock photo websites such as Unsplash, Pexels, or Shutterstock.",
+        "faithfulness": 0.7428275942802429,
+        "context_match": 0.6526346206665039,
+        "hallucination": false,
+        "confidence": 0.707,
+        "timestamp": "2026-03-18T18:47:14.027465"
     }
 ]

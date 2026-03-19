@@ -55,10 +55,6 @@ def generate(request: GenerateRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    #     output = llm(request.prompt, max_tokens=request.max_tokens)
-    #     return {"result": output["choices"][0]["text"].strip()}
-    # except Exception as e:
-    #     raise HTTPException(status_code=500, detail=str(e))
 
 # 3. Structured Chat Endpoint
 @app.post("/chat")

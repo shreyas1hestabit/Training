@@ -17,6 +17,6 @@ class ModelLoader:
                 n_gpu_layers=0,  # Forced to 0 for your CPU
                 n_threads=Config.THREADS,
                 n_ctx=Config.CONTEXT_SIZE,
-                verbose=False
+                verbose=False #keep the window clean don't tell me each and every intermediate step you are performing.
             )
         return cls._instance

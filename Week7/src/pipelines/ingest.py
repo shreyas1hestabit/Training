@@ -63,7 +63,7 @@ def extract_year_from_filename(file_name):
 
 def extract_type_from_filename(file_name):
     # Example naming convention:
-    # credit_policy_2024.pdf → type=policy
+    # credit_policy_2024.pdf -> type=policy
     if "policy" in file_name.lower():
         return "policy"
     if "guideline" in file_name.lower():

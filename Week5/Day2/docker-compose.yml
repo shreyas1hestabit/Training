@@ -8,6 +8,7 @@ services:
   server:
     build: ./server
     container_name: server
+    restart: always
     ports:
       - "3002:3002"
     environment:

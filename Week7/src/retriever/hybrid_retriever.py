@@ -22,9 +22,6 @@ class HybridRetriever:
         valid = []
         for idx, meta in enumerate(self.metadata):
 
-        #     if all(meta.get(k) == v for k, v in filters.items()):
-        #         valid.append(idx)
-        # return valid
             match = True
             for k,v in filters.items():
                 meta_val=meta.get(k)
@@ -44,9 +41,7 @@ class HybridRetriever:
                 if match:
                     valid.append(idx)
         return valid
-    # -----------------------------
     # Dense Retrieval
-    # -----------------------------
     def _dense_search(self, query, top_k):
         query_vec = self.embedding_model.encode([query])
         distances, indices = self.dense_index.search(query_vec, top_k)
@@ -55,7 +50,7 @@ class HybridRetriever:
 
 
     # MMR (Diversity)
-    def _mmr(self, query, candidate_indices, top_k, lambda_param=0.7):
+    def _mmr(self, query, candidate_indices, top_k, lambda_param=0.7): #lambda tells what to priortize diversity or relevance. higher the lambda the more relevance would be priortized.
         if not candidate_indices:
             return[]
         selected = []

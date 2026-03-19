@@ -41,12 +41,12 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
     numeric_cols=["Value","Latitude","Longitude"]
     for col in numeric_cols:
         if col in df.columns:
-            df[col]=df[col].fillna(df[col].median())
+            df[col]=df[col].fillna(df[col].median()) #used median because my data is right skewed so if i use average then the data would be highly bias so it is better to use middlemae.
 
     # Categorical columns -> mode
     categorical_cols = df.select_dtypes(include=["object","string"]).columns
     for col in categorical_cols:
-        df[col] = df[col].fillna(df[col].mode()[0])
+        df[col] = df[col].fillna(df[col].mode()[0]) #categorical ka mean or median kaise niklega so we fill it with the most occuring values
 
 
     # outlier_cols = ["Value"]  # Only apply where meaningful
@@ -69,10 +69,10 @@ def clean_data(df): #cleaning function create kiya hai jisme df as a input pass 
 def create_target(df):
     df["Traffic_level"]="Zero"
     non_zero_mask=df["Value"]>0
-    df.loc[non_zero_mask,"Traffic_level"]=pd.qcut(
+    df.loc[non_zero_mask,"Traffic_level"]=pd.qcut(  #this ensures that my buckets are fair. i.e. low, medium and high have same no of values and the model is not biased towards nay one class.
         df.loc[non_zero_mask,"Value"],
         q=3,
-        labels=["Low","Medium","High"],
+        labels=["Low","Medium","High"],  #we are using categories because computer finds it hard to predict numbers comparitive to classifying values so we have turned a regression problem to a classification one.
         duplicates="drop")
 
     return df

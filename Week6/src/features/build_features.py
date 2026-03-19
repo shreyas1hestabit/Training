@@ -560,8 +560,8 @@
 
 
 from json import encoder
-import pandas as pd
-import numpy as np
+import pandas as pd #handles tables
+import numpy as np #handles maths
 import os
 import json
 from sklearn.model_selection import train_test_split
@@ -570,11 +570,11 @@ import joblib
 
 def load_data(path):
     df=pd.read_csv(path)
-    df.columns=df.columns.str.strip()
+    df.columns=df.columns.str.strip() #strip removes trailing whitespaces
     return df
 
 def engineer_features(df):
-    df=df.copy()
+    df=df.copy() #copy df so we accidently dont ruin original df.
     df.columns=df.columns.str.strip()
 
     if "Traffic_level" in df.columns:
@@ -590,6 +590,7 @@ def engineer_features(df):
     # df["Is_month_start"] = df["Date"].dt.is_month_start.astype(int)
     # df["Is_month_end"] = df["Date"].dt.is_month_end.astype(int)
 
+    #we are giving history ki iss port ne past mein itna traffic handle kiya  hai
     df["Port_Avg_Value"] = df.groupby("Port Name")["Value"].transform("mean")
     df["Port_Max_Value"] = df.groupby("Port Name")["Value"].transform("max")
 
@@ -609,13 +610,14 @@ def engineer_features(df):
     df["Traffic_level"] = traffic_level
     return df
 
-def stratified_sampling(df, max_per_class=50000):
+def stratified_sampling(df, max_per_class=50000): #we are using this to remove class imbalance. hm hr sample class mein hr traffic level pr same no of values chahiye.
+    #If "High Traffic" only happens 5% of the time, the model might ignore it. By taking a max of 50,000 samples per class, you ensure the model sees enough examples of "High," "Medium," and "Low" to learn the difference. 
 
     sampled_groups = []
     for name, group in df.groupby("Traffic_level"):
         sampled_group = group.sample(
-            n=min(len(group), max_per_class),
-            random_state=42
+            n=min(len(group), max_per_class), #agr 2 classes hai and dono mein highly imbalanced data hai toh hm min of both the classes lenge for max class.
+            random_state=42 #controls shuffling if the data is highly imbalanced by managing bias. it acts as a seed. basically aise smjhe ki yeh hr baar pattern 42 k according shuffle krega agr me koi or value rkhti toh woh uss pattern k acc shuffle krta and if i would have kept it none toh hr baar shuffle krne pr diff values aati and we dont get same result twice
         )
         sampled_groups.append(sampled_group)
 
@@ -632,19 +634,22 @@ def split_data(df):
         y,
         test_size=0.2,
         random_state=42,
-        stratify=y
+        stratify=y #stratify ensures that ratio of all the three classes remain same in train/test split
     )
 
     return X_train, X_test, y_train, y_test
 def encode_features(X_train, X_test):
 
     categorical_cols = ["State", "Border", "Measure"]
-
+    
+     #categorical columns ko vectorize kr rhe hai using onehot encoding
     encoder = OneHotEncoder(
-        handle_unknown="ignore",
-        sparse_output=True
+        handle_unknown="ignore", #if the model sees a new column in test data then it wont crash rather put zero at every place.
+        sparse_output=True #yeh memory save krne k kaam aata hai as it only saves value with 1 and not the values containing 0
     )
 
+
+    #fit is the learning phase. the encoder scans the dataset and identifies every unique category and it assigns new column for every unique value. 
     encoded_train = encoder.fit_transform(X_train[categorical_cols])
     encoded_test = encoder.transform(X_test[categorical_cols])
 
@@ -663,7 +668,7 @@ def encode_features(X_train, X_test):
     X_train = X_train.drop(columns=categorical_cols)
     X_test = X_test.drop(columns=categorical_cols)
 
-    X_train = pd.concat([X_train, encoded_train_df], axis=1)
+    X_train = pd.concat([X_train, encoded_train_df], axis=1) #glues new encoded columns on side to the main table 
     X_test = pd.concat([X_test, encoded_test_df], axis=1)
 
     return X_train, X_test, encoder
@@ -712,12 +717,22 @@ if __name__ == "__main__":
     df = load_data(data_path)
     print("Original shape:", df.shape)
 
+
+#The engineer_features function is for Batch Processing. It looks at the whole table, calculates averages, and fills the columns so you can train your model.
+
+# The code in main that saves to aggregation_stats.json is for Production (The Future).
+
+# The Scenario: Six months from now, a user wants a prediction for one single row of data (e.g., "Port of Buffalo").
+
+# The Problem: Your engineer_features function will fail because groupby("Port Name").mean() doesn't work on a single row! There is no group to average.
+
+# The Solution: By saving that dictionary in main now, your future "Predictor script" can simply load the JSON and say: "Ah, for Buffalo, the average is 500."
     ####aggregation stats saving
 
     print("\nCalculating and saving aggregation statistics...")
     
     aggregation_stats = {
-        "Port_Avg_Value": df.groupby("Port Name")["Value"].mean().to_dict(),
+        "Port_Avg_Value": df.groupby("Port Name")["Value"].mean().to_dict(), #we have stored them to dictionary because if we deploy this " The website doesn't have your 1GB training file to calculate the average. It simply opens this tiny .json file, looks up "Buffalo," and instantly knows if 500 is "High" or "Low" compared to the past
         "Port_Max_Value": df.groupby("Port Name")["Value"].max().to_dict(),
         "Measure_Avg_Value": df.groupby("Measure")["Value"].mean().to_dict(),
         "Border_Avg_Value": df.groupby("Border")["Value"].mean().to_dict(),
