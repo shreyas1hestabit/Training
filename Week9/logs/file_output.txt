@@ -1,0 +1,2602 @@
+
+============================================================
+Timestamp : 2026-03-26 05:22:21
+Action    : WRITE
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Success: 'tech.csv' written (100 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/tech.csv
+
+CONTENT WRITTEN:
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:23:29
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:24:02
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 662 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:24:02
+User Query       : analyze tech.csv and list all the products whose quantity is more than 3.
+────────────────────────────────────────────────────────────
+Based on the data analysis results, five produ
+
+============================================================
+Timestamp : 2026-03-26 05:24:57
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:33:27
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:34:02
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 1396 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:34:02
+User Query       : analyze tech.csv and give me all the products whose quantity is more than 3.
+────────────────────────────────────────────────────────────
+Based on the analysis of the data, the prod
+
+============================================================
+Timestamp : 2026-03-26 05:38:11
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:38:31
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 1913 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:38:31
+User Query       : analyze tech.csv and give me all the products whose quantity is more than 3.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me all the
+
+============================================================
+Timestamp : 2026-03-26 05:41:55
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:42:08
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 2467 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:42:08
+User Query       : analyze tech.csv and give me all products whose quantity is more than 3
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me all products
+
+============================================================
+Timestamp : 2026-03-26 05:45:23
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:45:35
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 2990 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:45:35
+User Query       : analyze tech.csv and give me all products whose quantity is more than 3.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me all product
+
+============================================================
+Timestamp : 2026-03-26 05:46:04
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:46:14
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 3506 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:46:14
+User Query       : analyze tech.csv and list all the distinct products.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and list all the distinct products.
+
+Found 
+
+============================================================
+Timestamp : 2026-03-26 05:46:50
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:47:02
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 4026 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:47:02
+User Query       : analyze tech.csv and display product with least price.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display product with least price.
+
+Fo
+
+============================================================
+Timestamp : 2026-03-26 05:47:39
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:47:51
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 4471 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:47:51
+User Query       : analyze tech.csv and display the quantity of Smartphone
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display the quantity of Smartphone
+
+
+
+============================================================
+Timestamp : 2026-03-26 05:54:07
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:54:49
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 4946 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:54:49
+User Query       : analyze tech.csv and display the quantity of Smartphone.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display the quantity of Smartphone.
+
+============================================================
+Timestamp : 2026-03-26 05:55:28
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 05:56:03
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 5412 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 05:56:03
+User Query       : analyze tech.csv and display product with least price.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display product with least price.
+
+Fo
+
+============================================================
+Timestamp : 2026-03-26 06:00:31
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:01:13
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 5879 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:01:13
+User Query       : analyze tech.csv and display product with least price.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display product with least price.
+
+Fo
+
+============================================================
+Timestamp : 2026-03-26 06:01:42
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:02:15
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 6356 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:02:15
+User Query       : analyze tech.csv and display the quantity of Smartphone.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and display the quantity of Smartphone.
+
+============================================================
+Timestamp : 2026-03-26 06:03:05
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:03:41
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 6886 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:03:41
+User Query       : analyze tech.csv and give me the total price of Headphones and Tablet
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the total pric
+
+============================================================
+Timestamp : 2026-03-26 06:04:29
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:05:05
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 7412 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:05:05
+User Query       : analyze tech.csv and tell me how many T-Shirt do we have?
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and tell me how many T-Shirt do we hav
+
+============================================================
+Timestamp : 2026-03-26 06:14:18
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:14:19
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 7888 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:14:19
+User Query       : analyze tech.csv and tell me how many T-Shirt do we have?
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and tell me how many T-Shirt do we hav
+
+============================================================
+Timestamp : 2026-03-26 06:14:39
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:14:40
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 8438 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:14:40
+User Query       : analyze tech.csv and give me the total price of Headphones and Tablet
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the total pric
+
+============================================================
+Timestamp : 2026-03-26 06:15:25
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Error: 'employee.csv' not found in /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data.
+
+============================================================
+Timestamp : 2026-03-26 06:15:49
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:15:51
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 8906 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:15:51
+User Query       : insert a new row to tech.csv
+────────────────────────────────────────────────────────────
+Query: insert a new row to tech.csv
+
+Found 5 matching rows where all rows:
+  * Laptop
+  * S
+
+============================================================
+Timestamp : 2026-03-26 06:21:02
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 100 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+
+============================================================
+Timestamp : 2026-03-26 06:21:08
+Action    : APPEND
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Success: Appended to 'tech.csv' (total 123 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/tech.csv
+
+APPENDED:
+Gaming Console,$2000,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:21:08
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 9361 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:21:08
+User Query       : insert a new row to tech.csv
+────────────────────────────────────────────────────────────
+Query: insert a new row to tech.csv
+
+New row inserted into 'tech.csv':
+  product: Gaming Co
+
+============================================================
+Timestamp : 2026-03-26 06:21:49
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 124 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:21:50
+Action    : APPEND
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Success: Appended to 'tech.csv' (total 139 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/tech.csv
+
+APPENDED:
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:21:50
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 9808 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:21:50
+User Query       : insert a new row to tech.csv
+────────────────────────────────────────────────────────────
+Query: insert a new row to tech.csv
+
+New row inserted into 'tech.csv':
+  product: Monitor
+ 
+
+============================================================
+Timestamp : 2026-03-26 06:22:11
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:22:12
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 10353 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:22:12
+User Query       : analyze tech.csv and give me the total price of Headphones and Tablet
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the total pric
+
+============================================================
+Timestamp : 2026-03-26 06:22:54
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:22:55
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 10993 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:22:55
+User Query       : analyze tech.csv and give me the total qunatity of Gaming Console and Monitor.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the t
+
+============================================================
+Timestamp : 2026-03-26 06:23:52
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:23:53
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 11452 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:23:53
+User Query       : From tech.csv update the quantity of Laptop to 2.
+────────────────────────────────────────────────────────────
+Query: From tech.csv update the quantity of Laptop to 2.
+
+Found 1 matc
+
+============================================================
+Timestamp : 2026-03-26 06:27:56
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,1
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:27:57
+Action    : WRITE
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Success: 'tech.csv' written (147 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/tech.csv
+
+CONTENT WRITTEN:
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:27:57
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 11949 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:27:57
+User Query       : From tech.csv update the quantity of Laptop to 2.
+────────────────────────────────────────────────────────────
+Query: From tech.csv update the quantity of Laptop to 2.
+
+Updated 'tec
+
+============================================================
+Timestamp : 2026-03-26 06:28:12
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:28:14
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 12525 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:28:14
+User Query       : analyze tech.csv and give me the total qunatity of Gaming Console and Monitor.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the t
+
+============================================================
+Timestamp : 2026-03-26 06:34:12
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:34:14
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 13095 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:34:14
+User Query       : analyze tech.csv and give me the total qunatity of Gaming Console and Monitor.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me the t
+
+============================================================
+Timestamp : 2026-03-26 06:35:04
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:35:06
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 13705 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:35:06
+User Query       : analyze tech.csv and give me the total price of Laptop, Gaming Console and Monitor.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me 
+
+============================================================
+Timestamp : 2026-03-26 06:35:42
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:35:43
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 14278 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:35:43
+User Query       : analyze tech.csv and tell me which is cheaper- Tablet or Monitor?
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and tell me which is cheaper- 
+
+============================================================
+Timestamp : 2026-03-26 06:38:24
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:38:25
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 14819 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:38:25
+User Query       : analyze tech.csv and tell me which is cheaper- Tablet or Monitor?
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and tell me which is cheaper- 
+
+============================================================
+Timestamp : 2026-03-26 06:39:55
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:40:57
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 15324 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:40:57
+User Query       : check the database and tell me how many rows are in the data_import table. Also show me the first three rows.
+────────────────────────────────────────────────────────────
+total | pr
+
+============================================================
+Timestamp : 2026-03-26 06:41:59
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 15713 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:41:59
+User Query       : check the database and tell me how many rows are in the data_import table.
+────────────────────────────────────────────────────────────
+count
+-----
+7
+
+
+============================================================
+Timestamp : 2026-03-26 06:42:27
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 16180 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:42:27
+User Query       : display first 3 rows from the database.
+────────────────────────────────────────────────────────────
+product | price | quantity
+--------------------------
+Gaming Console | $2000 | 5
+
+============================================================
+Timestamp : 2026-03-26 06:46:11
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 16639 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:46:11
+User Query       : display first 3 rows from the database.
+────────────────────────────────────────────────────────────
+product | price | quantity
+--------------------------
+Laptop | $1000 | 2.0
+Smart
+
+============================================================
+Timestamp : 2026-03-26 06:46:52
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 17021 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:46:52
+User Query       : from the database display the product with least quantity.
+────────────────────────────────────────────────────────────
+product
+-------
+Laptop
+
+
+============================================================
+Timestamp : 2026-03-26 06:47:43
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 17405 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:47:43
+User Query       : check from the database which product has highest price?
+────────────────────────────────────────────────────────────
+product
+-------
+Smartphone
+
+
+============================================================
+Timestamp : 2026-03-26 06:48:33
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 17957 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:48:33
+User Query       : from the database extract all the data.
+────────────────────────────────────────────────────────────
+product | price | quantity
+--------------------------
+Laptop | $1000 | 2.0
+Smart
+
+============================================================
+Timestamp : 2026-03-26 06:56:56
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 06:57:17
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 18569 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:57:17
+User Query       : check the database and tell me how many rows are in the data_import table. Also show me the first three rows.
+────────────────────────────────────────────────────────────
+Row count:
+
+============================================================
+Timestamp : 2026-03-26 06:57:42
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 19138 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:57:42
+User Query       : check the database and tell me how many rows are in the data_import table. Also show me the first 3 rows.
+────────────────────────────────────────────────────────────
+Row count:
+tot
+
+============================================================
+Timestamp : 2026-03-26 06:58:07
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 19570 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:58:07
+User Query       : from the database display the product with least quantity.
+────────────────────────────────────────────────────────────
+product | price | quantity
+--------------------------
+Laptop 
+
+============================================================
+Timestamp : 2026-03-26 06:58:30
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 20019 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:58:30
+User Query       : check from the database which product has highest price?
+────────────────────────────────────────────────────────────
+product | sort_price | quantity
+-------------------------------
+
+============================================================
+Timestamp : 2026-03-26 06:58:53
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 20637 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 06:58:53
+User Query       : from the database extract all the data.
+────────────────────────────────────────────────────────────
+product | price | quantity | price_num
+--------------------------------------
+La
+
+============================================================
+Timestamp : 2026-03-26 07:00:00
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 21033 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:00:00
+User Query       : from the database calculate total price of Headphones and Tablet.
+────────────────────────────────────────────────────────────
+total_price
+-----------
+760.0
+
+
+============================================================
+Timestamp : 2026-03-26 07:01:56
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 21518 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:01:56
+User Query       : from the database list all products whose quantity is more than 4.
+────────────────────────────────────────────────────────────
+product | price | quantity
+--------------------------
+
+============================================================
+Timestamp : 2026-03-26 07:02:56
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:02:57
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 22453 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:02:57
+User Query       : analyze people-100.csv and tell me total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and tell me total number of en
+
+============================================================
+Timestamp : 2026-03-26 07:03:27
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:03:28
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 23382 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:03:28
+User Query       : analyze people-100.csv and tell me total number of rows.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and tell me total number of rows.
+
+============================================================
+Timestamp : 2026-03-26 07:04:22
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:04:23
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 24344 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:04:23
+User Query       : analyze people-100.csv and list all the male names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the male names.
+
+Found 47
+
+============================================================
+Timestamp : 2026-03-26 07:06:08
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:06:10
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 24867 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:06:10
+User Query       : from people-100.csv give me all the female names born after 2000.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv give me all the female name
+
+============================================================
+Timestamp : 2026-03-26 07:07:06
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:07:07
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 26829 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:07:07
+User Query       : from people-100.csv list all the female born after 2000.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv list all the female born after 2000.
+
+============================================================
+Timestamp : 2026-03-26 07:07:55
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:07:56
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 27345 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:07:56
+User Query       : from people-100.csv list all the female names born after 2000.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv list all the female names born
+
+============================================================
+Timestamp : 2026-03-26 07:08:20
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:08:21
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 27855 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:08:21
+User Query       : from people-100.csv list all the male names born after 2000.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv list all the male names born aft
+
+============================================================
+Timestamp : 2026-03-26 07:15:21
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:21:28
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:21:29
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 28381 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:21:29
+User Query       : analyze people-100.csv and tell me total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and tell me total number of en
+
+============================================================
+Timestamp : 2026-03-26 07:22:22
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:22:23
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 29029 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:22:23
+User Query       : analyze people-100.csv and list all the males born after 2000.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the males born
+
+============================================================
+Timestamp : 2026-03-26 07:23:03
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:23:10
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 30181 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:23:10
+User Query       : analyze people-100.csv and list all the Games developer
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the Games developer
+
+
+
+============================================================
+Timestamp : 2026-03-26 07:24:12
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:24:19
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 31233 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:24:19
+User Query       : analyze people-100.csv and list all the distinct female names
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the distinct fe
+
+============================================================
+Timestamp : 2026-03-26 07:25:01
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:25:04
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 32415 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:25:04
+User Query       : analyze people-100.csv and list all the names occurring more than once
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the na
+
+============================================================
+Timestamp : 2026-03-26 07:27:00
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 32884 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:27:00
+User Query       : from the database extract all the products whose quantity is more than 3.
+────────────────────────────────────────────────────────────
+quantity | product
+------------------
+4 | Head
+
+============================================================
+Timestamp : 2026-03-26 07:27:40
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 07:27:40
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 33337 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:27:40
+User Query       : from tech.csv display product with least price.
+────────────────────────────────────────────────────────────
+Query: from tech.csv display product with least price.
+
+Found 1 matching
+
+============================================================
+Timestamp : 2026-03-26 07:29:34
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:29:34
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 33866 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:29:34
+User Query       : analyze people-100.csv and list all the names occurring more than once
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the na
+
+============================================================
+Timestamp : 2026-03-26 07:30:19
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:30:19
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 34400 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:30:19
+User Query       : analyze people-100.csv and tell me the total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and tell me the total numb
+
+============================================================
+Timestamp : 2026-03-26 07:33:25
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:33:25
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 34906 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:33:25
+User Query       : from people-100.csv give me total number of rows.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv give me total number of rows.
+
+Result:
+  To
+
+============================================================
+Timestamp : 2026-03-26 07:33:46
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:33:46
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 35426 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:33:46
+User Query       : analyze people-100.csv and give me total number of rows.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me total number of rows.
+
+============================================================
+Timestamp : 2026-03-26 07:41:57
+Action    : READ
+File      : peope-100.csv
+────────────────────────────────────────────────────────────
+Error: 'peope-100.csv' not found in /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data.
+
+============================================================
+Timestamp : 2026-03-26 07:42:27
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:42:27
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 35886 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:42:27
+User Query       : analyze people-100.csv and tell me total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and tell me total number of en
+
+============================================================
+Timestamp : 2026-03-26 07:43:00
+Action    : READ
+File      : tech.csv
+────────────────────────────────────────────────────────────
+Read 139 bytes.
+
+CONTENT (first 500 chars):
+product,price,quantity
+Laptop,$1000,2
+Smartphone,$800,2
+T-Shirt,$15,3
+Headphones,$60,4
+Tablet,$700,5
+Gaming Console,$2000,5
+Monitor,$500,5
+
+
+============================================================
+Timestamp : 2026-03-26 07:43:00
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 36323 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:43:00
+User Query       : analyze tech.csv and give me total number of rows.
+────────────────────────────────────────────────────────────
+Query: analyze tech.csv and give me total number of rows.
+
+Result:
+  
+
+============================================================
+Timestamp : 2026-03-26 07:43:17
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:43:17
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 36777 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:43:17
+User Query       : analyze people-100.csv and give me total number of rows.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me total number of rows.
+
+============================================================
+Timestamp : 2026-03-26 07:46:06
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:46:06
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 37228 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:46:06
+User Query       : analyze people-100.csv and give me total number of rows.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me total number of rows.
+
+============================================================
+Timestamp : 2026-03-26 07:46:25
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:46:25
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 37671 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:46:25
+User Query       : from people-100.csv tell me total number of entries.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv tell me total number of entries.
+
+Result
+
+============================================================
+Timestamp : 2026-03-26 07:46:52
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:46:54
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 38431 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:46:54
+User Query       : analyze people-100.csv and list all the male names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the male names.
+
+Found 14
+
+============================================================
+Timestamp : 2026-03-26 07:49:18
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:49:19
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 39191 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:49:19
+User Query       : analyze people-100.csv and list all the male names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the male names.
+
+Found 14
+
+============================================================
+Timestamp : 2026-03-26 07:54:21
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:54:22
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 40575 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:54:22
+User Query       : analyze people-100.csv and list all the male names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and list all the male names.
+
+Found 47
+
+============================================================
+Timestamp : 2026-03-26 07:54:55
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:54:57
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 41248 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:54:57
+User Query       : from people-100.csv give me all the female names born after 2000.
+────────────────────────────────────────────────────────────
+Query: from people-100.csv give me all the female name
+
+============================================================
+Timestamp : 2026-03-26 07:55:33
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:55:35
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 41736 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:55:35
+User Query       : analyze people-100.csv and give me all the unique names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the unique names.
+
+============================================================
+Timestamp : 2026-03-26 07:56:06
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:56:08
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 42299 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:56:08
+User Query       : analyze people-100.csv and give me all the first names where Job Title is Game developer
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv a
+
+============================================================
+Timestamp : 2026-03-26 07:56:24
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:56:25
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 43726 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:56:25
+User Query       : analyze people-100.csv and give me all the unique first name
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the unique fi
+
+============================================================
+Timestamp : 2026-03-26 07:56:46
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:56:47
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 44230 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 07:56:47
+User Query       : analyze people-100.csv and give me names of all the homeopath
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me names of all the
+
+============================================================
+Timestamp : 2026-03-26 07:57:17
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:57:54
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 07:58:08
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:01:45
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:01:45
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 44687 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:01:45
+User Query       : analyze people-100.csv and give me total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me total number of en
+
+============================================================
+Timestamp : 2026-03-26 08:02:28
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:02:28
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 45521 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:02:28
+User Query       : nalyze people-100.csv and calculate the average age of all users. Also, identify who the oldest person in the dataset is and what their Job Title is.
+───────────────────────────────
+
+============================================================
+Timestamp : 2026-03-26 08:03:09
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:03:10
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 46014 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:03:10
+User Query       : analyze people-100.csv and give me names of all the homeopath
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me names of all the
+
+============================================================
+Timestamp : 2026-03-26 08:03:37
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:03:39
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 47513 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:03:39
+User Query       : analyze people-100.csv and give me all the unique first name
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the unique fi
+
+============================================================
+Timestamp : 2026-03-26 08:03:55
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:03:56
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 48076 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:03:56
+User Query       : analyze people-100.csv and give me all the first names where Job Title is Game developer
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv a
+
+============================================================
+Timestamp : 2026-03-26 08:04:09
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:04:10
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 48573 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:04:10
+User Query       : analyze people-100.csv and give me all the unique names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the unique names.
+
+============================================================
+Timestamp : 2026-03-26 08:04:38
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:04:40
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 49085 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:04:40
+User Query       : analyze people-100.csv and give me all the distinct names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the distinct na
+
+============================================================
+Timestamp : 2026-03-26 08:07:25
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:07:25
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 50576 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:07:25
+User Query       : analyze people-100.csv and give me all the unique names.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me all the unique names.
+
+============================================================
+Timestamp : 2026-03-26 08:07:47
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:08:35
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:08:37
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 51143 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:08:37
+User Query       : analyze people-100.csv and give me all the first names where Job Title is Games developer.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv
+
+============================================================
+Timestamp : 2026-03-26 08:08:54
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:09:00
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 51647 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:09:00
+User Query       : analyze people-100.csv and give me names of all the homeopath
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me names of all the
+
+============================================================
+Timestamp : 2026-03-26 08:09:21
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:09:21
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 52395 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:09:21
+User Query       : Analyze people-100.csv and calculate the average age of all users. Also, identify who the oldest person in the dataset is and what their Job Title is.
+──────────────────────────────
+
+============================================================
+Timestamp : 2026-03-26 08:09:49
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-26 08:09:49
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 52852 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:09:49
+User Query       : analyze people-100.csv and give me total number of entries.
+────────────────────────────────────────────────────────────
+Query: analyze people-100.csv and give me total number of en
+
+============================================================
+Timestamp : 2026-03-26 08:10:34
+Action    : READ
+File      : fruits.csv
+────────────────────────────────────────────────────────────
+Read 111 bytes.
+
+CONTENT (first 500 chars):
+fruit_name,price_per_kg,quantity  
+Apple,$2,20  
+Banana,$1,30    
+Grapes,$5,15  
+Orange,$3,25    
+Peaches,$4,18
+
+============================================================
+Timestamp : 2026-03-26 08:11:47
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 53312 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:11:47
+User Query       : from the database extract all the data.
+────────────────────────────────────────────────────────────
+fruit_name | price_per_kg | quantity | total_rows
+------------------------------
+
+============================================================
+Timestamp : 2026-03-26 08:12:22
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 53931 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:12:22
+User Query       : check the database and tell me how many rows are in the data_import table. Also show me the first three rows.
+────────────────────────────────────────────────────────────
+Row count:
+
+============================================================
+Timestamp : 2026-03-26 08:13:33
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 54361 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 08:13:33
+User Query       : from the database calculate total quantity of apple and banana.
+────────────────────────────────────────────────────────────
+apple_total | banana_total
+--------------------------
+50

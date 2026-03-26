@@ -148,7 +148,7 @@ def print_banner():
     print("""
 ╔══════════════════════════════════════════════════════════════╗
 ║        NEXUS AI — Autonomous Multi-Agent System              ║
-║        Powered by Groq · llama-3.1-8b-instant               ║
+║        Powered by Groq · llama-3.1-8b-instant                ║
 ║        Multi-agent · Memory · Tools · Self-reflection        ║
 ╚══════════════════════════════════════════════════════════════╝
 """)

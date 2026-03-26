@@ -1,0 +1,168 @@
+
+============================================================
+Timestamp : 2026-03-26 05:24:57
+────────────────────────────────────────────────────────────
+CODE:
+import sqlite3, csv, io, re
+
+csv_data = "product,price,quantity\nLaptop,$1000,1\nSmartphone,$800,2\nT-Shirt,$15,3\nHeadphones,$60,4\nTablet,$700,5"
+
+f = io.StringIO(csv_data.strip())
+reader = csv.reader(f)
+header = [h.strip() for h in next(reader)]
+first_row = next(reader, None)
+
+conn = sqlite3.connect("/home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/business.db")
+cur  = conn.cursor()
+cur.execute("DROP TABLE IF EXISTS data_import")
+
+def guess_type(v):
+    if not v: return "TEXT"
+    try: float(str(v).replace(",","").strip()); return "REAL"
+    except: return "TEXT"
+
+col_defs = [f'"{h}" {guess_type(first_row[i] if first_row and i < len(first_row) else "")}' for i, h in enumerate(header)]
+cur.execute(f'CREATE TABLE data_import ({", ".join(col_defs)})')
+
+f.seek(0); next(reader)
+ok = err = 0
+for row in reader:
+    row = [re.sub(r'["\\+]', '', c).strip() for c in row]
+    row = [" ".join(c.split()) for c in row]
+    if len(row) > len(header): row = row[:len(header)]
+    elif len(row) < len(header): row += [""] * (len(header) - len(row))
+    try:
+        cur.execute(f'INSERT INTO data_import VALUES ({",".join(["?"]*len(header))})', row)
+        ok += 1
+    except: err += 1
+
+conn.commit(); conn.close()
+print(f"Import complete: {ok} rows inserted, {err} skipped.")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Python Error: ImportError: __import__ not found
+
+============================================================
+Timestamp : 2026-03-26 06:39:55
+────────────────────────────────────────────────────────────
+CODE:
+import sqlite3, csv, io, re
+
+csv_data = "product,price,quantity\nLaptop,$1000,2\nSmartphone,$800,2\nT-Shirt,$15,3\nHeadphones,$60,4\nTablet,$700,5\nGaming Console,$2000,5\nMonitor,$500,5\n"
+
+f = io.StringIO(csv_data.strip())
+reader = csv.reader(f)
+header = [h.strip() for h in next(reader)]
+first_row = next(reader, None)
+
+conn = sqlite3.connect("/home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/business.db")
+cur  = conn.cursor()
+cur.execute("DROP TABLE IF EXISTS data_import")
+
+def guess_type(v):
+    if not v: return "TEXT"
+    try: float(str(v).replace(",","").strip()); return "REAL"
+    except: return "TEXT"
+
+col_defs = [f'"{h}" {guess_type(first_row[i] if first_row and i < len(first_row) else "")}' for i, h in enumerate(header)]
+cur.execute(f'CREATE TABLE data_import ({", ".join(col_defs)})')
+
+f.seek(0); next(reader)
+ok = err = 0
+for row in reader:
+    row = [re.sub(r'["\\+]', '', c).strip() for c in row]
+    row = [" ".join(c.split()) for c in row]
+    if len(row) > len(header): row = row[:len(header)]
+    elif len(row) < len(header): row += [""] * (len(header) - len(row))
+    try:
+        cur.execute(f'INSERT INTO data_import VALUES ({",".join(["?"]*len(header))})', row)
+        ok += 1
+    except: err += 1
+
+conn.commit(); conn.close()
+print(f"Import complete: {ok} rows inserted, {err} skipped.")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Import complete: 7 rows inserted, 0 skipped.
+
+============================================================
+Timestamp : 2026-03-26 06:56:56
+────────────────────────────────────────────────────────────
+CODE:
+import sqlite3, csv, io, re
+
+csv_data = "product,price,quantity\nLaptop,$1000,2\nSmartphone,$800,2\nT-Shirt,$15,3\nHeadphones,$60,4\nTablet,$700,5\nGaming Console,$2000,5\nMonitor,$500,5\n"
+
+f = io.StringIO(csv_data.strip())
+reader = csv.reader(f)
+header = [h.strip() for h in next(reader)]
+first_row = next(reader, None)
+
+conn = sqlite3.connect("/home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/business.db")
+cur  = conn.cursor()
+cur.execute("DROP TABLE IF EXISTS data_import")
+
+# Store all columns as TEXT to preserve exact CSV values ("$1000", not 1000.0).
+# Numeric sorting uses CAST(REPLACE("col","$","") AS REAL) at query time.
+col_defs = ['"' + h + '" TEXT' for h in header]
+col_schema = ", ".join(col_defs)
+cur.execute("CREATE TABLE data_import (" + col_schema + ")")
+
+f.seek(0); next(reader)
+ok = err = 0
+for row in reader:
+    row = [re.sub(r'["\\+]', '', c).strip() for c in row]
+    row = [" ".join(c.split()) for c in row]
+    if len(row) > len(header): row = row[:len(header)]
+    elif len(row) < len(header): row += [""] * (len(header) - len(row))
+    try:
+        cur.execute(f'INSERT INTO data_import VALUES ({",".join(["?"]*len(header))})', row)
+        ok += 1
+    except: err += 1
+
+conn.commit(); conn.close()
+print(f"Import complete: {ok} rows inserted, {err} skipped.")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Import complete: 7 rows inserted, 0 skipped.
+
+============================================================
+Timestamp : 2026-03-26 08:10:34
+────────────────────────────────────────────────────────────
+CODE:
+import sqlite3, csv, io, re
+
+csv_data = "fruit_name,price_per_kg,quantity  \nApple,$2,20  \nBanana,$1,30    \nGrapes,$5,15  \nOrange,$3,25    \nPeaches,$4,18"
+
+f = io.StringIO(csv_data.strip())
+reader = csv.reader(f)
+header = [h.strip() for h in next(reader)]
+first_row = next(reader, None)
+
+conn = sqlite3.connect("/home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/business.db")
+cur  = conn.cursor()
+cur.execute("DROP TABLE IF EXISTS data_import")
+
+# Store all columns as TEXT to preserve exact CSV values ("$1000", not 1000.0).
+# Numeric sorting uses CAST(REPLACE("col","$","") AS REAL) at query time.
+col_defs = ['"' + h + '" TEXT' for h in header]
+col_schema = ", ".join(col_defs)
+cur.execute("CREATE TABLE data_import (" + col_schema + ")")
+
+f.seek(0); next(reader)
+ok = err = 0
+for row in reader:
+    row = [re.sub(r'["\\+]', '', c).strip() for c in row]
+    row = [" ".join(c.split()) for c in row]
+    if len(row) > len(header): row = row[:len(header)]
+    elif len(row) < len(header): row += [""] * (len(header) - len(row))
+    try:
+        cur.execute(f'INSERT INTO data_import VALUES ({",".join(["?"]*len(header))})', row)
+        ok += 1
+    except: err += 1
+
+conn.commit(); conn.close()
+print(f"Import complete: {ok} rows inserted, {err} skipped.")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Import complete: 5 rows inserted, 0 skipped.
