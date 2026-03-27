@@ -1557,3 +1557,29 @@ User Query       : from the database calculate total quantity of apple and banan
 apple_total | banana_total
 --------------------------
 50.0 | 50.0
+============================================================
+Report Generated : 2026-03-26 19:37:50
+User Query       : analyze employee.csv and list all the employees who joined after 2020.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv and list all the employees who joined after 2020.
+
+Found 3 matching rows where Date_of_joining > 2020:
+  * John Doe
+  * Robert Brown
+  * Maria Johnson
+============================================================
+Report Generated : 2026-03-26 19:40:24
+User Query       : analyze employee.csv and list give the name and emp_ID of the employees from New York.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv and list give the name and emp_ID of the employees from New York.
+
+Found 1 matching row where address = 123 Main St, New York:
+  * John Doe
+============================================================
+Report Generated : 2026-03-26 19:44:36
+User Query       : analyze employee.csv give the emp_ID of the employees living in New York.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv give the emp_ID of the employees living in New York.
+
+Found 1 matching row where address = 123 Main St, New York:
+  * John Doe

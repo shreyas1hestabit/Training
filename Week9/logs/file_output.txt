@@ -2600,3 +2600,111 @@ User Query       : from the database calculate total quantity of apple and banan
 apple_total | banana_total
 --------------------------
 50
+
+============================================================
+Timestamp : 2026-03-26 16:58:34
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Error: 'employee.csv' not found in /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data.
+
+============================================================
+Timestamp : 2026-03-26 19:37:08
+Action    : WRITE
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Success: 'employee.csv' written (401 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/employee.csv
+
+CONTENT WRITTEN:
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 M
+
+============================================================
+Timestamp : 2026-03-26 19:37:49
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Read 401 bytes.
+
+CONTENT (first 500 chars):
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 Maple St, Houston","2022-08-10"
+"5","William Davis","111-222-3333","901 Pine St, Phoenix","2018-11-25"
+
+============================================================
+Timestamp : 2026-03-26 19:37:50
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 54911 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 19:37:50
+User Query       : analyze employee.csv and list all the employees who joined after 2020.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv and list all the empl
+
+============================================================
+Timestamp : 2026-03-26 19:40:24
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Read 401 bytes.
+
+CONTENT (first 500 chars):
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 Maple St, Houston","2022-08-10"
+"5","William Davis","111-222-3333","901 Pine St, Phoenix","2018-11-25"
+
+============================================================
+Timestamp : 2026-03-26 19:40:24
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 55466 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 19:40:24
+User Query       : analyze employee.csv and list give the name and emp_ID of the employees from New York.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv and l
+
+============================================================
+Timestamp : 2026-03-26 19:44:35
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Read 401 bytes.
+
+CONTENT (first 500 chars):
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 Maple St, Houston","2022-08-10"
+"5","William Davis","111-222-3333","901 Pine St, Phoenix","2018-11-25"
+
+============================================================
+Timestamp : 2026-03-26 19:44:36
+Action    : APPEND
+File      : analysis_report.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'analysis_report.txt' (total 55995 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/analysis_report.txt
+
+APPENDED:
+============================================================
+Report Generated : 2026-03-26 19:44:36
+User Query       : analyze employee.csv give the emp_ID of the employees living in New York.
+────────────────────────────────────────────────────────────
+Query: analyze employee.csv give the emp_ID of
