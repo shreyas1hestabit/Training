@@ -1,14 +1,3 @@
-"""
-memory/long_term_memory.py
---------------------------
-LONG-TERM MEMORY — persists across sessions in SQLite (long_term.db).
-
-Stores:
-  • facts   — key/value pairs extracted from conversations
-  • episodes — full conversation summaries with timestamps
-  • recall_log — which memories were retrieved and when
-"""
-
 import sqlite3
 import json
 from datetime import datetime
@@ -16,11 +5,6 @@ from pathlib import Path
 
 
 DB_PATH = Path(__file__).parent / "long_term.db"
-
-
-# ---------------------------------------------------------------------------
-# Schema bootstrap
-# ---------------------------------------------------------------------------
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS facts (
@@ -48,11 +32,6 @@ CREATE TABLE IF NOT EXISTS recall_log (
 );
 """
 
-
-# ---------------------------------------------------------------------------
-# Long-Term Memory
-# ---------------------------------------------------------------------------
-
 class LongTermMemory:
     """
     SQLite-backed persistent memory.
@@ -73,10 +52,6 @@ class LongTermMemory:
     def _init_db(self) -> None:
         with self._connect() as conn:
             conn.executescript(SCHEMA)
-
-    # ------------------------------------------------------------------
-    # Facts  (key → value pairs, e.g. "user_name" → "Alice")
-    # ------------------------------------------------------------------
 
     def save_fact(self, key: str, value: str, source: str = "") -> None:
         """Insert or update a fact. One canonical value per key."""
@@ -124,10 +99,6 @@ class LongTermMemory:
         with self._connect() as conn:
             conn.execute("DELETE FROM facts WHERE key = ?", (key,))
 
-    # ------------------------------------------------------------------
-    # Episodes  (conversation summaries)
-    # ------------------------------------------------------------------
-
     def save_episode(self, summary: str, raw: str = "") -> int:
         """Store a conversation summary. Returns the new episode id."""
         now = datetime.now().isoformat()
@@ -154,10 +125,6 @@ class LongTermMemory:
             ).fetchall()
             return [dict(r) for r in rows]
 
-    # ------------------------------------------------------------------
-    # Recall log
-    # ------------------------------------------------------------------
-
     def log_recall(self, query: str, memory_type: str, memory_id: int | None = None) -> None:
         now = datetime.now().isoformat()
         with self._connect() as conn:
@@ -172,10 +139,6 @@ class LongTermMemory:
                 "SELECT * FROM recall_log ORDER BY id DESC LIMIT ?", (limit,)
             ).fetchall()
             return [dict(r) for r in rows]
-
-    # ------------------------------------------------------------------
-    # Utility
-    # ------------------------------------------------------------------
 
     def stats(self) -> dict:
         """Return counts for each table."""

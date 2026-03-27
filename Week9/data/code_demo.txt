@@ -1,0 +1,28 @@
+def calculate_factorial(n):
+    # Check if input is a non-negative integer
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("Input must be a non-negative integer")
+
+    # Base case: factorial of 0 or 1 is 1
+    if n == 0 or n == 1:
+        return 1
+
+    # Recursive case: n! = n * (n-1)!
+    else:
+        return n * calculate_factorial(n-1)
+
+
+def main():
+    # Get user input
+    num = int(input("Enter a non-negative integer: "))
+
+    try:
+        # Calculate and print factorial
+        factorial = calculate_factorial(num)
+        print(f"The factorial of {num} is: {factorial}")
+    except ValueError as e:
+        print(e)
+
+
+if __name__ == '__main__':
+    main()

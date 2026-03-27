@@ -1,21 +1,3 @@
-"""
-nexus_ai_two/conversation_memory.py
--------------------------------------
-Conversational memory for NEXUS AI.
-
-Combines three layers:
-    1. Session history  — current conversation turns (in RAM)
-    2. FAISS vector store — semantic search over all past task reports
-    3. SQLite facts     — extracted project facts (via long_term_memory.py)
-
-This enables follow-up questions like:
-    "design a RAG pipeline for 50k documents"
-    → "now add a re-ranking layer to that design"
-    → "what embedding model did we choose?"
-
-All three work together to inject relevant past context into each new task.
-"""
-
 import json
 import re
 from pathlib import Path
@@ -24,9 +6,6 @@ from autogen_core.models import UserMessage, SystemMessage
 
 from nexus_ai_two.config import LOGS_DIR, PRIMARY_MODEL
 
-# ---------------------------------------------------------------------------
-# Optional FAISS — graceful fallback if not installed
-# ---------------------------------------------------------------------------
 try:
     import faiss
     import numpy as np
@@ -40,11 +19,6 @@ EMBED_DIM    = 384
 INDEX_PATH   = LOGS_DIR / "nexus_faiss.index"
 META_PATH    = LOGS_DIR / "nexus_vector_meta.json"
 FACTS_PATH   = LOGS_DIR / "nexus_facts.json"
-
-
-# ---------------------------------------------------------------------------
-# Session History (in-RAM conversation window)
-# ---------------------------------------------------------------------------
 
 class SessionHistory:
     """
@@ -81,11 +55,6 @@ class SessionHistory:
 
     def __len__(self):
         return len(self._turns)
-
-
-# ---------------------------------------------------------------------------
-# FAISS Vector Store (persistent semantic search)
-# ---------------------------------------------------------------------------
 
 class NexusVectorStore:
     """
@@ -156,11 +125,6 @@ class NexusVectorStore:
         self._metadata = []
         self._save()
 
-
-# ---------------------------------------------------------------------------
-# Facts Store (key facts extracted from tasks — SQLite-lite via JSON)
-# ---------------------------------------------------------------------------
-
 class NexusFacts:
     """
     Lightweight JSON-backed facts store.
@@ -200,11 +164,6 @@ class NexusFacts:
         self._facts = []
         self._save()
 
-
-# ---------------------------------------------------------------------------
-# Main Conversation Memory — combines all three layers
-# ---------------------------------------------------------------------------
-
 class ConversationMemory:
     """
     Three-tier conversational memory for NEXUS AI:
@@ -231,10 +190,6 @@ class ConversationMemory:
         self.session = SessionHistory(max_turns=6)
         self.vector  = NexusVectorStore()
         self.facts   = NexusFacts()
-
-    # ------------------------------------------------------------------
-    # Build context to inject into the current task prompt
-    # ------------------------------------------------------------------
 
     def build_context(self, current_task: str) -> str:
         """
@@ -282,10 +237,6 @@ class ConversationMemory:
             + "\n=== End of Memory Context ===\n"
         )
 
-    # ------------------------------------------------------------------
-    # Store a completed task
-    # ------------------------------------------------------------------
-
     def store_task(self, task: str, report: str):
         """
         After a task completes:
@@ -293,16 +244,10 @@ class ConversationMemory:
         2. Store report in FAISS vector store
         3. Extract and store key facts
         """
-        # Tier 1: session
         self.session.add("user", task)
         self.session.add("assistant", report[:600])
-
-        # Tier 2: vector — store a combined chunk
         combined = f"Task: {task}\n\nReport summary: {report[:600]}"
         self.vector.add(combined, source="task_report", meta={"task": task[:80]})
-
-        # Tier 3: facts — extract asynchronously via LLM (fire and hope)
-        # (We don't await here to avoid blocking — facts are best-effort)
         import asyncio
         try:
             loop = asyncio.get_event_loop()
@@ -338,10 +283,6 @@ class ConversationMemory:
                         self.facts.add(fact.strip(), source_task=task[:60])
         except Exception:
             pass
-
-    # ------------------------------------------------------------------
-    # Utility
-    # ------------------------------------------------------------------
 
     def clear_session(self):
         """Clear session history only — vector store and facts persist."""

@@ -1,17 +1,3 @@
-"""
-src/tools/file_agent.py — File Read / Write Tool
---------------------------------------------------
-SYSTEM PROMPT is defined here (not in main).
-
-Improvements over v1:
-  • Saves every read/write operation record to logs/file_output.txt
-  • Supports "append" action in addition to read/write
-  • Returns structured dict so orchestrator can log/display cleanly
-  • Resolves paths relative to a configurable DATA_DIR (not bare cwd)
-  • Validates file extensions (.csv, .txt only)
-  • Auto-creates parent directories on write
-"""
-
 import os
 import csv
 import json

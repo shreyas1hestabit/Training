@@ -239,3 +239,45 @@ RESULT    :
 apple_total | banana_total
 --------------------------
 50.0 | 50.0
+
+============================================================
+Timestamp : 2026-03-27 16:03:15
+SQL       :
+SELECT * FROM clothes WHERE CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL) > 49.00 LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+
+============================================================
+Timestamp : 2026-03-27 16:04:21
+SQL       :
+SELECT * FROM clothes ORDER BY CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL) ASC LIMIT 1;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Socks | Cotton | 120 | 6.99
+
+============================================================
+Timestamp : 2026-03-27 16:06:22
+SQL       :
+SELECT SUM(CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL)) AS total_price FROM clothes WHERE "product" LIKE '%Pants%' OR "product" LIKE '%Scarf%';
+────────────────────────────────────────────────────────────
+RESULT    :
+total_price
+-----------
+39.98
+
+============================================================
+Timestamp : 2026-03-27 16:07:20
+SQL       :
+SELECT CAST(REPLACE("Quantity",",","") AS REAL) FROM clothes WHERE "product" = 'Socks' OR "product" = 'Shoes';
+────────────────────────────────────────────────────────────
+RESULT    :
+CAST(REPLACE("Quantity",",","") AS REAL)
+----------------------------------------
+80.0
+120.0

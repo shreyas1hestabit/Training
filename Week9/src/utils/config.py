@@ -20,7 +20,7 @@ if _groq_api_key:
         api_key=_groq_api_key,
         model_info={
             "vision":            False,
-            "function_calling":  False,
+            "function_calling":  True,
             "json_output":       True,
             "family":            "unknown",
             "structured_output": False,
@@ -39,7 +39,7 @@ else:
         api_key=_ollama_api_key,
         model_info={
             "vision":            False,
-            "function_calling":  False,
+            "function_calling":  True,
             "json_output":       False,
             "family":            "unknown",
             "structured_output": False,

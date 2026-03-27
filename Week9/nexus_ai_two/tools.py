@@ -1,10 +1,3 @@
-"""
-nexus_ai_two/tools.py
-----------------------
-Real tools for NEXUS AI — Groq edition.
-Identical to nexus_ai/tools.py except imports from nexus_ai_two.config.
-"""
-
 import sys
 import io
 import csv as csv_module

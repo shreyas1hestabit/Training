@@ -1,10 +1,3 @@
-"""
-nexus_ai_two/agents.py
------------------------
-All 9 NEXUS AI specialist agents — Groq edition.
-Identical to nexus_ai/agents.py except imports from nexus_ai_two.config.
-"""
-
 import re
 from autogen_core.models import UserMessage, SystemMessage
 from nexus_ai_two.config import PRIMARY_MODEL, FAST_MODEL, AGENT_PERSONAS

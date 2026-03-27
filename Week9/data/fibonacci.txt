@@ -1,0 +1,22 @@
+def fibonacci(n):
+    # Initialize the first two numbers in the series
+    a, b = 0, 1
+    
+    # List to store the Fibonacci series
+    series = []
+    
+    # Generate the Fibonacci series
+    for _ in range(n):
+        series.append(a)
+        # Calculate the next number in the series
+        a, b = b, a + b
+    
+    return series
+
+def main():
+    # Test the function
+    n = 10  # Number of terms in the series
+    print(f"Fibonacci series with {n} terms: {fibonacci(n)}")
+
+if __name__ == '__main__':
+    main()

@@ -166,3 +166,58 @@ print(f"Import complete: {ok} rows inserted, {err} skipped.")
 ────────────────────────────────────────────────────────────
 OUTPUT:
 Import complete: 5 rows inserted, 0 skipped.
+
+============================================================
+Timestamp : 2026-03-27 16:03:14
+────────────────────────────────────────────────────────────
+CODE:
+import io, csv
+
+data = "product,Fabric,Quantity,price\nShirt,Cotton,100,15.99\nPants,Denim,50,29.99\nDress,Silk,20,49.99\nJacket,Leather,30,69.99\nScarf,Wool,40,9.99\nHat,Cotton,60,12.99\nGloves,Leather,10,19.99\nShoes,Rubber,80,39.99\nSocks,Cotton,120,6.99\nBelt,Leather,25,14.99"
+
+reader = csv.reader(io.StringIO(data))
+
+next(reader)  # Skip header
+
+expensive_products = []
+
+for row in reader:
+    try:
+        price = float(row[3])
+        if price > 49.00:
+            expensive_products.append(row[0])
+    except Exception as e:
+        print(f"Error: {e}")
+
+print("Expensive products:")
+for i, product in enumerate(expensive_products, start=1):
+    print(f"{i}. {product}")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Expensive products:
+1. Dress
+2. Jacket
+
+============================================================
+Timestamp : 2026-03-27 16:04:19
+────────────────────────────────────────────────────────────
+CODE:
+import io, csv; data = '`clothescsv`'; reader = csv.reader(io.StringIO(data)); next(reader); cheapest = min(reader, key=lambda row: float(row[3])) ; print('The cheapest product is: ', cheapest[0], 'at $', cheapest[3])
+────────────────────────────────────────────────────────────
+OUTPUT:
+Python Error: ValueError: min() iterable argument is empty
+
+============================================================
+Timestamp : 2026-03-27 16:25:04
+────────────────────────────────────────────────────────────
+CODE:
+try:
+    with open('name.txt', 'w') as file:
+        for i in range(10):
+            file.write('updated data\n')
+    print('Data inserted successfully')
+except Exception as e:
+    print('An error occurred: ', str(e))
+────────────────────────────────────────────────────────────
+OUTPUT:
+Data inserted successfully

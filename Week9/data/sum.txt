@@ -1,0 +1,31 @@
+def calculate_sum(numbers):
+    # Initialize sum variable to 0
+    total_sum = 0
+    
+    # Iterate over each number in the list
+    for num in numbers:
+        # Add the current number to the sum
+        total_sum += num
+    
+    # Return the calculated sum
+    return total_sum
+
+
+def main():
+    # Get the value of n from the user
+    n = int(input("Enter the value of n: "))
+    
+    # Initialize an empty list to store numbers
+    numbers = []
+    
+    # Get n numbers from the user
+    for i in range(n):
+        num = int(input(f"Enter number {i+1}: "))
+        numbers.append(num)
+    
+    # Calculate and print the sum of the numbers
+    print("Sum of the numbers:", calculate_sum(numbers))
+
+
+if __name__ == '__main__':
+    main()

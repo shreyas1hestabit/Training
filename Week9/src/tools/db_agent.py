@@ -1,18 +1,3 @@
-"""
-src/tools/db_agent.py — SQLite Database Tool
----------------------------------------------
-SYSTEM PROMPT is defined here (not in main).
-
-Improvements over v1:
-  • Schema-aware: fetches real column names BEFORE generating SQL
-  • Stronger SQL cleaning — strips ALL non-SQL lines reliably
-  • Multi-attempt retry: if first query returns 0 rows, auto-retries with LIKE fallback
-  • PRAGMA and direct SQL passthrough bypass LLM entirely
-  • Saves every query + result to logs/db_output.txt
-  • Returns structured result so orchestrator can log cleanly
-  • Better value-matching: case-insensitive COLLATE NOCASE + LIKE fallback
-"""
-
 import os
 import re
 import sqlite3

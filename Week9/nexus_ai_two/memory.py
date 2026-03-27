@@ -1,10 +1,3 @@
-"""
-nexus_ai_two/memory.py
------------------------
-Persistent memory for NEXUS AI — Groq edition.
-Identical to nexus_ai/memory.py except imports from nexus_ai_two.config.
-"""
-
 import json
 from datetime import datetime
 from pathlib import Path

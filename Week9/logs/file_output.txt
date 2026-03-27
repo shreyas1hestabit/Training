@@ -2708,3 +2708,544 @@ Report Generated : 2026-03-26 19:44:36
 User Query       : analyze employee.csv give the emp_ID of the employees living in New York.
 ────────────────────────────────────────────────────────────
 Query: analyze employee.csv give the emp_ID of
+
+============================================================
+Timestamp : 2026-03-27 16:01:04
+Action    : WRITE
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Success: 'clothes.csv' written (753 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/clothes.csv
+
+CONTENT WRITTEN:
+product,Fabric,Quantity,price
+T-shirt,Cotton,100,10.99
+Jeans,Denim,50,29.99
+Dress,Silk,20,49.99
+Shoes,Leather,30,69.99
+Jacket,Fleece,40,39.99
+Socks,Wool,60,9.99
+Gloves,Rubber,10,19.99
+Hats,Cotton,25,14.99
+Scarf,Silk,15,24.99
+Earrings,Plastic,35,7.99
+Ring,Gold,5,99.99
+Watch,Stainless Steel,20,79.99
+B
+
+============================================================
+Timestamp : 2026-03-27 16:02:09
+Action    : WRITE
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Success: 'clothes.csv' written (246 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/clothes.csv
+
+CONTENT WRITTEN:
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:02:10
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:03:13
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:03:14
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:04:19
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:04:19
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:04:50
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:04:50
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:06:20
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:06:21
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:07:18
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:07:19
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-27 16:11:26
+Action    : WRITE
+File      : name.txt
+────────────────────────────────────────────────────────────
+Success: 'name.txt' written (179 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/name.txt
+
+CONTENT WRITTEN:
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-27 16:11:27
+Action    : READ
+File      : name.txt
+────────────────────────────────────────────────────────────
+Read 179 bytes.
+
+CONTENT (first 500 chars):
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-27 16:11:47
+Action    : READ
+File      : name.txt
+────────────────────────────────────────────────────────────
+Read 179 bytes.
+
+CONTENT (first 500 chars):
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-27 16:11:47
+Action    : READ
+File      : name.txt
+────────────────────────────────────────────────────────────
+Read 179 bytes.
+
+CONTENT (first 500 chars):
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-27 16:21:45
+Action    : WRITE
+File      : fibonacci.txt
+────────────────────────────────────────────────────────────
+Success: 'fibonacci.txt' written (32 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/fibonacci.txt
+
+CONTENT WRITTEN:
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+============================================================
+Timestamp : 2026-03-27 16:23:39
+Action    : READ
+File      : file.txt
+────────────────────────────────────────────────────────────
+Error: 'file.txt' not found in /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data.
+
+============================================================
+Timestamp : 2026-03-27 16:23:39
+Action    : WRITE
+File      : file.txt
+────────────────────────────────────────────────────────────
+Success: 'file.txt' written (25 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/file.txt
+
+CONTENT WRITTEN:
+My name is shreya singhal
+
+============================================================
+Timestamp : 2026-03-27 16:24:09
+Action    : READ
+File      : name.txt
+────────────────────────────────────────────────────────────
+Read 179 bytes.
+
+CONTENT (first 500 chars):
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-27 16:24:09
+Action    : WRITE
+File      : name.txt
+────────────────────────────────────────────────────────────
+Success: 'name.txt' written (24 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/name.txt
+
+CONTENT WRITTEN:
+my name is shreya singal
+
+============================================================
+Timestamp : 2026-03-27 16:24:36
+Action    : APPEND
+File      : name.txt
+────────────────────────────────────────────────────────────
+Success: Appended to 'name.txt' (total 59 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/name.txt
+
+APPENDED:
+new data to be appended to the file
+
+============================================================
+Timestamp : 2026-03-27 16:25:47
+Action    : READ
+File      : fruits.csv
+────────────────────────────────────────────────────────────
+Read 111 bytes.
+
+CONTENT (first 500 chars):
+fruit_name,price_per_kg,quantity  
+Apple,$2,20  
+Banana,$1,30    
+Grapes,$5,15  
+Orange,$3,25    
+Peaches,$4,18
+
+============================================================
+Timestamp : 2026-03-27 16:41:15
+Action    : WRITE
+File      : fibonacci.txt
+────────────────────────────────────────────────────────────
+Success: 'fibonacci.txt' written (713 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/fibonacci.txt
+
+CONTENT WRITTEN:
+def fibonacci(n):
+    # Initialize the first two numbers in the Fibonacci series
+    fib_series = [0, 1]
+    
+    # Generate the Fibonacci series up to the nth number
+    while len(fib_series) < n:
+        # Calculate the next number as the sum of the previous two
+        next_number = fib_series[-1
+
+============================================================
+Timestamp : 2026-03-27 16:41:18
+Action    : WRITE
+File      : fibonacci.txt
+────────────────────────────────────────────────────────────
+Success: 'fibonacci.txt' written (570 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/fibonacci.txt
+
+CONTENT WRITTEN:
+def fibonacci(n):
+    # Initialize a list to store the Fibonacci series
+    fib_series = [0, 1]
+    
+    # Generate the Fibonacci series up to the nth term
+    while len(fib_series) < n:
+        # Calculate the next term as the sum of the previous two terms
+        fib_series.append(fib_series[-1] +
+
+============================================================
+Timestamp : 2026-03-27 16:41:27
+Action    : WRITE
+File      : fibonacci.txt
+────────────────────────────────────────────────────────────
+Success: 'fibonacci.txt' written (517 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/fibonacci.txt
+
+CONTENT WRITTEN:
+def fibonacci(n):
+    # Initialize the first two numbers in the series
+    a, b = 0, 1
+    
+    # List to store the Fibonacci series
+    series = []
+    
+    # Generate the Fibonacci series
+    for _ in range(n):
+        series.append(a)
+        # Calculate the next number in the series
+        a, b
+
+============================================================
+Timestamp : 2026-03-27 16:43:30
+Action    : WRITE
+File      : code_demo.txt
+────────────────────────────────────────────────────────────
+Success: 'code_demo.txt' written (685 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/code_demo.txt
+
+CONTENT WRITTEN:
+def calculate_factorial(n):
+    # Check if input is a non-negative integer
+    if not isinstance(n, int) or n < 0:
+        raise ValueError("Input must be a non-negative integer")
+
+    # Base case: factorial of 0 or 1 is 1
+    if n == 0 or n == 1:
+        return 1
+
+    # Recursive case: n! = n * (n-
+
+============================================================
+Timestamp : 2026-03-27 16:55:32
+Action    : WRITE
+File      : sum.txt
+────────────────────────────────────────────────────────────
+Success: 'sum.txt' written (713 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/sum.txt
+
+CONTENT WRITTEN:
+def calculate_sum(n):
+    """
+    Calculate the sum of n numbers.
+    
+    Args:
+        n (int): The number of values to sum.
+    
+    Returns:
+        int: The sum of n numbers.
+    """
+    total = 0
+    for i in range(n):
+        # Get user input and convert it to a float
+        num = float(inpu
+
+============================================================
+Timestamp : 2026-03-27 16:55:35
+Action    : WRITE
+File      : sum.txt
+────────────────────────────────────────────────────────────
+Success: 'sum.txt' written (739 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/sum.txt
+
+CONTENT WRITTEN:
+def calculate_sum(numbers):
+    # Initialize sum variable to 0
+    total_sum = 0
+    
+    # Iterate over each number in the list
+    for num in numbers:
+        # Add the current number to the sum
+        total_sum += num
+    
+    # Return the calculated sum
+    return total_sum
+
+
+def main():
+    # 

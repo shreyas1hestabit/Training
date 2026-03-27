@@ -1,31 +1,12 @@
-"""
-memory/session_memory.py
-------------------------
-SHORT-TERM MEMORY — lives only for the current Python process session.
-
-Stores the rolling conversation history (user + assistant turns) and
-exposes helpers to build a trimmed context window for the LLM prompt.
-"""
-
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Literal
-
-
-# ---------------------------------------------------------------------------
-# Data model
-# ---------------------------------------------------------------------------
 
 @dataclass
 class Message:
     role: Literal["user", "assistant", "system"]
     content: str
     timestamp: str = field(default_factory=lambda: datetime.now().isoformat())
-
-
-# ---------------------------------------------------------------------------
-# Session Memory
-# ---------------------------------------------------------------------------
 
 class SessionMemory:
     """
@@ -46,10 +27,6 @@ class SessionMemory:
         self.system_prompt = system_prompt
         self._messages: list[Message] = []
 
-    # ------------------------------------------------------------------
-    # Write
-    # ------------------------------------------------------------------
-
     def add(self, role: Literal["user", "assistant"], content: str) -> None:
         """Append a message and trim to window size."""
         self._messages.append(Message(role=role, content=content))
@@ -65,9 +42,6 @@ class SessionMemory:
         """Wipe the session (e.g. when user types 'new chat')."""
         self._messages.clear()
 
-    # ------------------------------------------------------------------
-    # Read
-    # ------------------------------------------------------------------
 
     def get_context(self) -> list[dict]:
         """

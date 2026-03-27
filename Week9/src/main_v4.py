@@ -1,23 +1,3 @@
-"""
-main_v4.py
-----------
-DAY 4 — MEMORY SYSTEMS
-Entry point for the memory-enabled conversational agent.
-
-Run:
-    python -m src.main_v4
-
-Special commands (type during chat):
-    /memory   — show current memory status
-    /facts    — list all stored facts
-    /episodes — list recent episode summaries
-    /clear    — clear session memory (long-term persists)
-    /reset    — wipe ALL memory including long-term and vector store
-    exit      — quit
-
-Logs every turn to logs_day4.json.
-"""
-
 import asyncio, os, json
 from datetime import datetime
 from src.memory.memory_agent import MemoryAgent

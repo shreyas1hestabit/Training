@@ -1,29 +1,8 @@
-"""
-memory/vector_store.py
-----------------------
-VECTOR MEMORY — similarity-based recall using FAISS + sentence-transformers.
-
-Stores text chunks (facts, summaries, conversation snippets) as dense
-embeddings. At query time, the most semantically similar chunks are
-retrieved and injected into the LLM prompt as context.
-
-Dependencies
-------------
-    pip install faiss-cpu sentence-transformers numpy
-
-The index and metadata are saved to disk so memory survives restarts:
-    memory/faiss.index          — FAISS flat L2 index
-    memory/vector_metadata.json — parallel list of text + source metadata
-"""
-
 import json
 import numpy as np
 from pathlib import Path
 from typing import Optional
 
-# ---------------------------------------------------------------------------
-# Lazy imports — so the rest of the project still loads if these are missing
-# ---------------------------------------------------------------------------
 try:
     import faiss
     FAISS_AVAILABLE = True
@@ -43,11 +22,6 @@ METADATA_PATH = Path(__file__).parent / "vector_metadata.json"
 # Embedding model — small, fast, good quality for semantic search
 EMBED_MODEL = "all-MiniLM-L6-v2"   # 384-dim, ~22 MB download on first use
 EMBED_DIM   = 384
-
-
-# ---------------------------------------------------------------------------
-# Vector Store
-# ---------------------------------------------------------------------------
 
 class VectorStore:
     """
@@ -86,10 +60,6 @@ class VectorStore:
 
         self._load()
 
-    # ------------------------------------------------------------------
-    # Persistence
-    # ------------------------------------------------------------------
-
     def _load(self) -> None:
         """Load existing index + metadata from disk, or create fresh ones."""
         if self.index_path.exists() and self.metadata_path.exists():
@@ -105,10 +75,6 @@ class VectorStore:
         faiss.write_index(self._index, str(self.index_path))
         with open(self.metadata_path, "w", encoding="utf-8") as f:
             json.dump(self._metadata, f, indent=2, ensure_ascii=False)
-
-    # ------------------------------------------------------------------
-    # Write
-    # ------------------------------------------------------------------
 
     def add(self, text: str, source: str = "unknown", meta: dict | None = None) -> int:
         """
@@ -163,10 +129,6 @@ class VectorStore:
         self.save()
         return ids
 
-    # ------------------------------------------------------------------
-    # Read
-    # ------------------------------------------------------------------
-
     def search(self, query: str, top_k: int = 3, score_threshold: float = 2.0) -> list[dict]:
         """
         Find the top_k most semantically similar stored texts.
@@ -206,10 +168,6 @@ class VectorStore:
     def count(self) -> int:
         return self._index.ntotal if self._index else 0
 
-    # ------------------------------------------------------------------
-    # Delete / Reset
-    # ------------------------------------------------------------------
-
     def delete_by_source(self, source: str) -> int:
         """
         Remove all entries from a given source.
@@ -244,10 +202,6 @@ class VectorStore:
                 self._metadata.append(entry)
 
         self.save()
-
-    # ------------------------------------------------------------------
-    # Internal
-    # ------------------------------------------------------------------
 
     def _embed(self, text: str) -> np.ndarray:
         """Return a (1, EMBED_DIM) float32 numpy array."""

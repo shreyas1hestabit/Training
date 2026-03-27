@@ -1,24 +1,8 @@
-"""
-nexus_ai_two/config.py
------------------------
-Central configuration for NEXUS AI — Groq edition.
-
-Uses llama-3.1-8b-instant on Groq's LPU inference (very fast — ~500 tokens/sec).
-Get your free API key at: https://console.groq.com
-
-.env file should contain:
-    GROQ_API_KEY=gsk_...
-    GROQ_MODEL=llama-3.1-8b-instant
-"""
-
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 
-# ---------------------------------------------------------------------------
-# Load .env
-# ---------------------------------------------------------------------------
 load_dotenv()
 
 _api_key = os.getenv("GROQ_API_KEY", "")
@@ -32,18 +16,10 @@ if not _api_key:
         "Get a free key at: https://console.groq.com\n"
     )
 
-# ---------------------------------------------------------------------------
-# Paths
-# ---------------------------------------------------------------------------
 ROOT_DIR = Path(__file__).parent
 LOGS_DIR = ROOT_DIR / "logs"
 LOGS_DIR.mkdir(exist_ok=True)
 
-# ---------------------------------------------------------------------------
-# Groq client
-# Groq exposes an OpenAI-compatible API at https://api.groq.com/openai/v1
-# llama-3.1-8b-instant: ~500 tokens/sec on Groq LPU — much faster than Ollama
-# ---------------------------------------------------------------------------
 def _make_groq_client(model: str = None) -> OpenAIChatCompletionClient:
     return OpenAIChatCompletionClient(
         model=model or _model,
@@ -56,16 +32,8 @@ def _make_groq_client(model: str = None) -> OpenAIChatCompletionClient:
         },
     )
 
-# Primary model — used by all main agents
 PRIMARY_MODEL = _make_groq_client()
-
-# Fast model — used by Critic and Validator
-# Using the same model; swap to llama-3.1-70b-versatile for higher quality
 FAST_MODEL = _make_groq_client()
-
-# ---------------------------------------------------------------------------
-# Agent personas — concise for 8B model
-# ---------------------------------------------------------------------------
 AGENT_PERSONAS = {
 
     "orchestrator": (
@@ -116,14 +84,8 @@ AGENT_PERSONAS = {
     ),
 }
 
-# ---------------------------------------------------------------------------
-# Orchestration settings
-# ---------------------------------------------------------------------------
 MAX_CRITIC_RETRIES = 2      # Groq is fast enough for 2 retries
 CRITIC_PASS_SCORE  = 7      # Higher bar since llama-3.1-8b follows instructions well
 MAX_PLAN_STEPS     = 8
 
-# ---------------------------------------------------------------------------
-# Logging
-# ---------------------------------------------------------------------------
 LOG_FILE = LOGS_DIR / "nexus_trace.json"

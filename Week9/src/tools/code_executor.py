@@ -1,16 +1,3 @@
-"""
-src/tools/code_executor.py — Python Code Execution Tool
----------------------------------------------------------
-SYSTEM PROMPT is defined here (not in main).
-
-Improvements over v1:
-  • Isolated execution namespace with safe builtins only
-  • Captures both stdout AND return value of last expression
-  • Saves every execution result to logs/code_output.txt
-  • Detects and blocks dangerous calls (os.remove, subprocess, etc.)
-  • Returns structured dict so orchestrator can log cleanly
-"""
-
 import sys
 import io
 import os
@@ -42,10 +29,6 @@ STRICT RULES:
 - Always handle exceptions inside the code with try/except and print errors.
 - Produce concise, labelled output (e.g. "Average revenue: 42300.00").
 """
-
-# ── Blocked patterns (security guard) ────────────────────────────────────
-# These catch genuinely destructive calls. We do NOT block open() or imports
-# because the CSV→DB conversion script legitimately uses sqlite3, csv, io, re.
 _BLOCKED = [
     r"\bos\.remove\b",
     r"\bos\.rmdir\b",
@@ -96,10 +79,6 @@ def local_python_executor(code: str) -> str:
     old_stdout = sys.stdout
     sys.stdout  = buf = io.StringIO()
 
-    # ── Safe namespace ──────────────────────────────────────────────────────
-    # We keep the real __builtins__ (so `import sqlite3`, `import csv` etc.
-    # all work) but strip only the truly dangerous builtins.
-    # Dangerous OS calls are caught earlier by the _BLOCKED regex patterns.
     import builtins as _builtins_mod
     safe_builtins = vars(_builtins_mod).copy()
     for _bad in ("exec", "eval", "compile"):   # nested code execution only
@@ -123,8 +102,6 @@ def local_python_executor(code: str) -> str:
     _save_output(code, output)
     return output
 
-
-# ── Tool descriptor (imported by orchestrator / main) ────────────────────
 python_tool = {
     "name":        "python_executor",
     "description": "Execute Python code for data processing or analysis. Returns stdout.",
