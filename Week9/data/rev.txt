@@ -1,0 +1,13 @@
+def reverse_string(s):
+    # Function to reverse a given string
+    reversed_s = s[::-1]
+    return reversed_s
+
+def main():
+    # Test the reverse_string function
+    input_str = "Hello World"
+    print("Original String: ", input_str)
+    print("Reversed String: ", reverse_string(input_str))
+
+if __name__ == '__main__':
+    main()

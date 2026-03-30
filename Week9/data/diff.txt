@@ -1,0 +1,31 @@
+def calculate_difference(num1, num2):
+    """
+    Calculate the difference of two numbers.
+    
+    Parameters:
+    num1 (float): The first number.
+    num2 (float): The second number.
+    
+    Returns:
+    float: The difference of num1 and num2.
+    """
+    # Calculate the difference by subtracting num2 from num1
+    difference = num1 - num2
+    return difference
+
+def main():
+    """
+    Main function to test the calculate_difference function.
+    """
+    # Get two numbers from the user
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    
+    # Calculate the difference
+    difference = calculate_difference(num1, num2)
+    
+    # Print the result
+    print(f"The difference between {num1} and {num2} is {difference}")
+
+if __name__ == '__main__':
+    main()

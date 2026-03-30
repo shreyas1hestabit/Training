@@ -3249,3 +3249,335 @@ def calculate_sum(numbers):
 
 def main():
     # 
+
+============================================================
+Timestamp : 2026-03-30 05:48:02
+Action    : WRITE
+File      : phones.csv
+────────────────────────────────────────────────────────────
+Success: 'phones.csv' written (116 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/phones.csv
+
+CONTENT WRITTEN:
+name,company,price
+iPhone,Apple,999
+Galaxy,Samsung,799
+Pixel,Google,699
+OnePlus,OnePlus,599
+Huawei,Huawei,499
+
+
+============================================================
+Timestamp : 2026-03-30 05:52:11
+Action    : WRITE
+File      : laptop.csv
+────────────────────────────────────────────────────────────
+Success: 'laptop.csv' written (24 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/laptop.csv
+
+CONTENT WRITTEN:
+products,price,storage
+
+
+============================================================
+Timestamp : 2026-03-30 05:52:46
+Action    : APPEND
+File      : laptop.csv
+────────────────────────────────────────────────────────────
+Success: Appended to 'laptop.csv' (total 74 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/laptop.csv
+
+APPENDED:
+Dell,16
+HP,17
+Lenovo,15
+Asus,14
+Microsoft,13
+
+
+============================================================
+Timestamp : 2026-03-30 05:53:20
+Action    : WRITE
+File      : laptop.csv
+────────────────────────────────────────────────────────────
+Success: 'laptop.csv' written (103 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/laptop.csv
+
+CONTENT WRITTEN:
+products,price,storage
+Dell,1000,512
+HP,1200,1024
+Lenovo,1100,512
+Asus,1300,2048
+Apple,1500,1024
+
+
+============================================================
+Timestamp : 2026-03-30 05:56:10
+Action    : READ
+File      : laptop.csv
+────────────────────────────────────────────────────────────
+Read 97 bytes.
+
+CONTENT (first 500 chars):
+products,price,storage
+Dell,1000,512
+HP,1200,1024
+Lenovo,1100,512
+Asus,1300,2048
+Apple,1500,1024
+
+
+============================================================
+Timestamp : 2026-03-30 06:03:24
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-30 06:04:30
+Action    : READ
+File      : fruits.csv
+────────────────────────────────────────────────────────────
+Read 111 bytes.
+
+CONTENT (first 500 chars):
+fruit_name,price_per_kg,quantity  
+Apple,$2,20  
+Banana,$1,30    
+Grapes,$5,15  
+Orange,$3,25    
+Peaches,$4,18
+
+============================================================
+Timestamp : 2026-03-30 06:11:07
+Action    : READ
+File      : fruits.csv
+────────────────────────────────────────────────────────────
+Read 111 bytes.
+
+CONTENT (first 500 chars):
+fruit_name,price_per_kg,quantity  
+Apple,$2,20  
+Banana,$1,30    
+Grapes,$5,15  
+Orange,$3,25    
+Peaches,$4,18
+
+============================================================
+Timestamp : 2026-03-30 06:28:39
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-30 06:29:18
+Action    : READ
+File      : clothes.csv
+────────────────────────────────────────────────────────────
+Read 246 bytes.
+
+CONTENT (first 500 chars):
+product,Fabric,Quantity,price
+Shirt,Cotton,100,15.99
+Pants,Denim,50,29.99
+Dress,Silk,20,49.99
+Jacket,Leather,30,69.99
+Scarf,Wool,40,9.99
+Hat,Cotton,60,12.99
+Gloves,Leather,10,19.99
+Shoes,Rubber,80,39.99
+Socks,Cotton,120,6.99
+Belt,Leather,25,14.99
+
+============================================================
+Timestamp : 2026-03-30 07:04:04
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Read 401 bytes.
+
+CONTENT (first 500 chars):
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 Maple St, Houston","2022-08-10"
+"5","William Davis","111-222-3333","901 Pine St, Phoenix","2018-11-25"
+
+============================================================
+Timestamp : 2026-03-30 07:04:37
+Action    : READ
+File      : employee.csv
+────────────────────────────────────────────────────────────
+Read 401 bytes.
+
+CONTENT (first 500 chars):
+"emp_ID","name","phone","address","Date_of_joining"
+"1","John Doe","123-456-7890","123 Main St, New York","2020-01-15"
+"2","Jane Smith","987-654-3210","456 Elm St, Los Angeles","2019-06-01"
+"3","Robert Brown","555-123-4567","789 Oak St, Chicago","2021-03-20"
+"4","Maria Johnson","901-234-5678","321 Maple St, Houston","2022-08-10"
+"5","William Davis","111-222-3333","901 Pine St, Phoenix","2018-11-25"
+
+============================================================
+Timestamp : 2026-03-30 07:14:40
+Action    : WRITE
+File      : diff.txt
+────────────────────────────────────────────────────────────
+Success: 'diff.txt' written (822 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/diff.txt
+
+CONTENT WRITTEN:
+def calculate_difference(num1, num2):
+    """
+    Calculate the difference of two numbers.
+    
+    Parameters:
+    num1 (float): The first number.
+    num2 (float): The second number.
+    
+    Returns:
+    float: The difference of num1 and num2.
+    """
+    # Calculate the difference by subtracting
+
+============================================================
+Timestamp : 2026-03-30 07:15:42
+Action    : WRITE
+File      : rev.txt
+────────────────────────────────────────────────────────────
+Success: 'rev.txt' written (933 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/rev.txt
+
+CONTENT WRITTEN:
+def reverse_string(input_string):
+    """
+    This function takes a string as input and returns the reversed string.
+    
+    Parameters:
+    input_string (str): The string to be reversed.
+    
+    Returns:
+    str: The reversed string.
+    """
+    # We can reverse a string in Python using slicing
+ 
+
+============================================================
+Timestamp : 2026-03-30 07:25:37
+Action    : WRITE
+File      : rev.txt
+────────────────────────────────────────────────────────────
+Success: 'rev.txt' written (332 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/rev.txt
+
+CONTENT WRITTEN:
+def reverse_string(s):
+    # Function to reverse a given string
+    reversed_s = s[::-1]
+    return reversed_s
+
+def main():
+    # Test the reverse_string function
+    input_str = "Hello World"
+    print("Original String: ", input_str)
+    print("Reversed String: ", reverse_string(input_str))
+
+if __n
+
+============================================================
+Timestamp : 2026-03-30 07:49:47
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 07:50:13
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 07:51:18
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 07:56:37
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 07:57:07
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7

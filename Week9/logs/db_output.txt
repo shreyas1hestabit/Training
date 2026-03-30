@@ -281,3 +281,810 @@ CAST(REPLACE("Quantity",",","") AS REAL)
 ----------------------------------------
 80.0
 120.0
+
+============================================================
+Timestamp : 2026-03-30 06:20:33
+SQL       :
+SELECT COUNT(*) AS total FROM data_import;
+────────────────────────────────────────────────────────────
+RESULT    :
+total
+-----
+5
+
+============================================================
+Timestamp : 2026-03-30 06:21:24
+SQL       :
+SELECT * FROM clothes LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+
+============================================================
+Timestamp : 2026-03-30 06:27:34
+SQL       :
+SELECT * FROM name_table LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 06:27:57
+SQL       :
+SELECT * FROM clothes LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+
+============================================================
+Timestamp : 2026-03-30 06:28:12
+SQL       :
+SELECT * FROM data_import LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+
+============================================================
+Timestamp : 2026-03-30 06:34:11
+SQL       :
+SELECT COUNT(*) AS total FROM data_import;
+────────────────────────────────────────────────────────────
+RESULT    :
+total
+-----
+5
+
+============================================================
+Timestamp : 2026-03-30 06:34:25
+SQL       :
+SELECT SUM(CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL)) AS total_price FROM clothes WHERE "product" LIKE '%Shoes%' OR "product" LIKE '%Socks%' COLLATE NOCASE;
+────────────────────────────────────────────────────────────
+RESULT    :
+total_price
+-----------
+46.980000000000004
+
+============================================================
+Timestamp : 2026-03-30 06:34:59
+SQL       :
+SELECT * FROM name_table LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 06:43:28
+SQL       :
+SELECT COUNT(*) AS total FROM data_import;
+────────────────────────────────────────────────────────────
+RESULT    :
+total
+-----
+5
+
+============================================================
+Timestamp : 2026-03-30 06:44:12
+SQL       :
+SELECT SUM(CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL)) AS total_price FROM clothes WHERE "product" LIKE '%Shoes%' OR "product" LIKE '%Socks%';
+────────────────────────────────────────────────────────────
+RESULT    :
+total_price
+-----------
+46.980000000000004
+
+============================================================
+Timestamp : 2026-03-30 06:45:01
+SQL       :
+SELECT * FROM clothes LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+
+============================================================
+Timestamp : 2026-03-30 06:50:46
+SQL       :
+SELECT * FROM data_import LIMIT 50; SELECT * FROM clothes LIMIT 50; SELECT * FROM laptops LIMIT 50; SELECT * FROM name_table LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+DB Error: ProgrammingError: You can only execute one statement at a time.
+
+============================================================
+Timestamp : 2026-03-30 06:51:24
+SQL       :
+SELECT * FROM name_table LIMIT 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 06:51:38
+SQL       :
+SELECT * FROM clothes LIMIT 4;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+
+============================================================
+Timestamp : 2026-03-30 06:54:19
+SQL       :
+SELECT COUNT(*) AS total FROM data_import;
+────────────────────────────────────────────────────────────
+RESULT    :
+total
+-----
+5
+
+============================================================
+Timestamp : 2026-03-30 06:54:29
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 06:54:29
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 06:54:29
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 06:54:29
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 06:55:03
+SQL       :
+SELECT * FROM clothes ORDER BY CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL) ASC LIMIT 1;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Socks | Cotton | 120 | 6.99
+
+============================================================
+Timestamp : 2026-03-30 06:57:02
+SQL       :
+SELECT * FROM data_import LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 06:57:30
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 06:57:30
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 06:57:30
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 06:57:30
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:01:07
+SQL       :
+SELECT * FROM laptops LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:01:26
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 07:01:26
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 07:01:26
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:01:26
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "laptop" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+products | price | storage
+--------------------------
+Dell | 1000 | 512
+HP | 1200 | 1024
+Lenovo | 1100 | 512
+Asus | 1300 | 2048
+Apple | 1500 | 1024
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:02:16
+SQL       :
+SELECT * FROM "phones" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+name | company | price
+----------------------
+iPhone | Apple | 999
+Galaxy | Samsung | 799
+Pixel | Google | 699
+OnePlus | OnePlus | 599
+Huawei | Huawei | 499
+
+============================================================
+Timestamp : 2026-03-30 07:03:31
+SQL       :
+SELECT * FROM clothes ORDER BY CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL) ASC LIMIT 1;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Socks | Cotton | 120 | 6.99
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "laptop" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+products | price | storage
+--------------------------
+Dell | 1000 | 512
+HP | 1200 | 1024
+Lenovo | 1100 | 512
+Asus | 1300 | 2048
+Apple | 1500 | 1024
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:06:26
+SQL       :
+SELECT * FROM "phones" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+name | company | price
+----------------------
+iPhone | Apple | 999
+Galaxy | Samsung | 799
+Pixel | Google | 699
+OnePlus | OnePlus | 599
+Huawei | Huawei | 499
+
+============================================================
+Timestamp : 2026-03-30 07:12:37
+SQL       :
+SELECT * FROM phones ORDER BY price ASC LIMIT 1;
+────────────────────────────────────────────────────────────
+RESULT    :
+name | company | price
+----------------------
+Huawei | Huawei | 499
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "employee" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+emp_ID | name | phone | address | Date_of_joining
+-------------------------------------------------
+1 | John Doe | 123-456-7890 | 123 Main St, New York | 2020-01-15
+2 | Jane Smith | 987-654-3210 | 456 Elm St, Los Angeles | 2019-06-01
+3 | Robert Brown | 555-123-4567 | 789 Oak St, Chicago | 2021-03-20
+4 | Maria Johnson | 901-234-5678 | 321 Maple St, Houston | 2022-08-10
+5 | William Davis | 111-222-3333 | 901 Pine St, Phoenix | 2018-11-25
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "laptop" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+products | price | storage
+--------------------------
+Dell | 1000 | 512
+HP | 1200 | 1024
+Lenovo | 1100 | 512
+Asus | 1300 | 2048
+Apple | 1500 | 1024
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:13:38
+SQL       :
+SELECT * FROM "phones" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+name | company | price
+----------------------
+iPhone | Apple | 999
+Galaxy | Samsung | 799
+Pixel | Google | 699
+OnePlus | OnePlus | 599
+Huawei | Huawei | 499
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "clothes" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | Fabric | Quantity | price
+-----------------------------------
+Shirt | Cotton | 100 | 15.99
+Pants | Denim | 50 | 29.99
+Dress | Silk | 20 | 49.99
+Jacket | Leather | 30 | 69.99
+Scarf | Wool | 40 | 9.99
+Hat | Cotton | 60 | 12.99
+Gloves | Leather | 10 | 19.99
+Shoes | Rubber | 80 | 39.99
+Socks | Cotton | 120 | 6.99
+Belt | Leather | 25 | 14.99
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "data_import" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+fruit_name | price_per_kg | quantity
+------------------------------------
+Apple | $2 | 20
+Banana | $1 | 30
+Grapes | $5 | 15
+Orange | $3 | 25
+Peaches | $4 | 18
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "employee" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+emp_ID | name | phone | address | Date_of_joining
+-------------------------------------------------
+1 | John Doe | 123-456-7890 | 123 Main St, New York | 2020-01-15
+2 | Jane Smith | 987-654-3210 | 456 Elm St, Los Angeles | 2019-06-01
+3 | Robert Brown | 555-123-4567 | 789 Oak St, Chicago | 2021-03-20
+4 | Maria Johnson | 901-234-5678 | 321 Maple St, Houston | 2022-08-10
+5 | William Davis | 111-222-3333 | 901 Pine St, Phoenix | 2018-11-25
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "laptop" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+products | price | storage
+--------------------------
+Dell | 1000 | 512
+HP | 1200 | 1024
+Lenovo | 1100 | 512
+Asus | 1300 | 2048
+Apple | 1500 | 1024
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "laptops" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+Query executed successfully. No rows matched.
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "name_table" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+My name is shreya
+-----------------
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+My name is shreya
+
+============================================================
+Timestamp : 2026-03-30 07:48:16
+SQL       :
+SELECT * FROM "phones" LIMIT 50;
+────────────────────────────────────────────────────────────
+RESULT    :
+name | company | price
+----------------------
+iPhone | Apple | 999
+Galaxy | Samsung | 799
+Pixel | Google | 699
+OnePlus | OnePlus | 599
+Huawei | Huawei | 499
+
+============================================================
+Timestamp : 2026-03-30 07:48:50
+SQL       :
+SELECT "product" FROM clothes ORDER BY CAST(REPLACE(REPLACE("price","$",""),",","") AS REAL) ASC LIMIT 1;
+────────────────────────────────────────────────────────────
+RESULT    :
+product
+-------
+Socks
+
+============================================================
+Timestamp : 2026-03-30 07:58:18
+SQL       :
+SELECT * FROM tech LIMIT 5;
+────────────────────────────────────────────────────────────
+RESULT    :
+product | price | quantity
+--------------------------
+Laptop | $1000 | 2
+Smartphone | $800 | 2
+T-Shirt | $15 | 3
+Headphones | $60 | 4
+Tablet | $700 | 5
+
+============================================================
+Timestamp : 2026-03-30 07:59:07
+SQL       :
+SELECT "product" FROM tech WHERE CAST(REPLACE(REPLACE("quantity","$",""),",","") AS REAL) > 3;
+────────────────────────────────────────────────────────────
+RESULT    :
+product
+-------
+Headphones
+Tablet
+Gaming Console
+Monitor

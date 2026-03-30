@@ -221,3 +221,232 @@ except Exception as e:
 ────────────────────────────────────────────────────────────
 OUTPUT:
 Data inserted successfully
+
+============================================================
+Timestamp : 2026-03-30 05:56:11
+────────────────────────────────────────────────────────────
+CODE:
+data = """products,price,storage
+Dell,1000,512
+HP,1200,1024
+Lenovo,1100,512
+Asus,1300,2048
+Apple,1500,1024
+"""
+import io, csv
+reader = csv.DictReader(io.StringIO(data))
+products = list(reader)
+cheapest_product = min(products, key=lambda x: int(x['price']))
+print("Cheapest Product:")
+print(f"Product: {cheapest_product['products']}")
+print(f"Price: {cheapest_product['price']}")
+print(f"Storage: {cheapest_product['storage']}")
+────────────────────────────────────────────────────────────
+OUTPUT:
+Cheapest Product:
+Product: Dell
+Price: 1000
+Storage: 512
+
+============================================================
+Timestamp : 2026-03-30 06:11:08
+────────────────────────────────────────────────────────────
+CODE:
+import csv
+from io import StringIO
+
+data = '''fruit_name,price_per_kg,quantity
+Apple,$2,20
+Banana,$1,30
+Grapes,$5,15
+Orange,$3,25
+Peaches,$4,18'''
+csv_data = csv.DictReader(StringIO(data))
+for row in csv_data:
+    if int(row['quantity']) > 20:
+        print(row['fruit_name'])
+────────────────────────────────────────────────────────────
+OUTPUT:
+Banana
+Orange
+
+============================================================
+Timestamp : 2026-03-30 07:39:59
+────────────────────────────────────────────────────────────
+CODE:
+def reverse_string(s):
+    # Reverse the input string using slicing
+    return s[::-1]
+
+def main():
+    # Hardcoded example values
+    example_values = ["Hello World", "Python", "Programming", "Example"]
+
+    # Iterate over each example value
+    for value in example_values:
+        reversed_value = reverse_string(value)
+        print(f"Original String: {value}")
+        print(f"Reversed String: {reversed_value}")
+        print()
+
+if __name__ == '__main__': 
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Success: Code executed with no printed output.
+
+============================================================
+Timestamp : 2026-03-30 07:41:11
+────────────────────────────────────────────────────────────
+CODE:
+def calculate_sum(numbers):
+    return sum(numbers)
+
+def main():
+    n = 5
+    numbers = [1, 2, 3, 4, 5]
+    result = calculate_sum(numbers)
+    print(f"Sum of {n} numbers: {result}")
+
+    n = 3
+    numbers = [10, 20, 30]
+    result = calculate_sum(numbers)
+    print(f"Sum of {n} numbers: {result}")
+
+    n = 0
+    numbers = []
+    result = calculate_sum(numbers)
+    print(f"Sum of {n} numbers: {result}")
+
+if __name__ == '__main__': 
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Success: Code executed with no printed output.
+
+============================================================
+Timestamp : 2026-03-30 07:46:44
+────────────────────────────────────────────────────────────
+CODE:
+# Function to calculate the sum of n numbers
+def calculate_sum():
+    # Get the value of n from the user
+    while True:
+        try:
+            n = int("5")
+            break
+        except ValueError:
+            print("Invalid input: Please enter a whole number")
+
+    # Initialize sum to 0
+    total = 0
+
+    # Get n numbers from the user and calculate the sum
+    for i in range(n):
+        while True:
+            try:
+                num = float("5")
+                total += num
+                break
+            except ValueError:
+                print("Invalid input: Please enter a number")
+
+    return total
+
+# Main function
+def main():
+    print("Sum of n Numbers Calculator")
+    print("---------------------------")
+    sum_of_numbers = calculate_sum()
+    print(f"Sum of the numbers: {sum_of_numbers}")
+
+if __name__ == '__main__':
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Success: Code executed with no printed output.
+
+============================================================
+Timestamp : 2026-03-30 07:47:13
+────────────────────────────────────────────────────────────
+CODE:
+def reverse_string(input_str):
+    # Reverse the input string
+    return input_str[::-1]
+
+def main():
+    # Get user input
+    user_input = "5"
+    
+    # Reverse the input string
+    reversed_str = reverse_string(user_input)
+    
+    # Print the result
+    print("Reversed String:", reversed_str)
+
+if __name__ == '__main__': 
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Success: Code executed with no printed output.
+
+============================================================
+Timestamp : 2026-03-30 07:47:51
+────────────────────────────────────────────────────────────
+CODE:
+def is_palindrome(num):
+    # Convert the number to string to easily reverse it
+    num_str = str(num)
+    # Compare the number with its reverse
+    return num_str == num_str[::-1]
+
+def get_user_"5":
+    # Get user input and validate if it's a number
+    while True:
+        try:
+            num = int("5")
+            return num
+        except ValueError:
+            print("Invalid input: Please enter a whole number")
+
+def main():
+    num = get_user_"5"
+    if is_palindrome(num):
+        print("Is Palindrome: The number is a palindrome")
+    else:
+        print("Is Not Palindrome: The number is not a palindrome")
+
+if __name__ == '__main__': 
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Python Error: SyntaxError: expected '(' (<code_agent>, line 7)
+
+============================================================
+Timestamp : 2026-03-30 07:47:51
+────────────────────────────────────────────────────────────
+CODE:
+def is_palindrome(num):
+    num_str = str(num)
+    return num_str == num_str[::-1]
+
+def get_user_"5":
+    while True:
+        try:
+            num = int("5")
+            return num
+        except ValueError:
+            print("Invalid input: Please enter a whole number")
+
+def main():
+    num = get_user_"5"
+    if is_palindrome(num):
+        print("Is Palindrome: The number is a palindrome")
+    else:
+        print("Is Not Palindrome: The number is not a palindrome")
+
+if __name__ == '__main__':
+    main()
+────────────────────────────────────────────────────────────
+OUTPUT:
+Python Error: SyntaxError: expected '(' (<code_agent>, line 5)
