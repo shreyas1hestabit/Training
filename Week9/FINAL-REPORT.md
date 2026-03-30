@@ -1,10 +1,7 @@
 # FINAL REPORT — WEEK 9: AGENTIC AI & MULTI-AGENT SYSTEM DESIGN
 
-**Author:** Shreyas Singhal  
-**Bootcamp:** AI Systems Engineering — Week 9  
 **Framework:** AutoGen (AgentChat stable API — `autogen_agentchat`, `autogen_ext`, `autogen_core`)  
-**Models:** `llama3.2` via Ollama (Days 1–4) · `llama-3.3-70b-versatile` / `llama-3.1-8b-instant` via Groq (Days 2–5)  
-**Date:** March 2026
+**Models:** `llama3.2` via Ollama (Days 1–4) · `llama-3.3-70b-versatile` / `llama-3.1-8b-instant` via Groq (Days 2–5)
 
 ---
 
