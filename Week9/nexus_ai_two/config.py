@@ -20,21 +20,31 @@ ROOT_DIR = Path(__file__).parent
 LOGS_DIR = ROOT_DIR / "logs"
 LOGS_DIR.mkdir(exist_ok=True)
 
+
 def _make_groq_client(model: str = None) -> OpenAIChatCompletionClient:
+    """
+    Create a Groq-backed OpenAIChatCompletionClient.
+    model_capabilities is set explicitly because Groq models are not in
+    AutoGen's built-in registry and would otherwise raise a UserWarning
+    about the missing 'structured_output' field.
+    """
     return OpenAIChatCompletionClient(
         model=model or _model,
         base_url="https://api.groq.com/openai/v1",
         api_key=_api_key,
         model_capabilities={
-            "vision": False,
-            "function_calling": True,
-            "json_output": False,
+            "vision":            False,
+            "function_calling":  True,
+            "json_output":       False,
+            "structured_output": False,   # suppresses AutoGen UserWarning
         },
     )
 
+
 PRIMARY_MODEL = _make_groq_client()
-FAST_MODEL = _make_groq_client()
-AGENT_PERSONAS = {
+FAST_MODEL    = _make_groq_client()
+
+AGENT_PERSONAS: dict[str, str] = {
 
     "orchestrator": (
         "You are the Orchestrator of NEXUS AI. "
@@ -53,8 +63,15 @@ AGENT_PERSONAS = {
     ),
 
     "coder": (
-        "You are a Coder. Write clean, working code for the given task. "
-        "Include imports and a brief usage example. Add short comments."
+        "You are a Coder. Write clean, working code for the given task.\n"
+        "STRICT RULES — you must follow all of these:\n"
+        "1. Every piece of code MUST be inside a fenced block with the language tag.\n"
+        "   Example:  ```python\nimport os\nprint('hello')\n```\n"
+        "2. NEVER write code as plain prose or inline text. No exceptions.\n"
+        "3. All imports go at the top of each code block.\n"
+        "4. Include a short usage example in its own fenced block at the end.\n"
+        "5. Add brief inline comments on key steps.\n"
+        "If your response contains code, it MUST be inside a fenced block."
     ),
 
     "analyst": (
@@ -69,8 +86,10 @@ AGENT_PERSONAS = {
     ),
 
     "optimizer": (
-        "You are an Optimizer. Rewrite the given output to fix the issues listed in the critique. "
-        "Return the improved version in full."
+        "You are an Optimizer. Rewrite the given output to fix the issues in the critique.\n"
+        "IMPORTANT: if the original contains fenced code blocks (```language ... ```), "
+        "copy them into your improved version exactly — never convert code to prose.\n"
+        "Return the full improved version."
     ),
 
     "validator": (
@@ -79,13 +98,18 @@ AGENT_PERSONAS = {
     ),
 
     "reporter": (
-        "You are a Reporter. Compile the given agent outputs into a clean markdown report. "
-        "Structure: ## Executive Summary, then sections for each output, then ## Recommendations."
+        "You are a Reporter. Compile the given agent outputs into a clean markdown report.\n"
+        "Structure: ## Executive Summary, one section per agent output, then ## Recommendations.\n"
+        "CRITICAL RULES:\n"
+        "1. Any fenced code block (```language ... ```) in an agent output MUST be copied verbatim "
+        "   into a ## Code section of your report. Do not paraphrase or describe code.\n"
+        "2. Never drop or rewrite fenced code blocks — they must appear in full.\n"
+        "3. If multiple agents produced code, include all of their blocks."
     ),
 }
 
-MAX_CRITIC_RETRIES = 2      # Groq is fast enough for 2 retries
-CRITIC_PASS_SCORE  = 7      # Higher bar since llama-3.1-8b follows instructions well
+MAX_CRITIC_RETRIES = 2
+CRITIC_PASS_SCORE  = 7
 MAX_PLAN_STEPS     = 8
 
 LOG_FILE = LOGS_DIR / "nexus_trace.json"

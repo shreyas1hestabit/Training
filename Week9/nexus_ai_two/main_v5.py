@@ -1,20 +1,35 @@
 import asyncio
 import argparse
+import re
 import sys
 from pathlib import Path
+from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from nexus_ai_two.orchestrator import NexusOrchestrator
 from nexus_ai_two.config import LOGS_DIR
 
-
-DEMO_TASKS = [
-    "Plan a startup in AI for healthcare — include business model, MVP, target market, tech stack, and go-to-market strategy.",
-    "Generate backend architecture for a scalable web application — include database design, API structure, caching, auth, and deployment.",
-    "Analyze this CSV file (sales_data.csv) and create a comprehensive business strategy based on the findings.",
-    "Design a RAG pipeline for 50,000 documents — include chunking strategy, embedding model, vector store, retrieval logic, and LLM integration.",
-]
+LANG_EXT: dict[str, str] = {
+    "python":     ".py",
+    "py":         ".py",
+    "javascript": ".js",
+    "js":         ".js",
+    "typescript": ".ts",
+    "ts":         ".ts",
+    "bash":       ".sh",
+    "sh":         ".sh",
+    "sql":        ".sql",
+    "yaml":       ".yaml",
+    "yml":        ".yaml",
+    "json":       ".json",
+    "html":       ".html",
+    "css":        ".css",
+    "dockerfile": ".dockerfile",
+    "mermaid":    ".mmd",
+    "text":       ".txt",
+    "":           ".txt",
+}
 
 
 def print_banner():
@@ -27,42 +42,106 @@ def print_banner():
 """)
 
 
-def save_report(task: str, report: str, index: int = 0) -> Path:
-    safe = "".join(c if c.isalnum() else "_" for c in task[:40]).strip("_")
-    path = LOGS_DIR / f"report_{index:02d}_{safe}.md"
-    path.write_text(f"# NEXUS AI Report\n\n**Task:** {task}\n\n---\n\n{report}", encoding="utf-8")
-    print(f"\n[NEXUS] Report saved → {path}")
-    return path
+def _safe_name(text: str, max_len: int = 40) -> str:
+    return "".join(c if c.isalnum() else "_" for c in text[:max_len]).strip("_")
 
 
-async def run_single(task: str, index: int = 0):
+def _extract_code_blocks(text: str) -> list[tuple[str, str]]:
+    """Return (language, code) pairs for every fenced block with content > 10 chars."""
+    pattern = re.compile(r"```(\w*)\n(.*?)```", re.DOTALL)
+    return [
+        (m.group(1).lower().strip(), m.group(2).strip())
+        for m in pattern.finditer(text)
+        if len(m.group(2).strip()) > 10
+    ]
+
+
+def save_report(
+    task: str,
+    report: str,
+    index: int = 0,
+    raw_code_outputs: list[str] | None = None,
+) -> Path:
+    """
+    Creates  logs/task_NN_<slug>_<timestamp>/
+      ├── report.md
+      └── code/
+          ├── snippet_01.py
+          └── snippet_02.py   (etc.)
+
+    Code blocks are taken from the final report first.
+    If the reporter stripped them, falls back to raw coder agent outputs.
+    """
+    timestamp   = datetime.now().strftime("%Y%m%d_%H%M%S")
+    folder_name = f"task_{index:02d}_{_safe_name(task)}_{timestamp}"
+    task_dir    = LOGS_DIR / folder_name
+    task_dir.mkdir(parents=True, exist_ok=True)
+
+    # 1 ── report.md ─────────────────────────────────────────────────────────
+    report_path = task_dir / "report.md"
+    report_path.write_text(
+        f"# NEXUS AI Report\n\n"
+        f"**Task:** {task}\n\n"
+        f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+        f"---\n\n"
+        f"{report}",
+        encoding="utf-8",
+    )
+    print(f"\n[NEXUS] report.md → {report_path}")
+
+    # 2 ── collect code blocks ───────────────────────────────────────────────
+    blocks = _extract_code_blocks(report)
+
+    if not blocks and raw_code_outputs:
+        print("[NEXUS] No code blocks in report — scanning raw coder outputs...")
+        for raw in raw_code_outputs:
+            blocks.extend(_extract_code_blocks(raw))
+
+    # 3 ── save code files ───────────────────────────────────────────────────
+    if blocks:
+        code_dir = task_dir / "code"
+        code_dir.mkdir(exist_ok=True)
+        ext_counter: dict[str, int] = {}
+        saved: list[Path] = []
+        for lang, code in blocks:
+            ext = LANG_EXT.get(lang, ".txt")
+            ext_counter[ext] = ext_counter.get(ext, 0) + 1
+            fp = code_dir / f"snippet_{ext_counter[ext]:02d}{ext}"
+            fp.write_text(code, encoding="utf-8")
+            saved.append(fp)
+        print(f"[NEXUS] {len(saved)} code file(s) → {code_dir}")
+        for f in saved:
+            print(f"        {f.name}")
+    else:
+        print("[NEXUS] No code blocks found — only report.md saved.")
+
+    print(f"[NEXUS] Folder → {task_dir}\n")
+    return task_dir
+
+async def run_single(task: str, index: int = 1):
     nexus  = NexusOrchestrator()
     report = await nexus.run_with_recovery(task)
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
     print("FINAL REPORT")
-    print("="*60)
+    print("=" * 60)
     print(report)
-    save_report(task, report, index)
+    save_report(task, report, index, raw_code_outputs=nexus.last_code_outputs)
     return report
-
-
-async def run_demo():
-    print_banner()
-    nexus = NexusOrchestrator()
-    for i, task in enumerate(DEMO_TASKS, 1):
-        print(f"\n{'─'*60}\nDEMO TASK {i}/{len(DEMO_TASKS)}\n{'─'*60}")
-        report = await nexus.run_with_recovery(task)
-        save_report(task, report, i)
-    stats = nexus.memory.stats()
-    print(f"\n[NEXUS] Done. {stats['tasks']} tasks, {stats['reflections']} reflections stored.")
 
 
 async def run_interactive():
     print_banner()
-    print("Type your task. Follow-up questions are supported — NEXUS remembers context.")
-    print("Commands: 'memory' | 'history' | 'clear' | 'reset' | 'exit'\n")
+    print("Type your task and press Enter. NEXUS will plan, research, code, and report.")
+    print("Follow-up questions are supported — NEXUS remembers the whole session.")
+    print()
+    print("Commands:")
+    print("  memory   — show memory statistics")
+    print("  history  — show session conversation history")
+    print("  clear    — clear session history (keeps vector store & facts)")
+    print("  reset    — wipe ALL memory")
+    print("  exit     — quit")
+    print()
 
-    # Single orchestrator instance — persists across all turns in this session
     nexus = NexusOrchestrator()
     count = 0
 
@@ -76,14 +155,15 @@ async def run_interactive():
         if not task:
             continue
 
+        # ── built-in commands ──────────────────────────────────────────────
         if task.lower() == "exit":
             print("[NEXUS] Goodbye.")
             break
 
-        elif task.lower() == "memory":
+        if task.lower() == "memory":
             s = nexus.memory.stats()
             c = nexus.conv.status()
-            print(f"\n  === Memory Status ===")
+            print("\n  === Memory Status ===")
             print(f"  Session turns   : {c['session_turns']}")
             print(f"  Vector entries  : {c['vector_entries']}")
             print(f"  Facts stored    : {c['facts_stored']}")
@@ -92,7 +172,7 @@ async def run_interactive():
             print()
             continue
 
-        elif task.lower() == "history":
+        if task.lower() == "history":
             turns = nexus.conv.session.get_all()
             if not turns:
                 print("  (no conversation history yet)\n")
@@ -104,32 +184,49 @@ async def run_interactive():
                 print()
             continue
 
-        elif task.lower() == "clear":
+        if task.lower() == "clear":
             nexus.conv.clear_session()
             print("[Session history cleared. Vector store and facts intact.]\n")
             continue
 
-        elif task.lower() == "reset":
+        if task.lower() == "reset":
             nexus.conv.reset_all()
             print("[All memory wiped — vector store, facts, and session.]\n")
             continue
 
+        # ── run task ───────────────────────────────────────────────────────
         count += 1
         report = await nexus.run_with_recovery(task)
-        save_report(task, report, count)
+        save_report(task, report, count, raw_code_outputs=nexus.last_code_outputs)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="NEXUS AI — Groq Edition")
-    parser.add_argument("--demo", action="store_true", help="Run all 4 demo tasks")
-    parser.add_argument("--task", type=str,            help="Run a single task")
+    parser = argparse.ArgumentParser(
+        description="NEXUS AI — Autonomous Multi-Agent System (Groq Edition)",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Start interactive session (default)
+  python -m nexus_ai_two.main_v5
+
+  # Run a single task directly
+  python -m nexus_ai_two.main_v5 --task "Design a RAG pipeline for 50k documents"
+  python -m nexus_ai_two.main_v5 --task "Plan a startup in AI for healthcare"
+  python -m nexus_ai_two.main_v5 --task "Generate backend architecture for a scalable web app"
+        """,
+    )
+    parser.add_argument(
+        "--task",
+        type=str,
+        default=None,
+        help="Run a single task and exit (use quotes for multi-word tasks)",
+    )
     args = parser.parse_args()
 
-    if args.demo:
-        asyncio.run(run_demo())
-    elif args.task:
-        print_banner()
-        asyncio.run(run_single(args.task, index=1))
+    print_banner()
+
+    if args.task:
+        asyncio.run(run_single(args.task.strip(), index=1))
     else:
         asyncio.run(run_interactive())
 

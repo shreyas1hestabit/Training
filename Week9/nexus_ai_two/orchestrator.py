@@ -1,6 +1,8 @@
 import time
 import re
-from autogen_core.models import UserMessage, SystemMessage
+from autogen_agentchat.agents import AssistantAgent
+from autogen_agentchat.messages import TextMessage
+from autogen_core import CancellationToken
 
 from nexus_ai_two.agents import (
     PlannerAgent, ResearcherAgent, CoderAgent, AnalystAgent,
@@ -11,7 +13,7 @@ from nexus_ai_two.tools   import analyze_csv, web_search_stub
 from nexus_ai_two.memory  import NexusMemory
 from nexus_ai_two.conversation_memory import ConversationMemory
 from nexus_ai_two.logger  import NexusLogger
-from nexus_ai_two.config  import PRIMARY_MODEL, MAX_CRITIC_RETRIES, CRITIC_PASS_SCORE
+from nexus_ai_two.config  import PRIMARY_MODEL, MAX_CRITIC_RETRIES, CRITIC_PASS_SCORE, AGENT_PERSONAS
 
 ROLE_KEYWORDS = {
     "researcher": ["research", "gather", "find", "explain", "what is", "describe",
@@ -22,6 +24,7 @@ ROLE_KEYWORDS = {
                    "insights", "compare", "benchmark", "measure"],
     "reporter":   ["report", "compile", "summarise", "summarize", "document"],
 }
+
 
 def route_step(step: str) -> str:
     step_lower = step.lower()
@@ -41,6 +44,22 @@ def classify_task(task: str) -> str:
     ]
     return "full" if any(s in task.lower() for s in complex_signals) else "fast"
 
+
+async def _llm_call(prompt: str, system: str) -> str:
+    """Single LLM call using the AgentChat AssistantAgent pattern."""
+    agent = AssistantAgent(
+        name="helper",
+        model_client=PRIMARY_MODEL,
+        system_message=system,
+    )
+    token    = CancellationToken()
+    response = await agent.on_messages(
+        [TextMessage(content=prompt, source="user")],
+        cancellation_token=token,
+    )
+    return response.chat_message.content.strip()
+
+
 class NexusOrchestrator:
 
     def __init__(self):
@@ -54,7 +73,7 @@ class NexusOrchestrator:
         self.reporter   = ReporterAgent()
         self.master     = OrchestratorAgent()
         self.memory     = NexusMemory()
-        self.conv       = ConversationMemory()   # ← conversational memory
+        self.conv       = ConversationMemory()
         self.log        = NexusLogger()
 
         self._agents = {
@@ -63,16 +82,20 @@ class NexusOrchestrator:
             "analyst":    self.analyst,
             "reporter":   self.reporter,
         }
+
+        # Raw coder outputs — captured before reporter can strip fenced blocks
+        self.last_code_outputs: list[str] = []
+
         print(f"[NEXUS Memory] Session: {self.conv.status()}")
 
     async def run(self, task: str) -> str:
         start = time.time()
         self.log.start_task(task)
+        self.last_code_outputs = []
 
         mode = classify_task(task)
         print(f"\n  [NEXUS] Mode: {mode.upper()} | Model: llama-3.1-8b-instant (Groq)\n")
 
-        # Inject conversation memory context
         conv_context = self.conv.build_context(task)
         if conv_context:
             print(f"  [NEXUS Memory] Injecting context ({self.conv.status()})")
@@ -80,11 +103,13 @@ class NexusOrchestrator:
         else:
             task_with_context = task
 
-        report = await self._fast_pipeline(task_with_context) if mode == "fast" else await self._full_pipeline(task_with_context)
+        report = (
+            await self._fast_pipeline(task_with_context)
+            if mode == "fast"
+            else await self._full_pipeline(task_with_context)
+        )
 
-        # Store completed task in conversation memory
         self.conv.store_task(task, report)
-
         self.memory.save_task(task, report, {}, round(time.time() - start, 2))
         self.log.end_task(success=True, final_output=report)
         return report
@@ -115,6 +140,7 @@ class NexusOrchestrator:
             code = await self.coder.run(code_task, context=context)
             self.log.agent_end("coder", code, time.time() - t0)
             code = await self._critique_and_optimize(code, code_task, "coder")
+            self.last_code_outputs.append(code)
             agent_outputs["Code"] = code
 
         if not agent_outputs:
@@ -124,7 +150,6 @@ class NexusOrchestrator:
             self.log.agent_end("researcher", result, time.time() - t0)
             agent_outputs["Result"] = result
 
-        # Final report + validation
         self.log.agent_start("reporter", "compile")
         t0     = time.time()
         report = await self.reporter.compile(agent_outputs, task)
@@ -147,11 +172,10 @@ class NexusOrchestrator:
 
         agent_outputs = {}
 
-        # Plan
         constrained = (
             f"{enriched_task}\n\n"
-            f"IMPORTANT: Maximum 5 steps. Each step one sentence. "
-            f"Use only: Researcher, Coder, Analyst."
+            "IMPORTANT: Maximum 5 steps. Each step one sentence. "
+            "Use only: Researcher, Coder, Analyst."
         )
         self.log.agent_start("planner", task)
         t0 = time.time()
@@ -161,14 +185,12 @@ class NexusOrchestrator:
         self.log.plan(steps)
         agent_outputs["Plan"] = plan_text
 
-        # Execute each step
         accumulated = ""
         for i, step in enumerate(steps, 1):
             role  = route_step(step)
             agent = self._agents.get(role, self.researcher)
 
-            # Tool: CSV detection
-            csv_match = re.search(r'[\w\.\-]+\.csv', step, re.IGNORECASE)
+            csv_match = re.search(r'[\w.\-]+\.csv', step, re.IGNORECASE)
             if csv_match:
                 csv_result = analyze_csv(csv_match.group(0))
                 self.log.tool_call("analyze_csv", {"path": csv_match.group(0)}, csv_result[:100])
@@ -180,18 +202,20 @@ class NexusOrchestrator:
             self.log.agent_end(role, output, time.time() - t0)
             output = await self._critique_and_optimize(output, step, role)
 
-            accumulated                       += f"\nStep {i}: {output[:500]}"
+            # Capture coder raw outputs before reporter strips fenced blocks
+            if role == "coder":
+                self.last_code_outputs.append(output)
+
+            accumulated                              += f"\nStep {i}: {output[:500]}"
             agent_outputs[f"Step{i}_{role.title()}"] = output
 
-        # Report
         self.log.agent_start("reporter", "compile")
         t0     = time.time()
         report = await self.reporter.compile(agent_outputs, task)
         self.log.agent_end("reporter", report, time.time() - t0)
 
-        # Validation
         self.log.agent_start("validator", "validate")
-        t0         = time.time()
+        t0                   = time.time()
         val_report, is_valid = await self.validator.validate(report, task)
         self.log.agent_end("validator", val_report, time.time() - t0)
         self.log.validation_result(is_valid, val_report)
@@ -199,7 +223,6 @@ class NexusOrchestrator:
             self.log.optimizer_run(99)
             report = await self.optimizer.optimize(report, val_report, task)
 
-        # Reflect
         reflection = await self._reflect(task, report)
         self.log.reflection(reflection)
         self.memory.add_reflection(reflection, task)
@@ -226,13 +249,7 @@ class NexusOrchestrator:
             "In one sentence, what should be improved next time?"
         )
         try:
-            result = await PRIMARY_MODEL.create(
-                messages=[
-                    SystemMessage(content="Give brief self-improvement notes."),
-                    UserMessage(content=prompt, source="user"),
-                ],
-            )
-            return str(result.content).strip()
+            return await _llm_call(prompt, "Give brief self-improvement notes.")
         except Exception as e:
             return f"Reflection failed: {e}"
 
