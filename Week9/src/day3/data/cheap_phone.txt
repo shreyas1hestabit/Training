@@ -1,0 +1,4 @@
+name         Phone1
+price           100
+company    CompanyA
+Name: 0, dtype: object

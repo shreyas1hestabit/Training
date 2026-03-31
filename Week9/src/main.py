@@ -1,4 +1,4 @@
-import asyncio, os, time, json
+import asyncio, os, time, json #Essential for Agentic AI. Agents often wait for LLM responses; asyncio allows the program to "pause" and "resume" without freezing.
 from datetime import datetime
 from dotenv import load_dotenv
 from src.agents.research_agent import research_agent
@@ -32,23 +32,26 @@ async def save_to_log(user_query, research, summary, final_answer,timings):
 
 async def run_pipeline():
     print("\n--- ⚡ FAST PIPELINE ONLINE (v0.7.5) ---")
-    while True:
-        user_query = input("\nUser Request (or 'exit'/'clear'): ").strip()
+    while True: #Keeps the application alive so you can have a conversation rather than running the script once and it dying.
+        user_query = input("\nUser Request (or 'exit'/'clear'): ").strip() #strip is for data sanitization. it removes whitespaces from the begining and end of string.
         
         if user_query.lower() in ["exit", "quit"]: break
-        if user_query.lower() == "clear":
-            for agent in [research_agent, summarizer_agent, answer_agent]:
-                if hasattr(agent, "_model_context") and agent._model_context:
+        if user_query.lower() == "clear": #Episodic Memory. This line explicitly wipes the "10-message buffer" we set in the agents.
+            for agent in [research_agent, summarizer_agent, answer_agent]: #You are looping through every specialized worker you created. You treat them as a group so you don't have to write the reset logic three times.
+                if hasattr(agent, "_model_context") and agent._model_context: #(agent, "_model_context") ----> checks: "Does this agent actually have a memory object attached to it?"
+                    # agent._model_context ----> Sometimes an agent can have a memory slot, but it’s currently set to None (empty/null). This happens if you initialized the agent without a model_context parameter.
+                    #both are necessary for clear command to run.
+                    # example--> at entry do you have wallet (hasattr(agent, "_model_context")) and do you have money in that wallet (agent._model_context).
                     await agent._model_context.clear()
             print(" Memory cleared!")
             continue
 
         print(f" Starting Pipeline...")
-        start_time = time.time()
-        s1 = time.time()
+        start_time = time.time() #exact time the pipeline of three agents start
+        s1 = time.time() #A temporary "lap timer" for the Research Agent.
         print(" Step 1: Researching...")
         res_result = await research_agent.run(task=user_query)
-        raw_research = res_result.messages[-1].content
+        raw_research = res_result.messages[-1].content #extracting only the final answer.
         r_time = round(time.time() - s1, 2)
 
         s2 = time.time()
@@ -63,7 +66,7 @@ async def run_pipeline():
         final_output = ans_result.messages[-1].content
         f_time = round(time.time() - s3, 2)
 
-        print(f"\n Pipeline Complete in {round(time.time() - start_time, 2)}s")
+        print(f"\n Pipeline Complete in {round(time.time() - start_time, 2)}s") #From the moment the user hit Enter to the final polite response, it took X seconds.
         print("="*40 + "\n" + final_output + "\n" + "="*40)
 
         await save_to_log(user_query, raw_research, summary_text, final_output, {"res": r_time, "sum": s_time, "ans": f_time})

@@ -3581,3 +3581,314 @@ Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
 3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
 4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
 5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 21:29:19
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (467 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+Vegetable,Quantity,Price
+Carrot,10,1.50
+Broccoli,20,2.00
+Cauliflower,15,1.75
+Lettuce,25,1.25
+Spinach,30,1.50
+Beetroot,12,1.00
+Onion,18,0.75
+Potato,22,0.50
+Tomato,28,1.00
+Cucumber,11,0.75
+Pepper,16,1.25
+Mushroom,14,1.50
+Corn,26,1.00
+Asparagus,13,2.00
+Celery,24,1.25
+Radish,17,0.50
+Turnip,19,0.75
+Parsn
+
+============================================================
+Timestamp : 2026-03-30 21:29:21
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (559 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+vegetable,quantity,price
+Carrot,10,1.50
+Broccoli,20,2.00
+Cauliflower,15,1.75
+Potato,25,1.25
+Tomato,30,2.50
+Onion,12,1.00
+Mushroom,18,3.00
+Cabbage,22,1.50
+Spinach,28,2.25
+Beetroot,16,1.75
+Radish,24,1.25
+Lettuce,14,2.00
+Peas,26,2.50
+Corn,20,2.25
+Asparagus,18,3.50
+Eggplant,12,1.50
+Okra,22,2.00
+Celery,1
+
+============================================================
+Timestamp : 2026-03-30 21:31:58
+Action    : READ
+File      : people-100.csv
+────────────────────────────────────────────────────────────
+Read 11324 bytes.
+
+CONTENT (first 500 chars):
+Index,User Id,First Name,Last Name,Sex,Email,Phone,Date of birth,Job Title
+1,88F7B33d2bcf9f5,Shelby,Terrell,Male,elijah57@example.net,001-084-906-7849x73518,1945-10-26,Games developer
+2,f90cD3E76f1A9b9,Phillip,Summers,Female,bethany14@example.com,214.112.6044x4913,1910-03-24,Phytotherapist
+3,DbeAb8CcdfeFC2c,Kristine,Travis,Male,bthompson@example.com,277.609.7938,1992-07-02,Homeopath
+4,A31Bee3c201ef58,Yesenia,Martinez,Male,kaitlinkaiser@example.com,584.094.6111,2017-08-03,Market researcher
+5,1bA7
+
+============================================================
+Timestamp : 2026-03-30 21:33:59
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (170 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+Name,Age,Color
+Carrot,1,Orange
+Broccoli,2,Green
+Cauliflower,3,White
+Potato,4,Brown
+Tomato,5,Red
+Onion,6,White
+Mushroom,7,Brown
+Cabbage,8,Green
+Corn,9,Yellow
+Peas,10,Green
+
+============================================================
+Timestamp : 2026-03-30 21:34:01
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (136 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+name,price,quantity
+potato,10,5
+carrot,5,10
+onion,8,7
+bean,12,3
+tomato,15,2
+cucumber,20,1
+peas,18,4
+lettuce,22,6
+gourd,25,8
+spinach,30,9
+
+============================================================
+Timestamp : 2026-03-30 21:34:02
+Action    : READ
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Read 136 bytes.
+
+CONTENT (first 500 chars):
+name,price,quantity
+potato,10,5
+carrot,5,10
+onion,8,7
+bean,12,3
+tomato,15,2
+cucumber,20,1
+peas,18,4
+lettuce,22,6
+gourd,25,8
+spinach,30,9
+
+============================================================
+Timestamp : 2026-03-30 21:34:03
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (136 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+name,price,quantity
+potato,10,5
+carrot,5,10
+onion,8,7
+bean,12,3
+tomato,15,2
+cucumber,20,1
+peas,18,4
+lettuce,22,6
+gourd,25,8
+spinach,30,9
+
+============================================================
+Timestamp : 2026-03-30 21:34:07
+Action    : READ
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Read 136 bytes.
+
+CONTENT (first 500 chars):
+name,price,quantity
+potato,10,5
+carrot,5,10
+onion,8,7
+bean,12,3
+tomato,15,2
+cucumber,20,1
+peas,18,4
+lettuce,22,6
+gourd,25,8
+spinach,30,9
+
+============================================================
+Timestamp : 2026-03-30 21:34:10
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (136 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+name,price,quantity
+potato,10,5
+carrot,5,10
+onion,8,7
+bean,12,3
+tomato,15,2
+cucumber,20,1
+peas,18,4
+lettuce,22,6
+gourd,25,8
+spinach,30,9
+
+============================================================
+Timestamp : 2026-03-30 21:36:18
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (166 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+name,price,quantity
+Carrot,1.2,5
+Broccoli,2.5,10
+Cauliflower,3.0,7
+Potato,0.8,20
+Onion,0.5,15
+Mushroom,1.5,12
+Tomato,1.8,18
+Cucumber,1.0,8
+Lettuce,1.1,9
+Spinach,2.0,6
+
+============================================================
+Timestamp : 2026-03-30 21:36:19
+Action    : READ
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Read 166 bytes.
+
+CONTENT (first 500 chars):
+name,price,quantity
+Carrot,1.2,5
+Broccoli,2.5,10
+Cauliflower,3.0,7
+Potato,0.8,20
+Onion,0.5,15
+Mushroom,1.5,12
+Tomato,1.8,18
+Cucumber,1.0,8
+Lettuce,1.1,9
+Spinach,2.0,6
+
+============================================================
+Timestamp : 2026-03-30 21:36:21
+Action    : READ
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Read 166 bytes.
+
+CONTENT (first 500 chars):
+name,price,quantity
+Carrot,1.2,5
+Broccoli,2.5,10
+Cauliflower,3.0,7
+Potato,0.8,20
+Onion,0.5,15
+Mushroom,1.5,12
+Tomato,1.8,18
+Cucumber,1.0,8
+Lettuce,1.1,9
+Spinach,2.0,6
+
+============================================================
+Timestamp : 2026-03-30 21:39:02
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (144 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+vegetable,name,quantity
+1,Carrot,5
+2,Potato,10
+3,Onion,7
+4,Cabbage,3
+5,Broccoli,8
+6,Cauliflower,6
+7,Peas,9
+8,Spinach,4
+9,Tomato,11
+10,Cucumber,2
+
+============================================================
+Timestamp : 2026-03-30 21:39:04
+Action    : WRITE
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Success: 'vegetable.csv' written (178 bytes) → /home/shreyasinghal/Desktop/Training Bootcamp/Week9/data/vegetable.csv
+
+CONTENT WRITTEN:
+Name,Price,Quantity
+Carrot,1.50,10
+Broccoli,2.00,20
+Cauliflower,2.50,15
+Potato,1.00,30
+Tomato,2.00,25
+Onion,1.25,12
+Cucumber,1.75,18
+Lettuce,2.25,8
+Pepper,2.50,10
+Spinach,1.75,22
+
+============================================================
+Timestamp : 2026-03-30 21:39:04
+Action    : READ
+File      : vegetable.csv
+────────────────────────────────────────────────────────────
+Read 178 bytes.
+
+CONTENT (first 500 chars):
+Name,Price,Quantity
+Carrot,1.50,10
+Broccoli,2.00,20
+Cauliflower,2.50,15
+Potato,1.00,30
+Tomato,2.00,25
+Onion,1.25,12
+Cucumber,1.75,18
+Lettuce,2.25,8
+Pepper,2.50,10
+Spinach,1.75,22

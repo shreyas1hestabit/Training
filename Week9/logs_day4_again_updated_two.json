@@ -519,5 +519,63 @@
             "vector_entries": 8,
             "turn_count": 2
         }
+    },
+    {
+        "timestamp": "2026-03-31T10:48:44.400050",
+        "user_input": "my name is shreya",
+        "agent_response": "Nice to meet you, Shreya. I\u2019m here to help with anything you need\u2014whether it\u2019s about your work at HestaBit, your projects in the MERN stack, or your recent focus on AI at Agentic AI. Let me know how I can assist you today.",
+        "memory_snapshot": {
+            "session_messages": 2,
+            "vector_entries": 9,
+            "sqlite_facts": 7,
+            "sqlite_episodes": 1,
+            "turn_count": 1
+        },
+        "recalled_memories": [
+            {
+                "text": "User name is Shreya",
+                "source": "fact",
+                "score": 0.45764756202697754
+            },
+            {
+                "text": "User focused on MERN stack",
+                "source": "fact",
+                "score": 1.5839297771453857
+            },
+            {
+                "text": "- You've worked for nearly two months as a Software Engineering Trainee specializing in aggressive artificial intelligence projects, possibly pertaining to autonomous systems or proactive decision algorithms (Agentic AI), at HestiaBit\u2014a tech company known within the given context.",
+                "source": "episode",
+                "score": 1.6706998348236084
+            }
+        ]
+    },
+    {
+        "timestamp": "2026-03-31T10:49:10.386002",
+        "user_input": "what all do you remember about me?",
+        "agent_response": "I remember you\u2019re Shreya, a software engineer trainee at HestaBit. You\u2019ve been with the company for nearly six weeks and have been focusing on the MERN stack. After about two months you shifted your attention to AI work at Agentic AI.",
+        "memory_snapshot": {
+            "session_messages": 4,
+            "vector_entries": 9,
+            "sqlite_facts": 7,
+            "sqlite_episodes": 1,
+            "turn_count": 2
+        },
+        "recalled_memories": [
+            {
+                "text": "User name is Shreya",
+                "source": "fact",
+                "score": 1.6793040037155151
+            },
+            {
+                "text": "User name is shreya",
+                "source": "fact",
+                "score": 1.6793040037155151
+            },
+            {
+                "text": "User focused on MERN stack",
+                "source": "fact",
+                "score": 1.8906928300857544
+            }
+        ]
     }
 ]

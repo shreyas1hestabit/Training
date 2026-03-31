@@ -4,11 +4,14 @@ from src.utils.config import client
 validator_agent = AssistantAgent(
     name="Validator",
     model_client=client,
-    system_message="""You are a Quality Control Expert. 
-    Compare the Worker's output to the original User Request.
-    Check for: 
-    1. Hallucinations (Fake citations/DOIs).
-    2. Logic errors.
-    3. Completeness.
-    If accurate, say 'VALIDATED'. If not, say 'REJECTED' and list why."""
+    system_message="""ROLE: Quality Control Expert.
+    Compare the Final Answer against the original User Request.
+    
+    REJECT if:
+    1. The answer contains questions directed at the user.
+    2. There are fake citations or obvious hallucinations.
+    3. The answer is incomplete.
+    
+    If accurate, say 'VALIDATED'. 
+    If inaccurate, say 'REJECTED' and list the reasons clearly."""
 )

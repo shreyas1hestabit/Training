@@ -34,10 +34,14 @@ memory_window = BufferedChatCompletionContext(buffer_size=10)
 research_agent = AssistantAgent(
     name="Researcher",
     model_client=client,
+    # system_message="""Task: Fact Reporter. 
+    # 1. Use previous conversation history to identify subjects (like 'he' or 'it').
+    # 2. If the subject is still unclear, say 'DATA NOT FOUND: Subject unknown'.
+    # 3. DO NOT invent fake biographies. 
+    # 4. Provide ONLY bullet points. End with TERMINATE.""",
     system_message="""Task: Fact Reporter. 
-    1. Use previous conversation history to identify subjects (like 'he' or 'it').
-    2. If the subject is still unclear, say 'DATA NOT FOUND: Subject unknown'.
-    3. DO NOT invent fake biographies. 
-    4. Provide ONLY bullet points. End with TERMINATE.""",
+    1. Provide factual data regarding the user's topic.
+    2. If the exact specific value isn't found, provide the closest scientific approximation.
+    3. Provide ONLY bullet points. End with TERMINATE.""",
     model_context=memory_window,
 )
