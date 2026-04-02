@@ -1,0 +1,90 @@
+id,name,price,brand,volume
+1,Classic Shampoo,5.99,BrandA,500ml
+2,Herbal Shampoo,6.49,BrandB,400ml
+3,Volumizing Shampoo,7.29,BrandC,350ml
+4,Anti-dandruff Shampoo,8.99,BrandD,300ml
+5,Moisture Shampoo,4.79,BrandE,450ml
+6,Sparkle Shampoo,9.19,BrandF,250ml
+7,Color Protection Shampoo,10.49,BrandG,200ml
+8,Smooth Finish Shampoo,6.89,BrandH,600ml
+9,Nourishing Shampoo,7.99,BrandI,550ml
+10,Refreshing Shampoo,5.49,BrandJ,500ml
+11,Ultra Clean Shampoo,8.59,BrandK,400ml
+12,Deep Clean Shampoo,7.59,BrandL,350ml
+13,All-in-One Shampoo,6.09,BrandM,300ml
+14,Strengthening Shampoo,9.59,BrandN,250ml
+15,Hydrating Shampoo,5.19,BrandO,200ml
+16,Anti-Hair Loss Shampoo,10.09,BrandP,600ml
+17,Detox Shampoo,8.79,BrandQ,550ml
+18,Revitalizing Shampoo,7.89,BrandR,500ml
+19,Smoothness Shampoo,6.49,BrandS,450ml
+20,Silky Shampoo,9.29,BrandT,400ml
+21,Deep Hydration Shampoo,10.99,BrandU,350ml
+22,Fragrance Shampoo,5.99,BrandV,300ml
+23,Balancing Shampoo,8.29,BrandW,250ml
+24,Refresh Shampoo,7.19,BrandX,200ml
+25,Nourish & Shine Shampoo,6.79,BrandY,600ml
+26,Calm & Soothe Shampoo,9.79,BrandZ,550ml
+27,Boost Shampoo,7.69,BrandAA,500ml
+28,Cleanse Shampoo,5.39,BrandBB,450ml
+29,Color Care Shampoo,8.39,BrandCC,400ml
+30,Smooth Shampoo,6.19,BrandDD,350ml
+31,Nourishment Shampoo,9.69,BrandEE,300ml
+32,Revive Shampoo,7.39,BrandFF,250ml
+33,Hydrate Shampoo,5.59,BrandGG,200ml
+34,Shine Booster Shampoo,10.59,BrandHH,600ml
+35,Detoxify Shampoo,8.99,BrandII,550ml
+36,Strength Booster Shampoo,7.49,BrandJJ,500ml
+37,Calm Shampoo,6.69,BrandKK,450ml
+38,Refreshment Shampoo,9.09,BrandLL,400ml
+39,Silky Finish Shampoo,5.79,BrandMM,350ml
+40,All Natural Shampoo,8.19,BrandNN,300ml
+41,Deep Moisture Shampoo,7.79,BrandOO,250ml
+42,Balanced Care Shampoo,6.29,BrandPP,200ml
+43,Anti-Sag Shampoo,10.19,BrandQQ,600ml
+44,Revitalise Shampoo,9.49,BrandRR,550ml
+45,Shine & Smooth Shampoo,7.09,BrandSS,500ml
+46,Nurturing Shampoo,5.99,BrandTT,450ml
+47,Detox Care Shampoo,8.59,BrandUU,400ml
+48,Strengthening Care Shampoo,7.19,BrandVV,350ml
+49,Hydration Care Shampoo,6.49,BrandWW,300ml
+50,Ultimate Shine Shampoo,9.99,BrandXX,250ml
+51,Ultra Volume Shampoo,8.89,BrandYY,400ml
+52,Deep Repair Shampoo,9.59,BrandZZ,350ml
+53,Herbal Boost Shampoo,7.49,BrandAAA,300ml
+54,Anti-Static Shampoo,6.29,BrandBBB,250ml
+55,Silk Texture Shampoo,5.79,BrandCCC,200ml
+56,Color Guard Shampoo,10.39,BrandDDD,600ml
+57,Detox Clean Shampoo,8.99,BrandEEE,550ml
+58,Nourishing Care Shampoo,7.79,BrandFFF,500ml
+59,Soft Touch Shampoo,6.19,BrandGGG,450ml
+60,Refresh Boost Shampoo,9.09,BrandHHH,400ml
+61,Ultimate Moisture Shampoo,10.99,BrandIII,350ml
+62,Fragrance Boost Shampoo,5.99,BrandJJJ,300ml
+63,Balance Restore Shampoo,8.49,BrandKKK,250ml
+64,Refresh & Revive Shampoo,7.09,BrandLLL,200ml
+65,Nourish & Protect Shampoo,6.79,BrandMMM,600ml
+66,Calm & Relax Shampoo,9.59,BrandNNN,550ml
+67,Boost & Strength Shampoo,7.39,BrandOOO,500ml
+68,Cleanse & Brighten Shampoo,5.59,BrandPPP,450ml
+69,Color Care Pro Shampoo,8.29,BrandQQQ,400ml
+70,Silky Finish Pro Shampoo,6.09,BrandRRR,350ml71,EcoShine,3.58,200,Unscented
+72,CleanCo,3.45,100,Unscented
+73,FreshFoam,12.58,150,Vanilla
+74,FreshFoam,11.98,100,Unscented
+75,SilkySoft,3.93,150,Unscented
+76,EcoShine,12.2,250,Unscented
+77,SilkySoft,6.81,200,Lavender
+78,SilkySoft,8.91,300,Citrus
+79,Luxe,9.72,250,Rose
+80,Luxe,12.8,300,Unscented
+81,Luxe,11.55,300,Unscented
+82,EcoShine,14.92,250,Vanilla
+83,FreshFoam,12.27,200,Lavender
+84,EcoShine,8.56,250,Unscented
+85,SilkySoft,7.36,250,Unscented
+86,SilkySoft,5.15,150,Rose
+87,SilkySoft,14.57,100,Lavender
+88,EcoShine,5.0,300,Citrus
+89,SilkySoft,4.43,100,Citrus
+90,Luxe,5.74,250,Rose

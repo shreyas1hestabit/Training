@@ -19,9 +19,9 @@ SYSTEM_PROMPT = (
 FACT_EXTRACTION_PROMPT = (
     'Message: "{user_input}"\n\n'
     "List every fact about the user in this message as a JSON array of strings.\n"
-    "Include: name, employer, role, projects, hobbies.\n"
+    "Include: identity markers, professional/academic status, stated preferences, current environmental context, and any specific constraints mentioned\n"
     "Short sentences. Third person. No invented facts. Return [] if none.\n"
-    'Example: ["User is named Shreya", "User works at HestaBit"]\n'
+    'Example: ["User is named Shreya", "User works at HestaBit","The user is in a time-sensitive situation", "The user prefers Python for data tasks"]\n'
     "Return ONLY the JSON array."
 )
 
