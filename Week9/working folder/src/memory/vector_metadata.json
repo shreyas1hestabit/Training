@@ -1,0 +1,58 @@
+[
+  {
+    "id": 0,
+    "text": "User name is Shreya",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 1,
+    "text": "User works at HestaBit",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 2,
+    "text": "User is a software engineer trainee",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 3,
+    "text": "User works at Agentic AI",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 4,
+    "text": "User has been employed at the company for nearly six weeks",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 5,
+    "text": "- You've worked for nearly two months as a Software Engineering Trainee specializing in aggressive artificial intelligence projects, possibly pertaining to autonomous systems or proactive decision algorithms (Agentic AI), at HestiaBit—a tech company known within the given context.",
+    "source": "episode",
+    "meta": {
+      "episode_id": 1
+    }
+  },
+  {
+    "id": 6,
+    "text": "User focused on MERN stack",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 7,
+    "text": "User focused on AI after two months",
+    "source": "fact",
+    "meta": {}
+  },
+  {
+    "id": 8,
+    "text": "User name is shreya",
+    "source": "fact",
+    "meta": {}
+  }
+]

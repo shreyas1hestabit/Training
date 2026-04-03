@@ -1,0 +1,162 @@
+[
+  {
+    "fact": "The RAG pipeline is designed for 50k documents and deployed on Google Cloud services",
+    "source": "design a RAG pipeline for 50k documents.",
+    "ts": "2026-03-23T18:44:52.987508"
+  },
+  {
+    "fact": "The RAG pipeline utilizes a Python-based architecture and a systematic approach to categorize documents",
+    "source": "design a RAG pipeline for 50k documents.",
+    "ts": "2026-03-23T18:44:52.988040"
+  },
+  {
+    "fact": "The RAG categories include Red (Critical or urgent), Amber (Needs attention), and Green (Complete or correct)",
+    "source": "design a RAG pipeline for 50k documents.",
+    "ts": "2026-03-23T18:44:52.988289"
+  },
+  {
+    "fact": "A re-ranking layer has been integrated into the RAG pipeline",
+    "source": "now add a re-ranking layer to that design.",
+    "ts": "2026-03-23T18:46:52.079717"
+  },
+  {
+    "fact": "The pipeline utilizes a Python-based architecture",
+    "source": "now add a re-ranking layer to that design.",
+    "ts": "2026-03-23T18:46:52.080312"
+  },
+  {
+    "fact": "Google Cloud services are used for deployment",
+    "source": "now add a re-ranking layer to that design.",
+    "ts": "2026-03-23T18:46:52.082588"
+  },
+  {
+    "fact": "The pipeline utilizes a systematic approach to categorize documents and includes three RAG categories: Red, Amber, and Green",
+    "source": "/memory",
+    "ts": "2026-03-23T18:51:26.515927"
+  },
+  {
+    "fact": "The deployment of the pipeline utilizes Google Cloud services",
+    "source": "/memory",
+    "ts": "2026-03-23T18:51:26.516537"
+  },
+  {
+    "fact": "The pipeline has been integrated with a re-ranking layer for improved performance",
+    "source": "/memory",
+    "ts": "2026-03-23T18:51:26.518749"
+  },
+  {
+    "fact": "The RAG pipeline has been optimized for high-quality document categorization",
+    "source": "/history",
+    "ts": "2026-03-23T18:52:38.194972"
+  },
+  {
+    "fact": "The pipeline has been integrated with a re-ranking layer for improved performance",
+    "source": "/history",
+    "ts": "2026-03-23T18:52:38.195626"
+  },
+  {
+    "fact": "The pipeline utilizes a systematic approach to categorize documents",
+    "source": "/history",
+    "ts": "2026-03-23T18:52:38.202047"
+  },
+  {
+    "fact": "The RAG pipeline is designed to process and analyze large volumes of documents",
+    "source": "by RAG pipeline I meant retrievel augmented generation and N",
+    "ts": "2026-03-23T19:01:26.151592"
+  },
+  {
+    "fact": "The pipeline consists of multiple stages, including data ingestion, text preprocessing, topic modeling, and sentiment analysis",
+    "source": "by RAG pipeline I meant retrievel augmented generation and N",
+    "ts": "2026-03-23T19:01:26.152118"
+  },
+  {
+    "fact": "The improved version of the code addresses issues with abbreviation detection using a dictionary to map abbreviations to their expansions",
+    "source": "On what parameters are you trained that you can not understa",
+    "ts": "2026-03-23T19:04:04.282782"
+  },
+  {
+    "fact": "A more advanced approach is implemented to correctly handle user abbreviations like 'RAG'",
+    "source": "On what parameters are you trained that you can not understa",
+    "ts": "2026-03-23T19:04:04.283514"
+  },
+  {
+    "fact": "The code utilizes natural language processing techniques to remove abbreviations while preserving context",
+    "source": "On what parameters are you trained that you can not understa",
+    "ts": "2026-03-23T19:04:04.289844"
+  },
+  {
+    "fact": "The script uses the csv library to write data to a CSV file.",
+    "source": "create a employee.csv file with 5 entries each with name, ph",
+    "ts": "2026-03-24T11:31:22.482197"
+  },
+  {
+    "fact": "The data is defined as a list of dictionaries where each dictionary represents an entry in the CSV file.",
+    "source": "create a employee.csv file with 5 entries each with name, ph",
+    "ts": "2026-03-24T11:31:22.482883"
+  },
+  {
+    "fact": "The employee_ID field has a typo (should be 'employee_ID' instead of 'emplo') but the code seems to have been corrected in the original report snippet.",
+    "source": "create a employee.csv file with 5 entries each with name, ph",
+    "ts": "2026-03-24T11:31:22.489349"
+  },
+  {
+    "fact": "The RAG pipeline utilizes a Python-based architecture",
+    "source": "generate a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:05:13.653487"
+  },
+  {
+    "fact": "The pipeline combines retrieval and generation models",
+    "source": "generate a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:05:13.654182"
+  },
+  {
+    "fact": "The RAG pipeline is deployed on Google Cloud services",
+    "source": "generate a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:05:13.660602"
+  },
+  {
+    "fact": "The RAG pipeline utilizes a Python-based architecture",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:06:13.454986"
+  },
+  {
+    "fact": "The implementation incorporates natural language processing techniques",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:06:13.455787"
+  },
+  {
+    "fact": "The pipeline is designed to be scalable and efficient",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:06:13.462074"
+  },
+  {
+    "fact": "The RAG pipeline utilizes a Python-based architecture",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:22:42.433825"
+  },
+  {
+    "fact": "The pipeline combines retrieval and generation models",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:22:42.434586"
+  },
+  {
+    "fact": "The implementation is deployed on Google Cloud services",
+    "source": "design a rag pipeline for 50k documents",
+    "ts": "2026-03-30T08:22:42.436764"
+  },
+  {
+    "fact": "The RAG pipeline utilizes a Python-based architecture",
+    "source": "create a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:36:40.171650"
+  },
+  {
+    "fact": "The implementation incorporates natural language processing techniques",
+    "source": "create a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:36:40.172486"
+  },
+  {
+    "fact": "The RAG pipeline is deployed on Google Cloud services",
+    "source": "create a rag pipeline for 50k documents.",
+    "ts": "2026-03-30T08:36:40.174781"
+  }
+]
