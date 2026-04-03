@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "bb1ca141-be0b-48c3-8554-14ea9dcaf1dd",
+		"name": "Week 4 Product API",
+		"description": "Product API with security, validation, rate limiting, request tracing, background jobs and logging.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51377746",
+		"_collection_link": "https://shreyas1-hestabit-8812957.postman.co/workspace/shreya-singhal's-Workspace~5b82cd2a-724b-44cc-8acc-6164b95e1081/collection/51377746-bb1ca141-be0b-48c3-8554-14ea9dcaf1dd?action=share&source=collection_link&creator=51377746"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/health",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "create product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-request-id",
+								"value": "postman-req-1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"macbook pro\",\n    \"price\": 100000,\n    \"category\":\"electronics\",\n    \"stock\":10,\n    \"status\":\"active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/products",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products?search=mac&minPrice=600000",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "mac"
+								},
+								{
+									"key": "minPrice",
+									"value": "600000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/{{productId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"{{productId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
