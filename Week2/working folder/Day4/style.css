@@ -1,0 +1,259 @@
+/*
+*{
+    background-color: #D0F0C0;
+}
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 400px 800px;
+  font-size: larger;
+}
+
+h1{
+    color: #004526;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+
+li {
+  margin: 10px 0;
+}
+
+button {
+  margin-left: 5px;
+  margin-top: 20px;
+  color: #004526;
+}
+  */
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  min-height: 100vh;
+  background-color: #d9f7c8;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #1b5e20; /* green text everywhere */
+}
+
+/* Todo App Container */
+.todo-container {
+  background-color: #f6fff2;
+  padding: 30px 40px;
+  border-radius: 12px;
+  border: 2px solid #66bb6a;
+  box-shadow: 0 8px 20px rgba(0, 100, 0, 0.15);
+  align-items: center;
+  min-width: 320px;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  gap:20px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #1b5e20;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 260px;
+  /*margin: 0 auto; 
+  align-items: stretch; */
+}
+
+/* Input box */
+#todo-input {
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #81c784;
+  outline: none;
+  width: 100%;
+}
+
+#todo-input:focus {
+  border-color: #2e7d32;
+  background-color: #f1fff0;
+}
+
+/* Submit Button */
+button {
+
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #43a047;
+  color: #e8f5e9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* Todo List */
+ul {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Each Todo */
+li {
+  background-color: #e8f5e9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Edit / Delete buttons */
+li button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #66bb6a;
+  margin-left: 8px;
+  border-radius: 6px;
+}
+
+li button:hover {
+  background-color: #388e3c;
+}
+.dropdown {
+  list-style: none;
+
+  /* White background */
+  background: white;
+
+  /* Absolute position header ke niche */
+  position: absolute;
+  top: 60px;
+  right: 40px;
+
+  /* Fixed width */
+  width: 160px;
+
+  /* Default hidden */
+  display: none;
+
+  /* Rounded corners */
+  border-radius: 6px;
+
+  /* Extra overflow hide */
+  overflow: hidden;
+}
+
+/* Dropdown ke links */
+.dropdown li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hover effect on dropdown links */
+.dropdown li a:hover {
+  background: #e5e7eb;
+}
+
+/* ---------------- DROPDOWN ACTIVE STATE ---------------- */
+/* JS se show class add hoti hai */
+.dropdown.show {
+  display: block;
+}
+
+
+/* ---------------- FOOTER ---------------- */
+/* Footer fixed bottom pe */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+
+  width: 100%;
+  background: green;
+  color: white;
+
+  /* Text center align */
+  text-align: center;
+
+  font-weight: bold;
+  padding: 16px 0;
+}
+/* Fixed header top pe */
+.header {
+  width: 100%;
+  background: green;
+  color: white;
+  padding: 16px 40px;
+
+  /* Logo aur menu ko ek line me rakhna */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Header ko fixed banana */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* ---------------- LOGO ---------------- */
+/* Website ka naam */
+.logo {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/* ---------------- MENU BUTTON ---------------- */
+/* Mobile menu button */
+
+
+/* Footer text styling */
+.footer p {
+  font-size: 14px;
+
+  /* Thoda light look ke liye */
+  opacity: 0.8;
+}
+
+.menu-btn {
+  list-style: none;
+  padding:  10px 16px;
+  margin: 0;
+  width: 220px;                 /* thoda balanced width */
+  color:white;
+  background-color: green;
+  border-radius: 14px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                    /* margin-bottom ki jagah */
+}
+

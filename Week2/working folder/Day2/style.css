@@ -1,0 +1,307 @@
+/* browser ke default margin & padding hata rahe hain  and universal ek layout krdiya*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* size calculate karna easy ho jaata hai */
+}
+
+/* -------------------- BODY -------------------- */
+/* poore page ka base layout */
+body {
+  min-height: 100vh; /* page kam ho toh bhi full screen height le */
+  display: grid; /* poora page grid me divide kiya */
+  grid-template-rows: auto auto 1fr auto; 
+  /* header | hero | content | footer */
+
+  font-family: Arial, sans-serif; /* simple readable font */
+  line-height: 1.6; /* text ko thoda sa breathing space */
+  background: #f7f7f7; /* light grey background */
+  color: #333; /* dark grey text */
+}
+
+/* -------------------- HEADER -------------------- */
+/* top bar jisme logo + menu hai */
+.header {
+  display: flex; /* logo aur menu side by side */
+  justify-content: space-between; /* left-right gap */
+  align-items: center; /* vertically center */
+  padding: 16px 24px;
+  background: #0b3c49; /* dark blue background */
+  color: #fff; /* white text */
+}
+
+/* logo ka style */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* menu container */
+.menu {
+  display: flex; /* links ek line me */
+  gap: 20px; /* links ke beech gap */
+}
+
+/* menu ke links */
+.menu a {
+  text-decoration: none; /* underline hata diya */
+  color: #fff; /* white text */
+  font-size: 0.9rem;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+/* intro section */
+.hero {
+  padding: 60px 24px; /* upar-neeche zyada space */
+  text-align: center; /* center align text */
+  background: #e0f2f1; /* light background */
+}
+
+/* hero heading */
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* hero text */
+.hero p {
+  margin-bottom: 20px;
+}
+
+/* hero buttons wrapper */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* hero buttons */
+.hero button {
+  padding: 10px 18px;
+  border: none; /* border hata diya */
+  background: #0b3c49;
+  color: white;
+  cursor: pointer; /* hover pe hand icon */
+  border-radius: 4px;
+}
+
+/* -------------------- CONTENT LAYOUT -------------------- */
+/* main + aside ko wrap karta hai */
+.content {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
+/* trip cards ka layout */
+.main-content {
+  display: grid;
+  gap: 16px;
+}
+
+/* main cards + aside cards dono ka common style */
+.card,
+.adventure-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 6px;
+
+  /* hover animation smooth banane ke liye */
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* card heading */
+.card h2 {
+  margin-bottom: 8px;
+}
+
+/* list ka left gap */
+.card ul {
+  padding-left: 18px;
+}
+
+/* selector challenge:
+   list ka pehla item bold */
+.card ul li:first-child {
+  font-weight: bold;
+}
+
+/* card hover effect */
+.card:hover {
+  background: #111; /* black theme */
+  color: #fff; /* text white */
+  transform: translateY(-6px); /* thoda upar uthta hai */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* shadow */
+}
+
+/* card ke andar links */
+.card a {
+  color: inherit; /* text ka hi color follow kare */
+  text-decoration: none;
+}
+
+/* -------------------- ASIDE -------------------- */
+/* side section ka layout */
+.side {
+  display: grid;
+  gap: 16px;
+}
+
+/* side image */
+.side-image img {
+  width: 100%; /* full width */
+  border-radius: 6px;
+}
+
+/* -------------------- PRODUCT GRID -------------------- */
+/* adventure cards ka grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* mobile pe 2 columns */
+  gap: 12px;
+}
+
+/* adventure card extra styling */
+.adventure-card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* adventure card image */
+.adventure-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover; /* image stretch na ho */
+  margin-bottom: 8px;
+}
+
+/* adventure card hover */
+.adventure-card:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* adventure card links */
+.adventure-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -------------------- BANNER -------------------- */
+/* offers banner */
+.banner {
+  grid-column: 1 / -1; /* full width le */
+  background: #0b3c49;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* banner links */
+.banner a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* banner link hover */
+.banner a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- FOOTER -------------------- */
+/* footer styling */
+.footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+/* -------- TABLET VIEW -------- */
+/* 
+  Jab screen width 600px ya usse zyada ho jaaye
+  (generally tablets ya landscape mobile)
+*/
+@media (min-width: 600px) {
+
+  /* 
+    Content ko 2 parts me divide kar rahe hain:
+    - Left side: main content (zyada space)
+    - Right side: aside (kam space)
+  */
+  .content {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  /* 
+    Product grid ko thoda wide kar rahe hain
+    mobile ke 2 columns se badha kar 3 columns
+  */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* -------- DESKTOP VIEW -------- */
+/* 
+  Jab screen width 900px ya usse zyada ho
+  (laptops aur desktops)
+*/
+@media (min-width: 900px) {
+
+  /* 
+    Desktop pe zyada space hota hai
+    isliye hero heading ko bada dikha rahe hain
+  */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* 
+    Desktop screen pe product grid ko aur wide bana diya
+    taaki cards cramped na lage
+  */
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* -------- MOBILE -------- */
+/* 
+  Mobile devices me hover properly kaam nahi karta
+  isliye hover animations disable kar rahe hain
+*/
+@media (hover: none) {
+
+  /* 
+    Card hover effect hata diya
+    taaki accidental animation na ho
+  */
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* 
+    Same hover disable for aside / adventure cards
+  */
+  .adventure-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
