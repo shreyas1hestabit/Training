@@ -1,0 +1,9 @@
+git bisect start
+# status: waiting for both good and bad commits
+# bad: [ef1688c4fee7e6913803d96108081d40994f15f3] Commit 8: add project documentation
+git bisect bad ef1688c4fee7e6913803d96108081d40994f15f3
+# status: waiting for good commit(s), bad commit known
+# good: [05a5c4521e13a869e235cc867c0727b454b5e880] Commit 3: add employee records with roles
+git bisect good 05a5c4521e13a869e235cc867c0727b454b5e880
+# bad: [cc758fae29838a99c09e1a4a9be336ecf5b9807b] Commit 5: add dashboard authorization logic
+git bisect bad cc758fae29838a99c09e1a4a9be336ecf5b9807b
