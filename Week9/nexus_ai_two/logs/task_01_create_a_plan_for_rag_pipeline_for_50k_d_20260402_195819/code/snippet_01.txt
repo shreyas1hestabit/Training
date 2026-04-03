@@ -1,0 +1,20 @@
+┌──────────────────┐     ┌──────────────────┐     ┌──────────────────────┐
+│  Data Ingestion  │ →   │  Vector Store    │ →   │  Retrieval Service   │
+│ (Cloud Storage,  │     │ (FAISS or Pinecone│     │ (Cloud Functions /   │
+│  Pub/Sub)        │     │  on GKE)          │     │  Cloud Run)          │
+└──────────────────┘     └──────────────────┘     └──────────────────────┘
+          ▲                       ▲                        │
+          │                       │                        ▼
+          │                       │              ┌──────────────────────┐
+          │                       │              │  Generation Service  │
+          │                       │              │ (Gemini/LLama‑2 on   │
+          │                       │              │  Vertex AI / Cloud   │
+          │                       │              │  Run)                │
+          │                       │              └──────────────────────┘
+          │                       │
+          ▼                       ▼
+┌──────────────────┐     ┌──────────────────┐
+│  Monitoring &    │     │  Logging &       │
+│  Alerting (Stack│     │  Tracing (Cloud │
+│  Driver)         │     │  Logging)        │
+└──────────────────┘     └──────────────────┘
