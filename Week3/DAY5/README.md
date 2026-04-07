@@ -520,29 +520,29 @@ my-dashboard
 
 ![lo](week3-next-tailwind-frontent/screenshots/l1.png)
 
-![lt](screenshots/l2.png)
+![lt](week3-next-tailwind-frontent/screenshots/l2.png)
 
 <h5>about</h5>
 
-![ab](screenshots/about.png)
+![ab](week3-next-tailwind-frontent/screenshots/about.png)
 
 <h5>dashboard</h5>
 
-![do](screenshots/d1.png)
-![dt](screenshots/d2.png)
-![dth](screenshots/d3.png)
-![df](screenshots/d4.png)
+![do](week3-next-tailwind-frontent/screenshots/d1.png)
+![dt](week3-next-tailwind-frontent/screenshots/d2.png)
+![dth](week3-next-tailwind-frontent/screenshots/d3.png)
+![df](week3-next-tailwind-frontent/screenshots/d4.png)
 
 <h5>profile</h5>
 
-![pf](screenshots/p1.png)
-![pt](screenshots/p2.png)
+![pf](week3-next-tailwind-frontent/screenshots/p1.png)
+![pt](week3-next-tailwind-frontent/screenshots/p2.png)
 
 <h5>users</h5>
 
-![us](screenshots/users.png)
-![ust](screenshots/user_modal.png)
+![us](week3-next-tailwind-frontent/screenshots/users.png)
+![ust](week3-next-tailwind-frontent/screenshots/user_modal.png)
 
 <h5>login</h5>
 
-![log](screenshots/login.png)
+![log](week3-next-tailwind-frontent/screenshots/login.png)
