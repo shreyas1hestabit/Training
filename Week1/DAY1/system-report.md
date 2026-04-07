@@ -61,8 +61,6 @@ WORKS ON: Many distributions.
 ![starrelease](/Week1/working_folder/Day1/Task1/Screenshots-day1-task1/cat-etc-*-release.png) 2. CURRENT SHELL
 a. ps -p $$
 
-> > > > > > > eafa36b (updated md paths)
-
     DESCRIPTION: The actual running process command name
     RELIABILITY FOR CURRENT SHELL: High
 

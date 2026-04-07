@@ -70,7 +70,7 @@ docker logs nginx
 - Backend logs: should say `"Backend is running on PORT 3005"`
 - Nginx logs: should start without any errors
 
-![s1](../screenshots/s1.png)
+![s1](./screenshots/s1.png)
 
 ### Healthcheck
 
@@ -80,7 +80,7 @@ curl http://localhost:3005/health
 
 - Status should be `"okay"`
 
-![s2](../screenshots/s2.png)
+![s2](./screenshots/s2.png)
 
 ### Test APIs through Nginx (prod)
 
@@ -89,7 +89,7 @@ curl -k https://localhost/todos
 curl -k -X POST https://localhost/todos -H "Content-Type: application/json" -d '{"title":"test todo"}'
 ```
 
-![s3](../screenshots/s3.png)
+![s3](./screenshots/s3.png)
 
 ### Test HTTP → HTTPS redirect
 
@@ -98,7 +98,7 @@ curl -I http://localhost
 # Should redirect to HTTPS
 ```
 
-![s4](../screenshots/s4.png)
+![s4](./screenshots/s4.png)
 
 ### Check if logs are saved
 
@@ -109,7 +109,7 @@ ls backend/logs
 - Should see `app.log`, `error.log`, `access.log`
 - Try restarting backend, logs should still be there
 
-![s5](../screenshots/s5.png)
+![s5](./screenshots/s5.png)
 
 ### Test restart policy
 
@@ -119,6 +119,6 @@ docker ps
 # Backend should come back up automatically
 ```
 
-![s6](../screenshots/s6.png)
+![s6](./screenshots/s6.png)
 
 ---
