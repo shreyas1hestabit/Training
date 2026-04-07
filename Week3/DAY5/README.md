@@ -518,7 +518,7 @@ my-dashboard
 
 <h5>landing page</h5>
 
-![lo](screenshots/l1.png)
+![lo](week3-next-tailwind-frontent/screenshots/l1.png)
 
 ![lt](screenshots/l2.png)
 
